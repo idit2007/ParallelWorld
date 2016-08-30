@@ -35,10 +35,11 @@ public class Teleportion : MonoBehaviour {
 	IEnumerator TeleportAnimation()
 	{
 		particleTeleportionStart.SetActive (true);
-		yield return new WaitForSeconds (2f);
 		blueFlash.SetActive (true);
-		yield return new WaitForSeconds (0.1f);
+		yield return new WaitForSeconds (2f);
 		blueFlash.SetActive (false);
+		yield return new WaitForSeconds (0.1f);
+
 		world = !world;
 		if (!world) {
 			Player.transform.position = new Vector3 (Player.transform.position.x + teleportRange, Player.transform.position.y, Player.transform.position.z);
