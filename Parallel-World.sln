@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{1B17F55B-855B-2B30-933C-1F3546E4C694}") = "Parallel-World", "Assembly-CSharp.csproj", "{68B7ECA0-ED7B-832E-E184-1A4FFD28ED46}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{68B7ECA0-ED7B-832E-E184-1A4FFD28ED46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68B7ECA0-ED7B-832E-E184-1A4FFD28ED46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68B7ECA0-ED7B-832E-E184-1A4FFD28ED46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68B7ECA0-ED7B-832E-E184-1A4FFD28ED46}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
