@@ -1,0 +1,189 @@
+fileFormatVersion: 2
+guid: 12c07dd8cab6147679d65f06595dddc3
+timeCreated: 1468476526
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Arm
+    100002: EyeL
+    100004: EyeR
+    100006: Face
+    100008: fingerL_index1
+    100010: fingerL_index2
+    100012: fingerL_index3
+    100014: fingerL_thump1
+    100016: fingerL_thump2
+    100018: fingerR_index1
+    100020: fingerR_index2
+    100022: fingerR_index3
+    100024: fingerR_thump1
+    100026: fingerR_thump2
+    100028: FootL
+    100030: FootR
+    100032: group
+    100034: group1
+    100036: group2
+    100038: Head
+    100040: head
+    100042: Leg
+    100044: LowerArmL
+    100046: LowerArmR
+    100048: LowerLegL
+    100050: LowerLegR
+    100052: Mount
+    100054: neck
+    100056: ParmL
+    100058: ParmR
+    100060: pasted__group1
+    100062: Piv
+    100064: Shirt
+    100066: Shoe
+    100068: ShouderL
+    100070: ShouderR
+    100072: spine1
+    100074: spine2
+    100076: ToeL
+    100078: toeL2
+    100080: ToeR
+    100082: ToeR2
+    100084: UpperArmL
+    100086: UpperArmR
+    100088: UpperLegL
+    100090: UpperLegR
+    100092: //RootNode
+    400000: Arm
+    400002: EyeL
+    400004: EyeR
+    400006: Face
+    400008: fingerL_index1
+    400010: fingerL_index2
+    400012: fingerL_index3
+    400014: fingerL_thump1
+    400016: fingerL_thump2
+    400018: fingerR_index1
+    400020: fingerR_index2
+    400022: fingerR_index3
+    400024: fingerR_thump1
+    400026: fingerR_thump2
+    400028: FootL
+    400030: FootR
+    400032: group
+    400034: group1
+    400036: group2
+    400038: Head
+    400040: head
+    400042: Leg
+    400044: LowerArmL
+    400046: LowerArmR
+    400048: LowerLegL
+    400050: LowerLegR
+    400052: Mount
+    400054: neck
+    400056: ParmL
+    400058: ParmR
+    400060: pasted__group1
+    400062: Piv
+    400064: Shirt
+    400066: Shoe
+    400068: ShouderL
+    400070: ShouderR
+    400072: spine1
+    400074: spine2
+    400076: ToeL
+    400078: toeL2
+    400080: ToeR
+    400082: ToeR2
+    400084: UpperArmL
+    400086: UpperArmR
+    400088: UpperLegL
+    400090: UpperLegR
+    400092: //RootNode
+    2300000: EyeL
+    2300002: EyeR
+    2300004: Head
+    2300006: Mount
+    3300000: EyeL
+    3300002: EyeR
+    3300004: Head
+    3300006: Mount
+    4300000: Face
+    4300002: Shirt
+    4300004: Arm
+    4300006: Shoe
+    4300008: Leg
+    4300010: Mount
+    4300012: EyeL
+    4300014: EyeR
+    4300016: Head
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Arm
+    13700002: Face
+    13700004: Leg
+    13700006: Shirt
+    13700008: Shoe
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
