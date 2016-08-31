@@ -1,9 +1,10 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GamePlayRoom1/Teleportion.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GamePlayRoom1/Movement.cs">
     <Files>
-      <File FileName="Assets/Scripts/GamePlayRoom1/Teleportion.cs" Line="60" Column="44" />
-      <File FileName="Assets/Teleport_Particle_Effect/Scripts/Teleport.js" Line="18" Column="1" />
+      <File FileName="Assets/Scripts/GamePlayRoom1/Teleportion.cs" Line="19" Column="55" />
+      <File FileName="Assets/Teleport_Particle_Effect/Scripts/Teleport.js" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GamePlayRoom1/Movement.cs" Line="18" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
