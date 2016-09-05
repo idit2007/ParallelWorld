@@ -1,7 +1,7 @@
 ﻿var TeleportVideoParticles : ParticleSystem;
 var SmokeParticles : ParticleSystem;
 var SparkParticles : ParticleSystem;
-var TeleportLight: Light;
+var TeleportLight : Light;
 var TeleportAudio : AudioSource;
 
  private var fadeStart = 5;
@@ -11,7 +11,7 @@ var TeleportAudio : AudioSource;
 
 function Update ()
 {
-   
+   /*
    if (Input.GetButtonDown("Fire1")) //check to see if the left mouse was pushed.
   
     {
@@ -24,7 +24,7 @@ function Update ()
        FadeLight();
       
      }
-       
+       */
    
 }
 

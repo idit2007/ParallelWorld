@@ -39,7 +39,8 @@ public class Teleportion : MonoBehaviour {
 	}
 	IEnumerator TeleportAnimation()
 	{
-		Button teleportButtonC = teleportButton.GetComponent<Button>();
+        selectpoint.removeway = true;
+        Button teleportButtonC = teleportButton.GetComponent<Button>();
 		teleportButtonC.interactable = false;
 		particleTeleportionStart.SetActive (true);
 		blueFlash.SetActive (true);
@@ -49,13 +50,22 @@ public class Teleportion : MonoBehaviour {
 
 		world = !world;
 		if (!world) {
-			Player.transform.position = new Vector3 (Player.transform.position.x + teleportRange, Player.transform.position.y, Player.transform.position.z);
+            selectpoint.removeway = false;
+            Player.transform.position = new Vector3 (Player.transform.position.x + teleportRange, Player.transform.position.y, Player.transform.position.z);
 			CameraSet.SetActive (true);
-		} 
+            Unit.World = 1;
+            if (Unit.haveway == true)
+                selectpoint.removeway = true;
+        } 
 		else {
-			Player.transform.position = new Vector3 (Player.transform.position.x - teleportRange, Player.transform.position.y, Player.transform.position.z);
+            selectpoint.removeway = false;
+            Player.transform.position = new Vector3 (Player.transform.position.x - teleportRange, Player.transform.position.y, Player.transform.position.z);
 			CameraSet.SetActive (false);
-		}
+            Unit.World = 0;
+            if(Unit.haveway==true)
+                selectpoint.removeway = true;
+
+        }
 		explosionLight.SetActive (false);
 		particleTeleportionStop.SetActive (true);
 		yield return new WaitForSeconds (4f);
