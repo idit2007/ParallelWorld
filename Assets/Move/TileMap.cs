@@ -164,7 +164,7 @@ public class TileMap : MonoBehaviour {
 				GameObject go = (GameObject)Instantiate( tt.tileVisualPrefab, StartPosition.transform.position +new Vector3(2*x, 0, 2 * y), Quaternion.identity );
 				GameObject environemt = GameObject.Find ("Environment");
 				Transform environemtParrent = environemt.GetComponent<Transform> ();
-				//go.transform.parent = environemtParrent.transform;
+				go.transform.parent = environemtParrent.transform;
 				ClickableTile ct = go.GetComponent<ClickableTile>();
 
 				ct.tileX = x;
