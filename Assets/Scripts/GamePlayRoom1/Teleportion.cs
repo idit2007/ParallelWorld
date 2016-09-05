@@ -26,6 +26,7 @@ public class Teleportion : MonoBehaviour {
 		particleTeleportionStart.SetActive (false);
 		particleTeleportionStop.SetActive (false);
 		blueFlash.SetActive (false);
+		explosionLight.SetActive (false);
 	}
 
 	// Update is called once per frame
