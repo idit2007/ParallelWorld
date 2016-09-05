@@ -44,8 +44,6 @@ public class Teleportion : MonoBehaviour {
 		particleTeleportionStart.SetActive (true);
 		blueFlash.SetActive (true);
 		yield return new WaitForSeconds (2f);
-		blueFlash.SetActive (false);
-		yield return new WaitForSeconds (0.1f);
 
 		world = !world;
 		if (!world) {
@@ -56,6 +54,7 @@ public class Teleportion : MonoBehaviour {
 			Player.transform.position = new Vector3 (Player.transform.position.x - teleportRange, Player.transform.position.y, Player.transform.position.z);
 			CameraSet.SetActive (false);
 		}
+		blueFlash.SetActive (false);
 		explosionLight.SetActive (false);
 		particleTeleportionStop.SetActive (true);
 		yield return new WaitForSeconds (4f);
