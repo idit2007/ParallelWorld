@@ -11,7 +11,7 @@ public class Unit : MonoBehaviour {
     static public TileMap mapStatic;
 
     public GameObject[] DrawLine;
-
+    static public GameObject[] DrawLineStatic= new GameObject[2];
 
     public List<Node> currentPath = null;
 
@@ -28,14 +28,15 @@ public class Unit : MonoBehaviour {
 
     void Start()
     {
-
+        DrawLineStatic[0]= DrawLine[0];
+        DrawLineStatic[1]= DrawLine[1];
     }
 
 
 
    void Update() {
 
-
+        Debug.Log("selectpoint.StartGoway " + selectpoint.StartGoway);
         if (currentPath != null) {
 
             haveway = true;
@@ -53,18 +54,20 @@ public class Unit : MonoBehaviour {
 
             if (selectpoint.StartGoway == true)
             {
-
-
+                
+                Debug.Log("1 " );
+                DrawLine[World].SetActive(false);
                 Vector3 Endpositon = map[World].TileCoordToWorldCoord(currentPath[currentPath.Count -1].x, currentPath[currentPath.Count - 1].y) + new Vector3(0, 2.1f, 0);
                // DrawLine.GetComponent<LineRenderer>().st = false;
                 if (Vector3.Distance(transform.position, Endpositon) > 0.001f)
                 {
                     Debug.Log("indexTarget "+ indexTarget);
-
                     cntStep += Time.deltaTime * speed;
                     Vector3 Goposition = map[World].TileCoordToWorldCoord(currentPath[indexTarget + 1].x, currentPath[indexTarget + 1].y) + new Vector3(0, 2.1f, 0);
+                    Vector3 GopositionPre = map[World].TileCoordToWorldCoord(currentPath[indexTarget ].x, currentPath[indexTarget ].y) + new Vector3(0, 2.1f, 0);
                     transform.position = Vector3.MoveTowards(transform.position, Goposition, cntStep);
-                    var rotation = Quaternion.LookRotation(Goposition - transform.position);
+                    var rotation = Quaternion.LookRotation(Goposition - GopositionPre);
+                   // var rotation = Quaternion.Euler(rotation2.x, rotation2.y, rotation2.z);
                     transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * 2);
                     if (Vector3.Distance(transform.position, Goposition) < 0.001f)
                     {
@@ -75,8 +78,7 @@ public class Unit : MonoBehaviour {
                         indexTarget++;
                             if (Vector3.Distance(transform.position, Endpositon) < 0.01f)
                                 {
-                                    Debug.Log("aa");
-                                        //transform.rotation = targetList[indexTarget - 1].rotation;
+                                    //transform.rotation = Quaternion.LookRotation(Endpositon - map[World].TileCoordToWorldCoord(currentPath[indexTarget -1].x, currentPath[indexTarget -1].y) + new Vector3(0, 2.1f, 0));
                                     selectpoint.StartGoway = false;
                                     selectpoint.removeway = true;
 
@@ -95,27 +97,31 @@ public class Unit : MonoBehaviour {
 
             if (selectpoint.removeway == true)
             {
-
-
+                DrawLine[World].SetActive(false);
                 Debug.Log("currentPath.Count  " + currentPath.Count );
                 if (currentPath.Count == 1)
                 {
                     currentPath.RemoveAt(0);
-                    selectpoint.removeway = false;
                     currentPath = null;
-                    haveway = false;
-                    //DrawLine.GetComponent<LineRenderer>().useWorldSpace = true;
+                    haveway = false;          
                     indexTarget = 0;
+                    selectpoint.removeway = false;
                 }
                 else 
                     currentPath.RemoveAt(0);
             }
 
             if (currentPath == null)
-            { DrawLine[World].GetComponent<LineRenderer>().SetPosition(0, new Vector3(1, 1, 1));
-
+            {
+                DrawLine[World].GetComponent<LineRenderer>().SetPosition(0, new Vector3(1, 1, 1));
+                DrawLine[World].SetActive(true);
+                cntStep = 0;
             }
 
+        }
+        else
+        {
+            selectpoint.StartGoway = false;
         }
     }
 

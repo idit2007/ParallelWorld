@@ -11,8 +11,9 @@ public class Teleportion : MonoBehaviour {
 	private GameObject blueFlash;
 	private GameObject explosionLight;
 	private GameObject teleportButton;
-	// Use this for initialization
-	void Start () {
+    public static Button TeleportButtonStatic;
+    // Use this for initialization
+    void Start () {
 		world = true;
 		teleportButton = GameObject.Find ("TeleportionButton");
 	
@@ -26,8 +27,9 @@ public class Teleportion : MonoBehaviour {
 		particleTeleportionStart.SetActive (false);
 		particleTeleportionStop.SetActive (false);
 		blueFlash.SetActive (false);
-		explosionLight.SetActive (false);
-	}
+        TeleportButtonStatic = GameObject.Find("TeleportionButton").GetComponent<Button>();
+
+    }
 
 	// Update is called once per frame
 	void Update () {
@@ -55,17 +57,16 @@ public class Teleportion : MonoBehaviour {
             Player.transform.position = new Vector3 (Player.transform.position.x + teleportRange, Player.transform.position.y, Player.transform.position.z);
 			CameraSet.SetActive (true);
             Unit.World = 1;
-            if (Unit.haveway == true)
-                selectpoint.removeway = true;
+            Unit.DrawLineStatic[0].SetActive(false);
+            Unit.DrawLineStatic[1].SetActive(true);
         } 
 		else {
             selectpoint.removeway = false;
             Player.transform.position = new Vector3 (Player.transform.position.x - teleportRange, Player.transform.position.y, Player.transform.position.z);
 			CameraSet.SetActive (false);
             Unit.World = 0;
-            if(Unit.haveway==true)
-                selectpoint.removeway = true;
-
+            Unit.DrawLineStatic[0].SetActive(true);
+            Unit.DrawLineStatic[1].SetActive(false);
         }
 		explosionLight.SetActive (false);
 		particleTeleportionStop.SetActive (true);
