@@ -161,11 +161,19 @@ public class TileMap : MonoBehaviour {
 		for(int x=0; x < mapSizeX; x++) {
 			for(int y=0; y < mapSizeY; y++) {
 				TileType tt = tileTypes[ tiles[x,y,WorldMap] ];
+<<<<<<< HEAD
                 GameObject go = (GameObject)Instantiate(tt.tileVisualPrefab, StartPosition.transform.position + new Vector3(2 * x, 0, 2 * y), Quaternion.identity);
                 GameObject environemt = GameObject.Find("Environment");
                 Transform environemtParrent = environemt.GetComponent<Transform>();
                 //go.transform.parent = environemtParrent.transform;
                 ClickableTile ct = go.GetComponent<ClickableTile>();
+=======
+				GameObject go = (GameObject)Instantiate( tt.tileVisualPrefab, StartPosition.transform.position +new Vector3(2*x, 0, 2 * y), Quaternion.identity );
+				GameObject environemt = GameObject.Find ("Environment");
+				Transform environemtParrent = environemt.GetComponent<Transform> ();
+				go.transform.parent = environemtParrent.transform;
+				ClickableTile ct = go.GetComponent<ClickableTile>();
+>>>>>>> 1317619a952d4b4c66d7352f25e59372b19838b0
 
 				ct.tileX = x;
 				ct.tileY = y;
