@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 public class Teleportion : MonoBehaviour {
-	private int teleportRange=47;
+	private float teleportRange;
 	private bool world;
 	private GameObject Player;
 	private GameObject CameraSet;
@@ -14,6 +14,9 @@ public class Teleportion : MonoBehaviour {
     public static Button TeleportButtonStatic;
     // Use this for initialization
     void Start () {
+		GameObject world1 = GameObject.Find ("World1");
+		GameObject world2 = GameObject.Find ("World2");
+		teleportRange = world2.transform.position.x - world1.transform.position.x;
 		world = true;
 		teleportButton = GameObject.Find ("TeleportionButton");
 	

@@ -36,7 +36,7 @@ public class Unit : MonoBehaviour {
 
    void Update() {
 
-        Debug.Log("selectpoint.StartGoway " + selectpoint.StartGoway);
+
         if (currentPath != null) {
 
             haveway = true;

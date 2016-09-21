@@ -55,13 +55,17 @@
      <Compile Include="Assets\Scripts\GamePlayRoom1\CameraManagement.cs" />
      <Compile Include="Assets\Scripts\GamePlayRoom1\EnemyMovement.cs" />
      <Compile Include="Assets\Scripts\GamePlayRoom1\Movement.cs" />
+     <Compile Include="Assets\Scripts\GamePlayRoom1\ShaderManagement.cs" />
      <Compile Include="Assets\Scripts\GamePlayRoom1\Teleportion.cs" />
      <Compile Include="Assets\Scripts\GamePlayRoom1\TurnController.cs" />
      <None Include="Assets\Scripts\Shaders\TransparentFresnel.shader" />
      <None Include="Assets\Packages\Effects\ToonShading\Shaders\ToonBasic.shader" />
      <None Include="Assets\Scripts\Shaders\Glow.shader" />
      <None Include="Assets\Scripts\Shaders\3DTextOneSided.shader" />
+     <None Include="Assets\Holo Shader\Shader_Hologram_NoCull.shader" />
      <None Include="Assets\Teleport_Particle_Effect\ClickLeftMouseToTriggerTeleport.txt" />
+     <None Include="Assets\Holo Shader\ReadMe.txt" />
+     <None Include="Assets\Holo Shader\Shader_Hologram.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
