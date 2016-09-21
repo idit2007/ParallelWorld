@@ -25,9 +25,14 @@ public class EnemyMovement : MonoBehaviour {
 		rb.useGravity = true;
 		if(nav.enabled)
 		nav.SetDestination(player.transform.position);
-
-
-
+		if (TurnController.Instance.playerMovemnet == false) {
+			nav.enabled = false;
+			enemeyArea.enabled = false;
+		}
+		else if(TurnController.Instance.playerMovemnet )
+		{
+			enemeyArea.enabled = true;
+		}
 
 	}
 	void OnTriggerEnter(Collider scol) {
