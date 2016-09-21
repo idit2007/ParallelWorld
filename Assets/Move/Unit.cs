@@ -54,7 +54,7 @@ public class Unit : MonoBehaviour {
 
             if (selectpoint.StartGoway == true)
             {
-                
+				TurnController.Instance.playerMovemnet = true;
                 Debug.Log("1 " );
                 DrawLine[World].SetActive(false);
                 Vector3 Endpositon = map[World].TileCoordToWorldCoord(currentPath[currentPath.Count -1].x, currentPath[currentPath.Count - 1].y) + new Vector3(0, 2.1f, 0);
@@ -78,6 +78,7 @@ public class Unit : MonoBehaviour {
                         indexTarget++;
                             if (Vector3.Distance(transform.position, Endpositon) < 0.01f)
                                 {
+							TurnController.Instance.playerMovemnet = false;
                                     //transform.rotation = Quaternion.LookRotation(Endpositon - map[World].TileCoordToWorldCoord(currentPath[indexTarget -1].x, currentPath[indexTarget -1].y) + new Vector3(0, 2.1f, 0));
                                     selectpoint.StartGoway = false;
                                     selectpoint.removeway = true;
