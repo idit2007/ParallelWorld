@@ -26,6 +26,9 @@ public class Unit : MonoBehaviour {
     public float cntStep = 0;
     // public int indexTarget = 0;
 
+    public GameObject MiniMap1;
+    public GameObject MiniMap2;
+
     void Start()
     {
         DrawLineStatic[0]= DrawLine[0];
@@ -35,6 +38,17 @@ public class Unit : MonoBehaviour {
 
 
    void Update() {
+
+        if(World==1)
+        {
+            MiniMap1.SetActive(true);
+            MiniMap2.SetActive(false);
+        }
+        else
+        {
+            MiniMap1.SetActive(false);
+            MiniMap2.SetActive(true);
+        }
 
 
         if (currentPath != null) {

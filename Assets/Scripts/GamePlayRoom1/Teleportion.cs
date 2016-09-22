@@ -5,7 +5,8 @@ public class Teleportion : MonoBehaviour {
 	private float teleportRange;
 	private bool world;
 	private GameObject Player;
-	private GameObject CameraSet;
+   public GameObject PlayerDummy;
+    private GameObject CameraSet;
 	private GameObject particleTeleportionStart;
 	private GameObject particleTeleportionStop;
 	private GameObject blueFlash;
@@ -21,7 +22,8 @@ public class Teleportion : MonoBehaviour {
 		teleportButton = GameObject.Find ("TeleportionButton");
 	
 		Player = GameObject.FindGameObjectWithTag("Player");
-		CameraSet = GameObject.Find ("CameraSet");
+        PlayerDummy = GameObject.FindGameObjectWithTag("PlayerDummy");
+        CameraSet = GameObject.Find ("CameraSet");
 		CameraSet.SetActive (false);
 		particleTeleportionStart = GameObject.Find ("TeleportStart");
 		particleTeleportionStop= GameObject.Find ("TeleportStop");
@@ -58,7 +60,8 @@ public class Teleportion : MonoBehaviour {
 		if (!world) {
             selectpoint.removeway = false;
             Player.transform.position = new Vector3 (Player.transform.position.x + teleportRange, Player.transform.position.y, Player.transform.position.z);
-			CameraSet.SetActive (true);
+            PlayerDummy.transform.position = new Vector3(PlayerDummy.transform.position.x - teleportRange, PlayerDummy.transform.position.y, PlayerDummy.transform.position.z);
+            CameraSet.SetActive (true);
             Unit.World = 1;
             Unit.DrawLineStatic[0].SetActive(false);
             Unit.DrawLineStatic[1].SetActive(true);
@@ -66,7 +69,8 @@ public class Teleportion : MonoBehaviour {
 		else {
             selectpoint.removeway = false;
             Player.transform.position = new Vector3 (Player.transform.position.x - teleportRange, Player.transform.position.y, Player.transform.position.z);
-			CameraSet.SetActive (false);
+            PlayerDummy.transform.position = new Vector3(PlayerDummy.transform.position.x + teleportRange, PlayerDummy.transform.position.y, PlayerDummy.transform.position.z);
+            CameraSet.SetActive (false);
             Unit.World = 0;
             Unit.DrawLineStatic[0].SetActive(true);
             Unit.DrawLineStatic[1].SetActive(false);
