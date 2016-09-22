@@ -2,10 +2,14 @@
 using System.Collections;
 
 public class ShaderManagement : MonoBehaviour {
-	public Material[] oldMaterials;
-	public Material hologramMaterial;
+	public Material[] oldMaterialsWorld1;
+	public Material[] oldMaterialsWorld2;
+	public Material hologramMaterialWorld1;
+	public Material hologramMaterialWorld2;
 	public Transform AllMaterialsWorld1;
+	public Transform AllMaterialsWorld2;
 	public Renderer floorWorld1;
+	public Renderer floorWorld2;
 	public Material newfloorMaterial;
 	public Material oldfloorMaterial;
 	private int i;
@@ -13,10 +17,17 @@ public class ShaderManagement : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		i = 0;
-		oldMaterials=new Material[AllMaterialsWorld1.childCount];
+		oldMaterialsWorld1=new Material[AllMaterialsWorld1.childCount];
+		oldMaterialsWorld2=new Material[AllMaterialsWorld2.childCount];
 		foreach (Transform child in  AllMaterialsWorld1 ){
-			Renderer newMaterial=child.GetComponent<Renderer> ();
-			oldMaterials[i] = newMaterial.sharedMaterial;
+			Renderer newMaterialWorld1=child.GetComponent<Renderer> ();
+			oldMaterialsWorld1[i] = newMaterialWorld1.sharedMaterial;
+			i++;
+		}
+		i = 0;
+		foreach (Transform child in  AllMaterialsWorld2 ){
+			Renderer newMaterialWorld2=child.GetComponent<Renderer> ();
+			oldMaterialsWorld2[i] = newMaterialWorld2.sharedMaterial;
 			i++;
 		}
 
@@ -33,20 +44,33 @@ public class ShaderManagement : MonoBehaviour {
 	private void HoloGramScene()
 	{
 		foreach (Transform child in  AllMaterialsWorld1) {
-			Renderer newMaterial = child.GetComponent<Renderer> ();
-			newMaterial.sharedMaterial = hologramMaterial;
+			Renderer newMaterialWorld1 = child.GetComponent<Renderer> ();
+			newMaterialWorld1.sharedMaterial = hologramMaterialWorld1;
 		}
+		foreach (Transform child in  AllMaterialsWorld2) {
+			Renderer newMaterialWorld2 = child.GetComponent<Renderer> ();
+			newMaterialWorld2.sharedMaterial = hologramMaterialWorld2;
+		}
+
 		floorWorld1.sharedMaterial = newfloorMaterial;
+		floorWorld2.sharedMaterial = newfloorMaterial;
 
 	}
 	private void DefaultScene()
 	{
 		j = 0;
 		foreach (Transform child in  AllMaterialsWorld1 ){
-			Renderer newMaterial=child.GetComponent<Renderer> ();
-			newMaterial.sharedMaterial = oldMaterials[j];
+			Renderer newMaterialWorld1=child.GetComponent<Renderer> ();
+			newMaterialWorld1.sharedMaterial = oldMaterialsWorld1[j];
+			j++;
+		}
+		j = 0;
+		foreach (Transform child in  AllMaterialsWorld2 ){
+			Renderer newMaterialWorld2=child.GetComponent<Renderer> ();
+			newMaterialWorld2.sharedMaterial = oldMaterialsWorld2[j];
 			j++;
 		}
 		floorWorld1.sharedMaterial = oldfloorMaterial;
+		floorWorld2.sharedMaterial = oldfloorMaterial;
 	}
 }
