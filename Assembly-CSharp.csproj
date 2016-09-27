@@ -53,11 +53,13 @@
      <Compile Include="Assets\Move\Unit.cs" />
      <Compile Include="Assets\Move\selectpoint.cs" />
      <Compile Include="Assets\Scripts\GamePlayRoom1\CameraManagement.cs" />
+     <Compile Include="Assets\Scripts\GamePlayRoom1\ChangeModeShader.cs" />
      <Compile Include="Assets\Scripts\GamePlayRoom1\EnemyMovement.cs" />
      <Compile Include="Assets\Scripts\GamePlayRoom1\Movement.cs" />
      <Compile Include="Assets\Scripts\GamePlayRoom1\ShaderManagement.cs" />
      <Compile Include="Assets\Scripts\GamePlayRoom1\Teleportion.cs" />
      <Compile Include="Assets\Scripts\GamePlayRoom1\TurnController.cs" />
+     <Compile Include="Assets\moveMiniMapCarmara.cs" />
      <None Include="Assets\Scripts\Shaders\TransparentFresnel.shader" />
      <None Include="Assets\Packages\Effects\ToonShading\Shaders\ToonBasic.shader" />
      <None Include="Assets\Scripts\Shaders\Glow.shader" />

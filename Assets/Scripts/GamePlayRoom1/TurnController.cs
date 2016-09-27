@@ -3,6 +3,7 @@ using System.Collections;
 
 public class TurnController : MonoBehaviour {
 	public bool playerMovemnet;
+	public int CurrentWorld;
 	private static TurnController instance;
 	          
 	//use singleton.
@@ -14,7 +15,7 @@ public class TurnController : MonoBehaviour {
 	}
 	void Awake()
 	{
-
+		CurrentWorld = 1;
 		instance = this;
 
 	}

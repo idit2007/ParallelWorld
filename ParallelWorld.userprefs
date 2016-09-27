@@ -1,13 +1,14 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GamePlayRoom1/ShaderManagement.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GamePlayRoom1/CameraManagement.cs">
     <Files>
-      <File FileName="Assets/Scripts/GamePlayRoom1/TurnController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GamePlayRoom1/Teleportion.cs" Line="18" Column="50" />
-      <File FileName="Assets/Scripts/GamePlayRoom1/EnemyMovement.cs" Line="17" Column="32" />
-      <File FileName="Assets/Move/Unit.cs" Line="41" Column="4" />
-      <File FileName="Assets/Scripts/GamePlayRoom1/CameraManagement.cs" Line="20" Column="1" />
-      <File FileName="Assets/Scripts/GamePlayRoom1/ShaderManagement.cs" Line="50" Column="49" />
+      <File FileName="Assets/Scripts/GamePlayRoom1/TurnController.cs" Line="11" Column="3" />
+      <File FileName="Assets/Scripts/GamePlayRoom1/Teleportion.cs" Line="36" Column="31" />
+      <File FileName="Assets/Scripts/GamePlayRoom1/CameraManagement.cs" Line="27" Column="59" />
+      <File FileName="Assets/Scripts/GamePlayRoom1/EnemyMovement.cs" Line="28" Column="1" />
+      <File FileName="Assets/Move/Unit.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GamePlayRoom1/ChangeModeShader.cs" Line="10" Column="42" />
+      <File FileName="Assets/Scripts/GamePlayRoom1/ShaderManagement.cs" Line="73" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
