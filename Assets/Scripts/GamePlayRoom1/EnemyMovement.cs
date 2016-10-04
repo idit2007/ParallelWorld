@@ -36,6 +36,7 @@ public class EnemyMovement : MonoBehaviour {
 	{
 		rb.useGravity = true;
 		if (target) {
+			if(nav.enabled)
 			nav.SetDestination (player.transform.position);
 			if (!TurnController.Instance.playerMovemnet) {
 				nav.enabled = false;
@@ -52,6 +53,7 @@ public class EnemyMovement : MonoBehaviour {
 			else 
 			{
 				timeSwitch -= 20 * Time.deltaTime;
+				if(nav.enabled)
 				nav.destination= new Vector3 (tarX, this.transform.position.y, tarZ);
 
 			}

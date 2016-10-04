@@ -38,7 +38,7 @@ public class CameraManagement : MonoBehaviour {
 		//defaultPosition= thirdPersonCamera.transform.position;
 		done1 = true;
 		done2 = true;
-		uIFPS.SetActive (false);
+		//uIFPS.SetActive (false);
 		preFps.SetActive (false);
 		topViewCameraWorld1.SetActive (false);
 		topViewCameraWorld2.SetActive (false);
@@ -72,7 +72,7 @@ public class CameraManagement : MonoBehaviour {
 
 			topViewCameraWorld1.SetActive (false);
 			topViewCameraWorld2.SetActive (false);
-			uIFPS.SetActive (false);
+			//uIFPS.SetActive (false);
 			done1 = false;
 			done2 = true;
 		} 
@@ -117,7 +117,7 @@ public class CameraManagement : MonoBehaviour {
 		preFps.SetActive (true);
 	//	changeShaderArea.SetActive (true);
 		yield return new WaitForSeconds (0.5f);
-		uIFPS.SetActive (true);
+	//	uIFPS.SetActive (true);
 		preFps.SetActive (false);
 		//mapWord1.enabled = true;
 		//mapWord2.enabled = true;
