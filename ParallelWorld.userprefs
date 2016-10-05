@@ -1,14 +1,16 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GamePlayRoom1/Teleportion.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GamePlayRoom1/CameraManagement.cs">
     <Files>
+      <File FileName="Assets/Scripts/GamePlayRoom1/EnemyMovement.cs" Line="56" Column="20" />
       <File FileName="Assets/Scripts/GamePlayRoom1/TurnController.cs" Line="11" Column="3" />
       <File FileName="Assets/Scripts/GamePlayRoom1/Teleportion.cs" Line="83" Column="28" />
-      <File FileName="Assets/Scripts/GamePlayRoom1/CameraManagement.cs" Line="37" Column="61" />
-      <File FileName="Assets/Scripts/GamePlayRoom1/EnemyMovement.cs" Line="1" Column="1" />
-      <File FileName="Assets/Move/Unit.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GamePlayRoom1/CameraManagement.cs" Line="38" Column="51" />
+      <File FileName="Assets/Move/Unit.cs" Line="112" Column="4" />
       <File FileName="Assets/Scripts/GamePlayRoom1/ChangeModeShader.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GamePlayRoom1/ShaderManagement.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GamePlayRoom1/ShaderManagement.cs" Line="48" Column="18" />
+      <File FileName="Assets/Scripts/GamePlayRoom1/PlayerAttacked.cs" Line="24" Column="8" />
+      <File FileName="Assets/Move/ClickableTile.cs" Line="19" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

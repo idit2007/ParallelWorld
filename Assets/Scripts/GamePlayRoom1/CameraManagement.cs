@@ -15,6 +15,7 @@ public class CameraManagement : MonoBehaviour {
 	public Animator animWorld1;
 	public Animator animWorld2;
 	private RawImage mapWord1;
+	private bool openGame;
 	public RawImage mapWord2;
 	public bool done1;
 	public bool done2;
@@ -43,6 +44,7 @@ public class CameraManagement : MonoBehaviour {
 		topViewCameraWorld1.SetActive (false);
 		topViewCameraWorld2.SetActive (false);
 		mapWord2.enabled = false;
+		openGame = false;
 //		gameObjectAnimWorld1.SetActive (false);
 //		gameObjectAnimWorld2.SetActive (false);
 	//	changeShaderArea.SetActive (false);
@@ -50,48 +52,43 @@ public class CameraManagement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
-		if (TurnController.Instance.playerMovemnet && done1) {
+		if (openGame) {
+			if (TurnController.Instance.playerMovemnet && done1) {
 			
-			thirdPersonCamera.SetActive (true);
-			if(TurnController.Instance.CurrentWorld==1){
-				mapWord2.enabled = false;
-				mapWord1.enabled = true;
-			animWorld1.SetBool("ShowMap",false);
-			animWorld1.SetBool ("DownScaleMap",true);
+				thirdPersonCamera.SetActive (true);
+				if (TurnController.Instance.CurrentWorld == 1) {
+					mapWord2.enabled = false;
+					mapWord1.enabled = true;
+					animWorld1.SetBool ("ShowMap", false);
+					animWorld1.SetBool ("DownScaleMap", true);
 
-			}
-			else if(TurnController.Instance.CurrentWorld==2)
-			{
-				mapWord2.enabled = true;
-				mapWord1.enabled = false;
-			animWorld2.SetBool("ShowMap",false);
-			animWorld2.SetBool ("DownScaleMap",true);
-			}
+				} else if (TurnController.Instance.CurrentWorld == 2) {
+					mapWord2.enabled = true;
+					mapWord1.enabled = false;
+					animWorld2.SetBool ("ShowMap", false);
+					animWorld2.SetBool ("DownScaleMap", true);
+				}
 
 
-			topViewCameraWorld1.SetActive (false);
-			topViewCameraWorld2.SetActive (false);
-			//uIFPS.SetActive (false);
-			done1 = false;
-			done2 = true;
-		} 
-		else if (!TurnController.Instance.playerMovemnet && done2) {
-			if(TurnController.Instance.CurrentWorld==1){
-				mapWord2.enabled = false;
-				mapWord1.enabled = true;	
-			}
-			else if(TurnController.Instance.CurrentWorld==2)
-			{
-				mapWord2.enabled = true;
-				mapWord1.enabled = false;
-			}
-			StartCoroutine (WaitEffectChangeshader ());
+				topViewCameraWorld1.SetActive (false);
+				topViewCameraWorld2.SetActive (false);
+				//uIFPS.SetActive (false);
+				done1 = false;
+				done2 = true;
+			} else if (!TurnController.Instance.playerMovemnet && done2) {
+				if (TurnController.Instance.CurrentWorld == 1) {
+					mapWord2.enabled = false;
+					mapWord1.enabled = true;	
+				} else if (TurnController.Instance.CurrentWorld == 2) {
+					mapWord2.enabled = true;
+					mapWord1.enabled = false;
+				}
+				StartCoroutine (WaitEffectChangeshader ());
 
-			done2 = false;
-			done1 = true;
-		}
-		/*
+				done2 = false;
+				done1 = true;
+			}
+			/*
 		if (zoom) {
 			if(thirdPersonCamera.transform.localRotation.x>0)
 			thirdPersonCamera.transform.Rotate (-Time.deltaTime*40,0,0);
@@ -106,7 +103,7 @@ public class CameraManagement : MonoBehaviour {
 			}
 		}
 		*/
-	
+		}
 	}
 	IEnumerator WaitEffectChangeshader()
 	{
@@ -156,5 +153,9 @@ public class CameraManagement : MonoBehaviour {
 		animWorld2.SetBool ("DownScaleMap",true);
 		mapWord2.enabled = false;
 		//	gameObjectAnim.SetActive (f alse);
+	}
+	public void OpenningGame()
+	{
+		openGame = true;
 	}
 }

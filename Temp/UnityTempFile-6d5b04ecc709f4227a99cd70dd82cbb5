@@ -1,0 +1,211 @@
+-debug
+-target:library
+-nowarn:0169
+-out:'Temp/Assembly-CSharp-Editor.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEditor.dll'
+-r:'Library/ScriptAssemblies/Assembly-CSharp.dll'
+-r:'Library/ScriptAssemblies/Assembly-UnityScript.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/EditorTestsRunner/Editor/nunit.framework.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/EditorTestsRunner/Editor/UnityEditor.EditorTestsRunner.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll'
+-r:'Assets/Packages/Cinema Suite/Cinema Director/System/Editor/DirectorControl/DirectorEditor.dll'
+-r:'Assets/PlayBento/Ingredients/Parse/Parse.Unity.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEditor.Graphs.dll'
+-r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll'
+-define:UNITY_5_3_OR_NEWER
+-define:UNITY_5_4_OR_NEWER
+-define:UNITY_5_4_1
+-define:UNITY_5_4
+-define:UNITY_5
+-define:ENABLE_NEW_BUGREPORTER
+-define:ENABLE_AUDIO
+-define:ENABLE_CACHING
+-define:ENABLE_CLOTH
+-define:ENABLE_DUCK_TYPING
+-define:ENABLE_EDITOR_RETINA
+-define:ENABLE_RETINA_GUISTYLES
+-define:ENABLE_FRAME_DEBUGGER
+-define:ENABLE_GENERICS
+-define:ENABLE_HOME_SCREEN
+-define:ENABLE_IMAGEEFFECTS
+-define:ENABLE_LIGHT_PROBES_LEGACY
+-define:ENABLE_MICROPHONE
+-define:ENABLE_MULTIPLE_DISPLAYS
+-define:ENABLE_PHYSICS
+-define:ENABLE_PLUGIN_INSPECTOR
+-define:ENABLE_SHADOWS
+-define:ENABLE_SPRITERENDERER_FLIPPING
+-define:ENABLE_SPRITES
+-define:ENABLE_SPRITE_POLYGON
+-define:ENABLE_TERRAIN
+-define:ENABLE_RAKNET
+-define:ENABLE_UNET
+-define:ENABLE_UNITYEVENTS
+-define:ENABLE_VR
+-define:ENABLE_WEBCAM
+-define:ENABLE_WWW
+-define:ENABLE_CLOUD_SERVICES
+-define:ENABLE_CLOUD_SERVICES_COLLAB
+-define:ENABLE_CLOUD_SERVICES_ADS
+-define:ENABLE_CLOUD_HUB
+-define:ENABLE_CLOUD_PROJECT_ID
+-define:ENABLE_CLOUD_SERVICES_CRASH_REPORTING
+-define:ENABLE_CLOUD_SERVICES_PURCHASING
+-define:ENABLE_CLOUD_SERVICES_ANALYTICS
+-define:ENABLE_CLOUD_SERVICES_UNET
+-define:ENABLE_CLOUD_SERVICES_BUILD
+-define:ENABLE_CLOUD_LICENSE
+-define:ENABLE_EDITOR_METRICS
+-define:ENABLE_EDITOR_METRICS_CACHING
+-define:INCLUDE_DYNAMIC_GI
+-define:INCLUDE_GI
+-define:INCLUDE_IL2CPP
+-define:INCLUDE_DIRECTX12
+-define:PLATFORM_SUPPORTS_MONO
+-define:RENDER_SOFTWARE_CURSOR
+-define:INCLUDE_PUBNUB
+-define:ENABLE_LOCALIZATION
+-define:ENABLE_ANDROID_ATLAS_ETC1_COMPRESSION
+-define:ENABLE_EDITOR_TESTS_RUNNER
+-define:UNITY_STANDALONE_OSX
+-define:UNITY_STANDALONE
+-define:ENABLE_SUBSTANCE
+-define:ENABLE_GAMECENTER
+-define:ENABLE_TEXTUREID_MAP
+-define:ENABLE_RUNTIME_GI
+-define:ENABLE_MOVIES
+-define:ENABLE_NETWORK
+-define:ENABLE_CRUNCH_TEXTURE_COMPRESSION
+-define:ENABLE_UNITYWEBREQUEST
+-define:ENABLE_CLUSTERINPUT
+-define:ENABLE_WEBSOCKET_HOST
+-define:ENABLE_MONO
+-define:ENABLE_PROFILER
+-define:DEBUG
+-define:TRACE
+-define:UNITY_ASSERTIONS
+-define:UNITY_EDITOR
+-define:UNITY_EDITOR_64
+-define:UNITY_EDITOR_OSX
+'Assets/Editor/VSCode.cs'
+'Assets/LeanTouch/Editor/LeanTouch_Editor.cs'
+'Assets/Packages/Cinema Suite/About/Editor/CinemaSuiteWelcome.cs'
+'Assets/Packages/Cinema Suite/About/Editor/ProductInfo.cs'
+'Assets/Packages/Cinema Suite/Cinema Director/System/Editor/CinemaDirectorProductInfo.cs'
+'Assets/Packages/Cinema Suite/Cinema Director/System/Editor/Controls/TrackControls/ActorCurveTrackControl.cs'
+'Assets/Packages/Cinema Suite/Cinema Director/System/Editor/Controls/TrackControls/ActorItemTrackControl.cs'
+'Assets/Packages/Cinema Suite/Cinema Director/System/Editor/Controls/TrackControls/AudioTrackControl.cs'
+'Assets/Packages/Cinema Suite/Cinema Director/System/Editor/Controls/TrackControls/DialogueTrackControl.cs'
+'Assets/Packages/Cinema Suite/Cinema Director/System/Editor/Controls/TrackControls/GenericTrackControl.cs'
+'Assets/Packages/Cinema Suite/Cinema Director/System/Editor/Controls/TrackControls/GlobalItemTrackControl.cs'
+'Assets/Packages/Cinema Suite/Cinema Director/System/Editor/Controls/TrackControls/MultiActorCurveTrackControl.cs'
+'Assets/Packages/Cinema Suite/Cinema Director/System/Editor/Controls/TrackControls/ShotTrackControl.cs'
+'Assets/Packages/Cinema Suite/Cinema Director/System/Editor/Controls/TrackGroupControls/ActorTrackGroupControl.cs'
+'Assets/Packages/Cinema Suite/Cinema Director/System/Editor/Controls/TrackGroupControls/CharacterTrackGroupControl.cs'
+'Assets/Packages/Cinema Suite/Cinema Director/System/Editor/Controls/TrackGroupControls/GenericTrackGroupControl.cs'
+'Assets/Packages/Cinema Suite/Cinema Director/System/Editor/Controls/TrackGroupControls/MultiActorTrackGroupControl.cs'
+'Assets/Packages/Cinema Suite/Cinema Director/System/Editor/Controls/TrackItemControls/CinemaActionControl.cs'
+'Assets/Packages/Cinema Suite/Cinema Director/System/Editor/Controls/TrackItemControls/CinemaActorActionControl.cs'
+'Assets/Packages/Cinema Suite/Cinema Director/System/Editor/Controls/TrackItemControls/CinemaActorCurveControl.cs'
+'Assets/Packages/Cinema Suite/Cinema Director/System/Editor/Controls/TrackItemControls/CinemaAudioControl.cs'
+'Assets/Packages/Cinema Suite/Cinema Director/System/Editor/Controls/TrackItemControls/CinemaCurveControl.cs'
+'Assets/Packages/Cinema Suite/Cinema Director/System/Editor/Controls/TrackItemControls/CinemaGlobalActionControl.cs'
+'Assets/Packages/Cinema Suite/Cinema Director/System/Editor/Controls/TrackItemControls/CinemaItemControl.cs'
+'Assets/Packages/Cinema Suite/Cinema Director/System/Editor/Controls/TrackItemControls/CinemaMultiActorCurveControl.cs'
+'Assets/Packages/Cinema Suite/Cinema Director/System/Editor/Controls/TrackItemControls/CinemaShotControl.cs'
+'Assets/Packages/Cinema Suite/Cinema Director/System/Editor/CustomInspectors/CutsceneInspector.cs'
+'Assets/Packages/Cinema Suite/Cinema Director/System/Editor/CustomInspectors/CutsceneItemInspectors/ActorClipCurveInspector.cs'
+'Assets/Packages/Cinema Suite/Cinema Director/System/Editor/CustomInspectors/CutsceneItemInspectors/DisableBehaviourInspector.cs'
+'Assets/Packages/Cinema Suite/Cinema Director/System/Editor/CustomInspectors/CutsceneItemInspectors/EnableBehaviourInspector.cs'
+'Assets/Packages/Cinema Suite/Cinema Director/System/Editor/CustomInspectors/CutsceneItemInspectors/LoadLevelEventInspector.cs'
+'Assets/Packages/Cinema Suite/Cinema Director/System/Editor/CustomInspectors/CutsceneItemInspectors/MemberClipCurveInspector.cs'
+'Assets/Packages/Cinema Suite/Cinema Director/System/Editor/CustomInspectors/CutsceneItemInspectors/MultiActorClipCurveInspector.cs'
+'Assets/Packages/Cinema Suite/Cinema Director/System/Editor/CustomInspectors/CutsceneItemInspectors/SendMessageGameObjectInspector.cs'
+'Assets/Packages/Cinema Suite/Cinema Director/System/Editor/CustomInspectors/CutsceneTriggerInspector.cs'
+'Assets/Packages/Cinema Suite/Cinema Director/System/Editor/CustomInspectors/GroupInspectors/ActorTrackGroupInspector.cs'
+'Assets/Packages/Cinema Suite/Cinema Director/System/Editor/CustomInspectors/GroupInspectors/CharacterTrackGroupInspector.cs'
+'Assets/Packages/Cinema Suite/Cinema Director/System/Editor/CustomInspectors/GroupInspectors/DirectorGroupInspector.cs'
+'Assets/Packages/Cinema Suite/Cinema Director/System/Editor/CustomInspectors/GroupInspectors/MultiActorTrackGroupInspector.cs'
+'Assets/Packages/Cinema Suite/Cinema Director/System/Editor/CustomInspectors/TrackInspectors/ActorItemTrackInspector.cs'
+'Assets/Packages/Cinema Suite/Cinema Director/System/Editor/CustomInspectors/TrackInspectors/AudioTrackInspector.cs'
+'Assets/Packages/Cinema Suite/Cinema Director/System/Editor/CustomInspectors/TrackInspectors/CurveTrackInspector.cs'
+'Assets/Packages/Cinema Suite/Cinema Director/System/Editor/CustomInspectors/TrackInspectors/DialogueTrackInspector.cs'
+'Assets/Packages/Cinema Suite/Cinema Director/System/Editor/CustomInspectors/TrackInspectors/GlobalItemTrackInspector.cs'
+'Assets/Packages/Cinema Suite/Cinema Director/System/Editor/CustomInspectors/TrackInspectors/MultiCurveTrackInspector.cs'
+'Assets/Packages/Cinema Suite/Cinema Director/System/Editor/CustomInspectors/TrackInspectors/ShotTrackInspector.cs'
+'Assets/Packages/Cinema Suite/Cinema Director/System/Editor/CustomInspectors/TrackItemInspectors/CinemaAudioInspector.cs'
+'Assets/Packages/Cinema Suite/Cinema Director/System/Editor/CutsceneCreatorWindow.cs'
+'Assets/Packages/Cinema Suite/Cinema Director/System/Editor/DirectorSettingsWindow.cs'
+'Assets/Packages/Cinema Suite/Cinema Director/System/Editor/DirectorWindow.cs'
+'Assets/Packages/Cinema Suite/Cinema Director/System/Editor/Utility/CutsceneControlHelper.cs'
+'Assets/Packages/Cinema Suite/Cinema Director/System/Editor/Utility/CutsceneItemFactory.cs'
+'Assets/Packages/Cinema Suite/Cinema Director/System/Editor/Utility/DirectorHelper.cs'
+'Assets/PlayBento/Editor/AdSettingEditor.cs'
+'Assets/PlayBento/Editor/CloudSettingEditor.cs'
+'Assets/PlayBento/Editor/IAPSettingEditor.cs'
+'Assets/PlayBento/Editor/ManifestMod.cs'
+'Assets/PlayBento/Editor/PlayBentoPostProcess.cs'
+'Assets/PlayBento/Editor/PlistMod.cs'
+'Assets/PlayBento/Editor/PushSettingEditor.cs'
+'Assets/PlayBento/Editor/SocialSettingEditor.cs'
+'Assets/PlayBento/Ingredients/AdColony/Editor/PostBuildProcessor.cs'
+'Assets/PlayBento/Ingredients/Chartboost/Editor/CBCleanup.cs'
+'Assets/PlayBento/Ingredients/Chartboost/Editor/CBManifestEditor.cs'
+'Assets/PlayBento/Ingredients/Chartboost/Editor/CBPostProcess.cs'
+'Assets/PlayBento/Ingredients/Chartboost/Editor/CBSettingEditor.cs'
+'Assets/PlayBento/Ingredients/Chartboost/Editor/XCodeEditor/PBXBuildFile.cs'
+'Assets/PlayBento/Ingredients/Chartboost/Editor/XCodeEditor/PBXBuildPhase.cs'
+'Assets/PlayBento/Ingredients/Chartboost/Editor/XCodeEditor/PBXDictionary.cs'
+'Assets/PlayBento/Ingredients/Chartboost/Editor/XCodeEditor/PBXFileReference.cs'
+'Assets/PlayBento/Ingredients/Chartboost/Editor/XCodeEditor/PBXGroup.cs'
+'Assets/PlayBento/Ingredients/Chartboost/Editor/XCodeEditor/PBXList.cs'
+'Assets/PlayBento/Ingredients/Chartboost/Editor/XCodeEditor/PBXObject.cs'
+'Assets/PlayBento/Ingredients/Chartboost/Editor/XCodeEditor/PBXParser.cs'
+'Assets/PlayBento/Ingredients/Chartboost/Editor/XCodeEditor/PBXProject.cs'
+'Assets/PlayBento/Ingredients/Chartboost/Editor/XCodeEditor/XCBuildConfiguration.cs'
+'Assets/PlayBento/Ingredients/Chartboost/Editor/XCodeEditor/XCConfigurationList.cs'
+'Assets/PlayBento/Ingredients/Chartboost/Editor/XCodeEditor/XCFileOperationQueue.cs'
+'Assets/PlayBento/Ingredients/Chartboost/Editor/XCodeEditor/XCMod.cs'
+'Assets/PlayBento/Ingredients/Chartboost/Editor/XCodeEditor/XCProject.cs'
+'Assets/PlayBento/Ingredients/Chartboost/Editor/XCodeEditor/XCSourceFile.cs'
+'Assets/PlayBento/Ingredients/Chartboost/Editor/XCodeEditor/XCTarget.cs'
+'Assets/PlayBento/Ingredients/Chartboost/Editor/XCodeEditor/XCodeEditorMenu.cs'
+'Assets/PlayBento/Ingredients/Chartboost/Editor/XCodeEditor/XMiniJSON.cs'
+'Assets/PlayBento/Ingredients/Facebook/Editor/FacebookBuild.cs'
+'Assets/PlayBento/Ingredients/Facebook/Editor/FacebookPostprocess.cs'
+'Assets/PlayBento/Ingredients/Facebook/Editor/FacebookSettingsEditor.cs'
+'Assets/PlayBento/Ingredients/Facebook/Editor/Utility.cs'
+'Assets/PlayBento/Ingredients/Facebook/Editor/android/FacebookAndroidUtil.cs'
+'Assets/PlayBento/Ingredients/Facebook/Editor/android/ManifestMod.cs'
+'Assets/PlayBento/Ingredients/Facebook/Editor/iOS/FixupFiles.cs'
+'Assets/PlayBento/Ingredients/Facebook/Editor/iOS/PListDict.cs'
+'Assets/PlayBento/Ingredients/Facebook/Editor/iOS/PListParser.cs'
+'Assets/PlayBento/Ingredients/GoogleMobileAds/Editor/CocoaPodHelper.cs'
+'Assets/PlayBento/Ingredients/GoogleMobileAds/Editor/PostProcessor.cs'
+'Assets/PlayBento/Ingredients/Katsu/Editor/KatsuEditor.cs'
+'Assets/PlayBento/Ingredients/UnityAds/Editor/Scripts/UnityAdsPackageGenerator.cs'
+'Assets/PlayBento/Ingredients/UnityAds/Editor/Scripts/UnityAdsPostprocessor.cs'
+'Assets/PlayBento/Ingredients/UnityAds/Editor/XCodeEditor/PBXBuildFile.cs'
+'Assets/PlayBento/Ingredients/UnityAds/Editor/XCodeEditor/PBXBuildPhase.cs'
+'Assets/PlayBento/Ingredients/UnityAds/Editor/XCodeEditor/PBXDictionary.cs'
+'Assets/PlayBento/Ingredients/UnityAds/Editor/XCodeEditor/PBXFileReference.cs'
+'Assets/PlayBento/Ingredients/UnityAds/Editor/XCodeEditor/PBXGroup.cs'
+'Assets/PlayBento/Ingredients/UnityAds/Editor/XCodeEditor/PBXList.cs'
+'Assets/PlayBento/Ingredients/UnityAds/Editor/XCodeEditor/PBXObject.cs'
+'Assets/PlayBento/Ingredients/UnityAds/Editor/XCodeEditor/PBXParser.cs'
+'Assets/PlayBento/Ingredients/UnityAds/Editor/XCodeEditor/PBXProject.cs'
+'Assets/PlayBento/Ingredients/UnityAds/Editor/XCodeEditor/XCBuildConfiguration.cs'
+'Assets/PlayBento/Ingredients/UnityAds/Editor/XCodeEditor/XCConfigurationList.cs'
+'Assets/PlayBento/Ingredients/UnityAds/Editor/XCodeEditor/XCFileOperationQueue.cs'
+'Assets/PlayBento/Ingredients/UnityAds/Editor/XCodeEditor/XCMod.cs'
+'Assets/PlayBento/Ingredients/UnityAds/Editor/XCodeEditor/XCProject.cs'
+'Assets/PlayBento/Ingredients/UnityAds/Editor/XCodeEditor/XCSourceFile.cs'
+'Assets/PlayBento/Ingredients/UnityAds/Editor/XCodeEditor/XCTarget.cs'
+-r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/2.0/System.Runtime.Serialization.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/2.0/System.Xml.Linq.dll'
