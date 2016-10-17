@@ -69,13 +69,13 @@ public class Unit : MonoBehaviour {
             if (selectpoint.StartGoway == true)
             {
 				TurnController.Instance.playerMovemnet = true;
-                Debug.Log("1 " );
+//                Debug.Log("1 " );
                 DrawLine[World].SetActive(false);
                 Vector3 Endpositon = map[World].TileCoordToWorldCoord(currentPath[currentPath.Count -1].x, currentPath[currentPath.Count - 1].y) + new Vector3(0, 2.1f, 0);
                // DrawLine.GetComponent<LineRenderer>().st = false;
                 if (Vector3.Distance(transform.position, Endpositon) > 0.001f)
                 {
-                    Debug.Log("indexTarget "+ indexTarget);
+       //             Debug.Log("indexTarget "+ indexTarget);
                     cntStep += Time.deltaTime * speed;
                     Vector3 Goposition = map[World].TileCoordToWorldCoord(currentPath[indexTarget + 1].x, currentPath[indexTarget + 1].y) + new Vector3(0, 2.1f, 0);
                     Vector3 GopositionPre = map[World].TileCoordToWorldCoord(currentPath[indexTarget ].x, currentPath[indexTarget ].y) + new Vector3(0, 2.1f, 0);
@@ -85,7 +85,7 @@ public class Unit : MonoBehaviour {
                     transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * 2);
                     if (Vector3.Distance(transform.position, Goposition) < 0.001f)
                     {
-                        Debug.Log("indexTarget "+ indexTarget);
+          //              Debug.Log("indexTarget "+ indexTarget);
                         map[World].selectedUnit.GetComponent<Unit>().tileX = currentPath[indexTarget + 1].x;
                         map[World].selectedUnit.GetComponent<Unit>().tileY = currentPath[indexTarget + 1].y;
                         transform.LookAt(Goposition);
@@ -113,7 +113,7 @@ public class Unit : MonoBehaviour {
             if (selectpoint.removeway == true)
             {
                 DrawLine[World].SetActive(false);
-                Debug.Log("currentPath.Count  " + currentPath.Count );
+//                Debug.Log("currentPath.Count  " + currentPath.Count );
                 if (currentPath.Count == 1)
                 {
                     currentPath.RemoveAt(0);
