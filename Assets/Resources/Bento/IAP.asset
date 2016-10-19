@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10fa4c0d05f20134f9c8c126e729469d, type: 3}
+  m_Name: IAP
+  m_EditorClassIdentifier: 
+  _googleLicenceKey: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkLtISYWVFujd/vqORWPmwGCYnqoba09Tgfcjyk04y80YsM/8orcWTPiKFSive4pY3ftmXFsjULTyd/uAjEfAYcnu2JTFFhFP61bEFvy+rduRbW3Mak9SfREaKpcV4/mYQB0J9Tv/Vpu8+lL/YhMetVJNhtWnz5ChADgDk+FknXyfA8iuYg0rSOC1HMrCkGpsLWFn+XBP9WbFWvQLA+dtkIJ+xdaAeuQ7mxX90BqJL3htRFEMy3nnxcedirkpDrnU08v3BakeuKdTIvY+r2G6itR4TxkKpwr/Knou1ODewqDpn3+BJKAEEWMEfRoyZbS9O7wlfI/EtvSO7prPOMaslwIDAQAB
+  _productIDLabels:
+  - th.co.progaming.playbento.sample1
+  - th.co.progaming.playbento.sample2
+  _titleLabels:
+  - Sample1 Item
+  - Sample2 Item
+  _descriptionLabels:
+  - This item is cool!
+  - This item is great!
+  _priceLabels:
+  - 1.99000001
+  - 9.98999977
+  _consumableLabels: 0100

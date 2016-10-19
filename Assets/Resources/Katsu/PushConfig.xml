@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PushConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <AppId>913a8446-865c-11e4-b97a-a7670e9393c7</AppId>
+  <GCMProjectId>418600328109</GCMProjectId>
+</PushConfig>

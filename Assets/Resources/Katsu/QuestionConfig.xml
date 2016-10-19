@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<QuestionConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <data>
+    <QuestionData Type="[string]" SceneName="[string]">
+      <Intro>[string]</Intro>
+      <Intro2>[string]</Intro2>
+      <Question>[string]</Question>
+      <Choices>
+        <Choice>[string]</Choice>
+      </Choices>
+      <Answer>0</Answer>
+      <AfterRightAnswer>[string]</AfterRightAnswer>
+      <AfterWrongAnswer>[string]</AfterWrongAnswer>
+      <AfterWrongAnswer2>[string]</AfterWrongAnswer2>
+    </QuestionData>
+    <QuestionData Type="[string]" SceneName="[string]">
+      <Intro>[string]</Intro>
+      <Intro2>[string]</Intro2>
+      <Question>[string]</Question>
+      <Choices>
+        <Choice>[string]</Choice>
+      </Choices>
+      <Answer>0</Answer>
+      <AfterRightAnswer>[string]</AfterRightAnswer>
+      <AfterWrongAnswer>[string]</AfterWrongAnswer>
+      <AfterWrongAnswer2>[string]</AfterWrongAnswer2>
+    </QuestionData>
+  </data>
+</QuestionConfig>

@@ -1,6 +1,8 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
+Project("{D0771813-8AF3-2B04-1281-8D81FD4DC511}") = "ParallelWorld", "Assembly-CSharp-firstpass.csproj", "{68ED18A4-EC6B-B935-72FC-AB40C6F3F58E}"
+EndProject
 Project("{D0771813-8AF3-2B04-1281-8D81FD4DC511}") = "ParallelWorld", "Assembly-CSharp.csproj", "{9D40E8D0-685C-0DE3-5A1F-DF0D88BD3F74}"
 EndProject
 Project("{D0771813-8AF3-2B04-1281-8D81FD4DC511}") = "ParallelWorld", "Assembly-CSharp-Editor.csproj", "{2585CC8E-6AAC-654F-44E9-DD044EA2B9AB}"
@@ -11,6 +13,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{68ED18A4-EC6B-B935-72FC-AB40C6F3F58E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68ED18A4-EC6B-B935-72FC-AB40C6F3F58E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68ED18A4-EC6B-B935-72FC-AB40C6F3F58E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68ED18A4-EC6B-B935-72FC-AB40C6F3F58E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9D40E8D0-685C-0DE3-5A1F-DF0D88BD3F74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9D40E8D0-685C-0DE3-5A1F-DF0D88BD3F74}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D40E8D0-685C-0DE3-5A1F-DF0D88BD3F74}.Release|Any CPU.ActiveCfg = Release|Any CPU

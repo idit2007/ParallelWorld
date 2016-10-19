@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CloudConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Server />
+  <ApplicationID>irU1drWpnj52GGqJia37Wwo8yP7yFdoms5rZ4zOQ</ApplicationID>
+  <DotNetKey>PHruFmtfS8FSpmWEHeeSCbJXOdXI1c1LJf82sTWD</DotNetKey>
+</CloudConfig>
