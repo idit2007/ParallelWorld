@@ -55,7 +55,7 @@ public class Unit : MonoBehaviour {
 
             haveway = true;
             int currNode = 0;
-            cntStep += Time.deltaTime * speed;
+
             DrawLine[World].GetComponent<LineRenderer>().SetVertexCount(currentPath.Count);
 
             while ( currNode < currentPath.Count ) {
