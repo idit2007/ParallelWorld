@@ -13,6 +13,9 @@ public class ShaderManagement : MonoBehaviour {
 	public Material newfloorMaterial;
 	public Material oldfloorMaterial;
 	private GameObject effect;
+	private GameObject allMaterialHoloWorld1;
+	private GameObject allMaterialHoloWorld2;
+	private GameObject preFps;
 	private int i;
 	private int j;
 	private bool done1;
@@ -20,7 +23,13 @@ public class ShaderManagement : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		done1 = false;
-		done2 = true;
+		done2 = false;
+		allMaterialHoloWorld1 = GameObject.Find ("AllMaterialsHoloWorld1");
+		allMaterialHoloWorld2 = GameObject.Find ("AllMaterialsHoloWorld2");
+		allMaterialHoloWorld1.SetActive (false);
+		allMaterialHoloWorld2.SetActive (false);
+		preFps = GameObject.Find ("PreFps");
+		preFps.SetActive (false);
 		//effect = GameObject.Find ("Capsule");
 	//	effect.SetActive (false);
 		i = 0;
@@ -46,11 +55,10 @@ public class ShaderManagement : MonoBehaviour {
 		if (TurnController.Instance.playerMovemnet && done1) {
 			DefaultScene ();
 			done1 = false;
-			done2 = true;
 		}
 		else if (!TurnController.Instance.playerMovemnet && done2)
 		{
-			StartCoroutine (EffectChangeShaderHoloGram ());
+			StartCoroutine (WaitEffectChangeshader ());
 			done2 = false;
 			done1 = true;
 		}
@@ -58,6 +66,8 @@ public class ShaderManagement : MonoBehaviour {
 	}
 	private void HoloGramScene()
 	{
+		allMaterialHoloWorld1.SetActive (true);
+		allMaterialHoloWorld2.SetActive (true);
 		foreach (Transform child in  AllMaterialsWorld1) {
 			Renderer newMaterialWorld1 = child.GetComponent<Renderer> ();
 			newMaterialWorld1.sharedMaterial = hologramMaterialWorld1;
@@ -74,6 +84,8 @@ public class ShaderManagement : MonoBehaviour {
 	}
 	private void DefaultScene()
 	{
+		allMaterialHoloWorld1.SetActive (false);
+		allMaterialHoloWorld2.SetActive (false);
 		j = 0;
 		foreach (Transform child in  AllMaterialsWorld1 ){
 			Renderer newMaterialWorld1=child.GetComponent<Renderer> ();
@@ -93,11 +105,31 @@ public class ShaderManagement : MonoBehaviour {
 	{
 
 		//effect.SetActive (true);
-		yield return new WaitForSeconds (1.5f);
-		HoloGramScene ();
+		yield return new WaitForSeconds (2f);
+	
 		//effect.SetActive (false);
 	}
+	public void TeleportionChangeShader()
+	{
+		done2 = true;
+	}
 
+	IEnumerator WaitEffectChangeshader()
+	{
+
+		//zoom = true;
+		//uIFPS.SetActive (true);
+		yield return new WaitForSeconds (3f);
+		preFps.SetActive (true);
+		//	changeShaderArea.SetActive (true);
+		yield return new WaitForSeconds (0.5f);
+		//	uIFPS.SetActive (true);
+		preFps.SetActive (false);
+		HoloGramScene ();
+		//mapWord1.enabled = true;
+		//mapWord2.enabled = true;
+		//thirdPersonCamera.SetActive (false);
+	}
 
 }
 

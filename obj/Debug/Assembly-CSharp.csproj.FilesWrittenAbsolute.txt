@@ -16,3 +16,5 @@
 /Users/ItBangchokdee/Desktop/ParallelWorld/Temp/bin/Debug/Mono.Cecil.Pdb.dll
 /Users/ItBangchokdee/Desktop/ParallelWorld/Temp/bin/Debug/Mono.Cecil.Mdb.dll
 /Users/ItBangchokdee/Desktop/ParallelWorld/Temp/bin/Debug/Parse.Unity.dll
+/Users/ItBangchokdee/Desktop/ParallelWorld/Temp/bin/Debug/Assembly-CSharp-firstpass.dll
+/Users/ItBangchokdee/Desktop/ParallelWorld/Temp/bin/Debug/Assembly-CSharp-firstpass.dll.mdb

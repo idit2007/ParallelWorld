@@ -209,7 +209,7 @@ public class TileMap : MonoBehaviour {
     public void GeneratePathTo(int x, int y)
     {
         // Clear out our unit's old path.
-        selectedUnit.GetComponent<Unit>().currentPath = null;
+//        selectedUnit.GetComponent<Unit>().currentPath = null;
 
         if (UnitCanEnterTile(x, y) == false)
         {

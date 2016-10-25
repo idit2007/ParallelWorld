@@ -464,6 +464,8 @@
      <Compile Include="Assets\Scripts\GamePlayRoom1\PlayerAttacked.cs" />
      <Compile Include="Assets\Scripts\GamePlayRoom1\ShaderManagement.cs" />
      <Compile Include="Assets\Scripts\GamePlayRoom1\Teleportion.cs" />
+     <Compile Include="Assets\Scripts\GamePlayRoom1\TestCamear\Camera2.cs" />
+     <Compile Include="Assets\Scripts\GamePlayRoom1\TestCamear\PlayerKeyBoardMovement.cs" />
      <Compile Include="Assets\Scripts\GamePlayRoom1\TurnController.cs" />
      <Compile Include="Assets\Scripts\Menu\AnimationBack.cs" />
      <Compile Include="Assets\Scripts\Menu\CurrentStage.cs" />

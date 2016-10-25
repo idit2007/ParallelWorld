@@ -12,6 +12,8 @@ public class CameraManagement : MonoBehaviour {
 	private Vector3  defaultPosition;
 	private GameObject gameObjectAnimWorld1;
 	private GameObject gameObjectAnimWorld2;
+	private GameObject allMaterialHoloWorld1;
+	private GameObject allMaterialHoloWorld2;
 	public Animator animWorld1;
 	public Animator animWorld2;
 	private RawImage mapWord1;
@@ -22,16 +24,20 @@ public class CameraManagement : MonoBehaviour {
 	public bool zoom;
 	// Use this for initialization
 	void Start () {
+		Screen.orientation = ScreenOrientation.LandscapeLeft;
 		zoom = false;
+		allMaterialHoloWorld1 = GameObject.Find ("AllMaterialsHoloWorld1");
+		allMaterialHoloWorld2 = GameObject.Find ("AllMaterialsHoloWorld2");
 		topViewCameraWorld1 = GameObject.Find ("TopViewCameraWorld1");
 		topViewCameraWorld2 = GameObject.Find ("TopViewCameraWorld2");
-	      gameObjectAnimWorld1 = GameObject.Find ("mapfps1");
-	    	gameObjectAnimWorld2 = GameObject.Find ("maptps2");
+	      gameObjectAnimWorld1 = GameObject.Find ("mapfps1Button");
+		gameObjectAnimWorld2 = GameObject.Find ("maptps2Button");
 		 animWorld1 = gameObjectAnimWorld1.GetComponent<Animator> ();
        animWorld2 = gameObjectAnimWorld2.GetComponent<Animator> ();
 		changeShaderArea = GameObject.Find ("ChangeShaderArea");
 		uIFPS = GameObject.Find ("UIFPS");
 		preFps = GameObject.Find ("PreFps");
+
 		thirdPersonCamera = GameObject.Find ("ThirdPersonCamera");
 		player = GameObject.FindGameObjectWithTag ("Player");
 		 mapWord1 = gameObjectAnimWorld1.GetComponent<RawImage> ();
@@ -45,6 +51,8 @@ public class CameraManagement : MonoBehaviour {
 		topViewCameraWorld2.SetActive (false);
 		mapWord2.enabled = false;
 		openGame = false;
+		allMaterialHoloWorld1.SetActive (false);
+		allMaterialHoloWorld2.SetActive (false);
 //		gameObjectAnimWorld1.SetActive (false);
 //		gameObjectAnimWorld2.SetActive (false);
 	//	changeShaderArea.SetActive (false);
@@ -54,7 +62,8 @@ public class CameraManagement : MonoBehaviour {
 	void Update () {
 		if (openGame) {
 			if (TurnController.Instance.playerMovemnet && done1) {
-			
+				allMaterialHoloWorld1.SetActive (false);
+				allMaterialHoloWorld2.SetActive (false);
 				thirdPersonCamera.SetActive (true);
 				if (TurnController.Instance.CurrentWorld == 1) {
 					mapWord2.enabled = false;
@@ -114,6 +123,8 @@ public class CameraManagement : MonoBehaviour {
 		preFps.SetActive (true);
 	//	changeShaderArea.SetActive (true);
 		yield return new WaitForSeconds (0.5f);
+		allMaterialHoloWorld1.SetActive (true);
+		allMaterialHoloWorld2.SetActive (true);
 	//	uIFPS.SetActive (true);
 		preFps.SetActive (false);
 		//mapWord1.enabled = true;

@@ -22,7 +22,7 @@ public class SelectStage : MonoBehaviour {
 	private float rotX;
 	void Start()
 	{
-		
+		Screen.orientation = ScreenOrientation.LandscapeLeft;
 		whitePanel = GameObject.Find ("WhitePanel");
 		UI = GameObject.Find ("UI");
 		mainCamera=GameObject.Find ("Main Camera");
