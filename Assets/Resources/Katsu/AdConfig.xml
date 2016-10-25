@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AdConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <iOS>
+    <AdMob priority="1">
+      <AdUnit>ca-app-pub-4367506489968499/8345514465</AdUnit>
+    </AdMob>
+    <Chartboost priority="2" />
+    <Unity priority="3">
+      <AppId>24004</AppId>
+    </Unity>
+    <AdColony priority="4">
+      <AppId>appd63ab582c3304e6db9</AppId>
+      <ZoneId>vz1444864b7f8f4d83b0</ZoneId>
+    </AdColony>
+  </iOS>
+  <Android>
+    <AdMob priority="1">
+      <AdUnit>ca-app-pub-4367506489968499/5531648862</AdUnit>
+    </AdMob>
+    <Chartboost priority="2" />
+    <Unity priority="3">
+      <AppId>24004</AppId>
+    </Unity>
+    <AdColony priority="4">
+      <AppId>app0baa338b42bd4143a8</AppId>
+      <ZoneId>vz9b07f27721f647e999</ZoneId>
+    </AdColony>
+  </Android>
+</AdConfig>

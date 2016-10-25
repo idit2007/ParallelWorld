@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93d988b08c95dac47b5797b32c586d53, type: 3}
+  m_Name: Social
+  m_EditorClassIdentifier: 
+  _inviteMessage: Come play this great game!
+  _sendGiftDelay: 3600
+  _publishAction: 0
+  _captionLabels:
+  - Play with ProGaming
+  - Play with ProGaming
+  - Play with ProGaming
+  _descriptionLabels:
+  - Come join us at ProGaming Play
+  - I have played with ProGaming and gain [score] points
+  - I have started this game for the first time
+  _idLabels:
+  - th.co.progaming.proengine.firsttime
+  _pictureLabel: http://www.progaming.co.th/wp-content/uploads/2014/08/logo3.png
+  _linkLabel: https://www.facebook.com/progaming.play
+  _nameLabel: ProGaming Play
+  _isUseSocial: 1

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<IAPConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <GoogleLicenseKey>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkLtISYWVFujd/vqORWPmwGCYnqoba09Tgfcjyk04y80YsM/8orcWTPiKFSive4pY3ftmXFsjULTyd/uAjEfAYcnu2JTFFhFP61bEFvy+rduRbW3Mak9SfREaKpcV4/mYQB0J9Tv/Vpu8+lL/YhMetVJNhtWnz5ChADgDk+FknXyfA8iuYg0rSOC1HMrCkGpsLWFn+XBP9WbFWvQLA+dtkIJ+xdaAeuQ7mxX90BqJL3htRFEMy3nnxcedirkpDrnU08v3BakeuKdTIvY+r2G6itR4TxkKpwr/Knou1ODewqDpn3+BJKAEEWMEfRoyZbS9O7wlfI/EtvSO7prPOMaslwIDAQAB</GoogleLicenseKey>
+  <Items>
+    <IAPItem Id="th.co.progaming.playbento.sample1">
+      <Title>Sample1 Item</Title>
+      <Description>This item is cool!</Description>
+      <Price>1.99</Price>
+      <Consumable>true</Consumable>
+    </IAPItem>
+    <IAPItem Id="th.co.progaming.playbento.sample2">
+      <Title>Sample2 Item</Title>
+      <Description>This item is great!</Description>
+      <Price>9.99</Price>
+      <Consumable>false</Consumable>
+    </IAPItem>
+  </Items>
+</IAPConfig>

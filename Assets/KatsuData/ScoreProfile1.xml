@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScoreProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ScoreList>
+    <ScoreData>
+      <NumberStage>1</NumberStage>
+      <Stars>2</Stars>
+      <height>1015598</height>
+      <Score>1015598</Score>
+    </ScoreData>
+    <ScoreData>
+      <NumberStage>2</NumberStage>
+      <Stars>2</Stars>
+      <height>1013509</height>
+      <Score>1013509</Score>
+    </ScoreData>
+  </ScoreList>
+</ScoreProfile>
