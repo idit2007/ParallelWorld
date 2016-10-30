@@ -26,7 +26,6 @@ public class Teleportion : MonoBehaviour {
 
 	//test
 	private GameObject caM1;
-	private GameObject caM2;
     void Start () {
 
 //		mapWord1 = minimapTpsWorld1.GetComponent<RawImage> ();
@@ -52,20 +51,12 @@ public class Teleportion : MonoBehaviour {
 
 		//test
 		caM1=GameObject.Find("Camera");
-		caM2=GameObject.Find("Camera2");
-		caM2.SetActive(false);
+
     }
 
 	// Update is called once per frame
 	void Update () {
-		if (TurnController.Instance.playerMovemnet) {
-			TeleportButtonStatic.interactable = false;
-		} 
-		else
-		{
-			if(!TurnController.Instance.objectCollision)
-			TeleportButtonStatic.interactable = true;
-		}
+		
 	}
 	public void TeleportionCharacter()
 	{
@@ -98,8 +89,8 @@ public class Teleportion : MonoBehaviour {
 
 
 			//test
-			caM2.SetActive(true);
-			caM1.SetActive(false);
+
+		
         } 
 		else {
 		//	mapWord2.enabled = false;
@@ -116,7 +107,7 @@ public class Teleportion : MonoBehaviour {
 
 			//test
 			caM1.SetActive(true);
-			caM2.SetActive(false);
+
         }
 		explosionLight.SetActive (false);
 		particleTeleportionStop.SetActive (true);

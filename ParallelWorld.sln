@@ -5,6 +5,8 @@ Project("{D0771813-8AF3-2B04-1281-8D81FD4DC511}") = "ParallelWorld", "Assembly-C
 EndProject
 Project("{D0771813-8AF3-2B04-1281-8D81FD4DC511}") = "ParallelWorld", "Assembly-CSharp.csproj", "{9D40E8D0-685C-0DE3-5A1F-DF0D88BD3F74}"
 EndProject
+Project("{D0771813-8AF3-2B04-1281-8D81FD4DC511}") = "ParallelWorld", "Assembly-CSharp-Editor-firstpass.csproj", "{7BC77B25-9E10-30DD-4CEA-DDE0B8C31F73}"
+EndProject
 Project("{D0771813-8AF3-2B04-1281-8D81FD4DC511}") = "ParallelWorld", "Assembly-CSharp-Editor.csproj", "{2585CC8E-6AAC-654F-44E9-DD044EA2B9AB}"
 EndProject
 Global
@@ -21,6 +23,10 @@ Global
 		{9D40E8D0-685C-0DE3-5A1F-DF0D88BD3F74}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D40E8D0-685C-0DE3-5A1F-DF0D88BD3F74}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9D40E8D0-685C-0DE3-5A1F-DF0D88BD3F74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BC77B25-9E10-30DD-4CEA-DDE0B8C31F73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BC77B25-9E10-30DD-4CEA-DDE0B8C31F73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BC77B25-9E10-30DD-4CEA-DDE0B8C31F73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BC77B25-9E10-30DD-4CEA-DDE0B8C31F73}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2585CC8E-6AAC-654F-44E9-DD044EA2B9AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2585CC8E-6AAC-654F-44E9-DD044EA2B9AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2585CC8E-6AAC-654F-44E9-DD044EA2B9AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
