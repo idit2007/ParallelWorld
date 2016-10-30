@@ -12,29 +12,30 @@ public class ShaderManagement : MonoBehaviour {
 	public Renderer floorWorld2;
 	public Material newfloorMaterial;
 	public Material oldfloorMaterial;
+	public Material world1;
+	public Material world2;
 	private GameObject effect;
 	private GameObject allMaterialHoloWorld1;
 	private GameObject allMaterialHoloWorld2;
-	private GameObject preFps;
 	private int i;
-	private int j;
-	private bool done1;
-	private bool done2;
+	public float alpha;
+	private bool holo;
 	// Use this for initialization
-	void Start () {
-		done1 = false;
-		done2 = false;
+	void Awake()
+	{
 		allMaterialHoloWorld1 = GameObject.Find ("AllMaterialsHoloWorld1");
 		allMaterialHoloWorld2 = GameObject.Find ("AllMaterialsHoloWorld2");
 		allMaterialHoloWorld1.SetActive (false);
 		allMaterialHoloWorld2.SetActive (false);
-		preFps = GameObject.Find ("PreFps");
-		preFps.SetActive (false);
-		//effect = GameObject.Find ("Capsule");
-	//	effect.SetActive (false);
+	}
+	void Start () {
+		alpha = 0;
+
+		holo = false;
 		i = 0;
 		oldMaterialsWorld1=new Material[AllMaterialsWorld1.childCount];
 		oldMaterialsWorld2=new Material[AllMaterialsWorld2.childCount];
+
 		foreach (Transform child in  AllMaterialsWorld1 ){
 			Renderer newMaterialWorld1=child.GetComponent<Renderer> ();
 		
@@ -48,26 +49,36 @@ public class ShaderManagement : MonoBehaviour {
 			i++;
 		}
 
+
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		if (TurnController.Instance.playerMovemnet && done1) {
-			DefaultScene ();
-			done1 = false;
+	void Update()
+	{
+		
+		if (holo) {
+			if (alpha < 1)
+				alpha += Time.deltaTime ;
+
 		}
-		else if (!TurnController.Instance.playerMovemnet && done2)
+		else
 		{
-			StartCoroutine (WaitEffectChangeshader ());
-			done2 = false;
-			done1 = true;
+			if(alpha>0)
+			alpha -= Time.deltaTime ;
 		}
-	
+			world1.SetFloat( "_ColorIntensity", alpha );
+		world2.SetFloat( "_ColorIntensity", alpha );
+
 	}
+	// Update is called once per frame
+
 	private void HoloGramScene()
 	{
+		
 		allMaterialHoloWorld1.SetActive (true);
 		allMaterialHoloWorld2.SetActive (true);
+
+
+		/*
+
 		foreach (Transform child in  AllMaterialsWorld1) {
 			Renderer newMaterialWorld1 = child.GetComponent<Renderer> ();
 			newMaterialWorld1.sharedMaterial = hologramMaterialWorld1;
@@ -77,7 +88,7 @@ public class ShaderManagement : MonoBehaviour {
 			Renderer newMaterialWorld2 = child.GetComponent<Renderer> ();
 			newMaterialWorld2.sharedMaterial = hologramMaterialWorld2;
 		}
-
+  */
 		floorWorld1.sharedMaterial = newfloorMaterial;
 		floorWorld2.sharedMaterial = newfloorMaterial;
 
@@ -86,7 +97,7 @@ public class ShaderManagement : MonoBehaviour {
 	{
 		allMaterialHoloWorld1.SetActive (false);
 		allMaterialHoloWorld2.SetActive (false);
-		j = 0;
+		/*
 		foreach (Transform child in  AllMaterialsWorld1 ){
 			Renderer newMaterialWorld1=child.GetComponent<Renderer> ();
 			newMaterialWorld1.sharedMaterial = oldMaterialsWorld1[j];
@@ -98,37 +109,27 @@ public class ShaderManagement : MonoBehaviour {
 			newMaterialWorld2.sharedMaterial = oldMaterialsWorld2[j];
 			j++;
 		}
+*/
 		floorWorld1.sharedMaterial = oldfloorMaterial;
 		floorWorld2.sharedMaterial = oldfloorMaterial;
 	}
-	IEnumerator EffectChangeShaderHoloGram()
-	{
 
-		//effect.SetActive (true);
-		yield return new WaitForSeconds (2f);
-	
-		//effect.SetActive (false);
-	}
 	public void TeleportionChangeShader()
 	{
-		done2 = true;
+		StartCoroutine (WaitEffectChangeshader());
 	}
 
 	IEnumerator WaitEffectChangeshader()
 	{
 
-		//zoom = true;
-		//uIFPS.SetActive (true);
-		yield return new WaitForSeconds (3f);
-		preFps.SetActive (true);
-		//	changeShaderArea.SetActive (true);
-		yield return new WaitForSeconds (0.5f);
-		//	uIFPS.SetActive (true);
-		preFps.SetActive (false);
+
+		yield return new WaitForSeconds (1f);
 		HoloGramScene ();
-		//mapWord1.enabled = true;
-		//mapWord2.enabled = true;
-		//thirdPersonCamera.SetActive (false);
+		holo = true;
+		yield return new WaitForSeconds (3f);
+		DefaultScene ();
+		holo = false;
+
 	}
 
 }
