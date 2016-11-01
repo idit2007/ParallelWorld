@@ -120,7 +120,6 @@
     <Compile Include="Assets\Move\TileMap.cs" />
     <Compile Include="Assets\Move\TileType.cs" />
     <Compile Include="Assets\Move\Unit.cs" />
-    <Compile Include="Assets\Move\ZembieNormolMove.cs" />
     <Compile Include="Assets\Move\selectpoint.cs" />
     <Compile Include="Assets\Packages\Cinema Suite\Cinema Director\Cutscene Items\Actor Items\Animation\BlendAnimationEvent.cs" />
     <Compile Include="Assets\Packages\Cinema Suite\Cinema Director\Cutscene Items\Actor Items\Animation\CrossFadeAnimationEvent.cs" />
@@ -526,6 +525,7 @@
     <Compile Include="Assets\Scripts\Title\Login.cs" />
     <Compile Include="Assets\Scripts\Title\Shared.cs" />
     <Compile Include="Assets\Scripts\_Config\QuestionConfig.cs" />
+    <Compile Include="Assets\ZombieNormalMovement.cs" />
     <Compile Include="Assets\moveMiniMapCarmara.cs" />
   </ItemGroup>
   <ItemGroup>
