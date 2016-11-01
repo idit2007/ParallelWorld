@@ -82,7 +82,7 @@ public class Teleportion : MonoBehaviour {
             selectpoint.removeway = false;
             Player.transform.position = new Vector3 (Player.transform.position.x + teleportRange, Player.transform.position.y, Player.transform.position.z);
             PlayerDummy.transform.position = new Vector3(PlayerDummy.transform.position.x - teleportRange, PlayerDummy.transform.position.y, PlayerDummy.transform.position.z);
-         //   Unit.World = 1;
+            Unit.World = 1;
             //Unit.DrawLineStatic[0].SetActive(false);
           //  Unit.DrawLineStatic[1].SetActive(true);
 
@@ -99,7 +99,7 @@ public class Teleportion : MonoBehaviour {
             selectpoint.removeway = false;
             Player.transform.position = new Vector3 (Player.transform.position.x - teleportRange, Player.transform.position.y, Player.transform.position.z);
             PlayerDummy.transform.position = new Vector3(PlayerDummy.transform.position.x + teleportRange, PlayerDummy.transform.position.y, PlayerDummy.transform.position.z);
-         //   Unit.World = 0;
+               Unit.World = 0;
 //            Unit.DrawLineStatic[0].SetActive(true);
      //       Unit.DrawLineStatic[1].SetActive(false);
 

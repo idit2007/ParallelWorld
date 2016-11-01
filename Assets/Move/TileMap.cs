@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 
 public class TileMap : MonoBehaviour {
 
@@ -10,6 +11,7 @@ public class TileMap : MonoBehaviour {
     public TileType[] tileTypes;
     public Vector4[] wall;
     public Vector4[] wallS;
+    public GameObject[] ZombieNormal;
 
     int[,,] tiles;
 	Node[,] graph;
@@ -18,23 +20,43 @@ public class TileMap : MonoBehaviour {
     public int mapSizeX = 15;
     public int mapSizeY = 19;
 
-	void Start() {
+
+
+    void Start() {
 
         // Setup the selectedUnit's variable
 
-        if (WorldMap == 0)
-        {
-            selectedUnit.GetComponent<Unit>().tileX = (int)((selectedUnit.transform.position.x - StartPosition.transform.position.x) /2);
-		    selectedUnit.GetComponent<Unit>().tileY = (int)((selectedUnit.transform.position.z - StartPosition.transform.position.z) /2);
-        }
-        
-		//selectedUnit.GetComponent<Unit>().map[0] = this;
+
         
 		GenerateMapData();
 		GeneratePathfindingGraph();
 		GenerateMapVisual();
 	}
+    void  Update()
+    {
+        if(WorldMap == Unit.World)
+        {
+            if(((((selectedUnit.transform.position.x - (StartPosition.transform.position.x)) / 2)*10 )% 10)>5)
+                selectedUnit.GetComponent<Unit>().tileX = (int)((selectedUnit.transform.position.x - (StartPosition.transform.position.x)) / 2)+1;
 
+            else
+                selectedUnit.GetComponent<Unit>().tileX = (int)((selectedUnit.transform.position.x - (StartPosition.transform.position.x)) / 2);
+
+
+            if (((((selectedUnit.transform.position.z - (StartPosition.transform.position.z)) / 2) * 10) % 10) > 5)
+                selectedUnit.GetComponent<Unit>().tileY = (int)((selectedUnit.transform.position.z - (StartPosition.transform.position.z)) / 2)+1;
+            else
+                selectedUnit.GetComponent<Unit>().tileY = (int)((selectedUnit.transform.position.z - (StartPosition.transform.position.z)) / 2);
+        }
+        else
+        {
+
+        }
+
+
+        
+
+    }
    
 
 
@@ -224,13 +246,12 @@ public class TileMap : MonoBehaviour {
         List<Node> unvisited = new List<Node>();
 
         Node source = graph[
-                            selectedUnit.GetComponent<Unit>().tileX,
-                            selectedUnit.GetComponent<Unit>().tileY
+                                 x,y
                             ];
 
         Node target = graph[
-                            x,
-                            y
+                            selectedUnit.GetComponent<Unit>().tileX,
+                            selectedUnit.GetComponent<Unit>().tileY
                             ];
 
         dist[source] = 0;
