@@ -12,11 +12,13 @@ public class ClickableTile : MonoBehaviour {
 
         if(Teleportion.TeleportButtonStatic.interactable == true && selectpoint.StartGoway == false)
         {
-           // map.GeneratePathTo(tileX, tileY);
+            map.GeneratePathTo(tileX, tileY);
            
             if (selectpoint.x == tileX && selectpoint.y == tileY && selectpoint.StartGoway == false)
                         selectpoint.StartGoway = true;
 
+//            Debug.Log ("Click!");
+        //    Debug.Log("tileX "+ tileX + " tileY "+ tileY+ " selectpoint.x " + selectpoint.x + " selectpoint.y  " + selectpoint.y);
             selectpoint.x= tileX;
             selectpoint.y = tileY;
         }
