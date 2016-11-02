@@ -3,54 +3,41 @@ using System.Collections.Generic;
 using System.Collections;
 
 public class Unit : MonoBehaviour {
-
-	public int tileX;
-	public int tileY;
+    public int tileX;
+    public int tileY;
     static public int World;
     public TileMap[] map;
     static public TileMap mapStatic;
 
-    public GameObject[] DrawLine;
-    static public GameObject[] DrawLineStatic= new GameObject[2];
 
     public List<Node> currentPath = null;
 
 
-    static public bool haveway = false;
-    int indexTarget = 0;
-
-    int moveSpeed ;
 
 
-    public float speed = 1f;
-    public float cntStep = 0;
-    // public int indexTarget = 0;
+    private static Unit instance;
 
-    public GameObject MiniMap1;
-    public GameObject MiniMap2;
+
+    public static Unit Instance
+    {
+        get
+        {
+            return instance;
+        }
+    }
 
     void Start()
     {
-        DrawLineStatic[0]= DrawLine[0];
-        DrawLineStatic[1]= DrawLine[1];
+
     }
 
 
 
-   void Update() {
+    void Update()
+    {
+        Debug.Log("World " + World);
 
-        if(World==1)
-        {
-            MiniMap1.SetActive(true);
-            MiniMap2.SetActive(false);
-        }
-        else
-        {
-            MiniMap1.SetActive(false);
-            MiniMap2.SetActive(true);
-        }
-
-
+        /*
         if (currentPath != null) {
 
             haveway = true;
@@ -137,12 +124,10 @@ public class Unit : MonoBehaviour {
         else
         {
             selectpoint.StartGoway = false;
-        }
+        }*/
     }
 
 
 
-
- 
 
 }

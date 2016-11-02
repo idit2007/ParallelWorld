@@ -4,56 +4,81 @@ using System.Linq;
 
 public class TileMap : MonoBehaviour {
 
-	public GameObject selectedUnit;
+    public GameObject selectedUnit;
     public GameObject StartPosition;
     public int WorldMap;
     public TileType[] tileTypes;
     public Vector4[] wall;
     public Vector4[] wallS;
+    public GameObject[] ZombieNormal;
 
     int[,,] tiles;
-	Node[,] graph;
+    Node[,] graph;
 
 
     public int mapSizeX = 15;
     public int mapSizeY = 19;
 
-	void Start() {
+
+
+    void Start()
+    {
 
         // Setup the selectedUnit's variable
 
-        if (WorldMap == 0)
+
+
+        GenerateMapData();
+        GeneratePathfindingGraph();
+        GenerateMapVisual();
+    }
+    void Update()
+    {
+        if (WorldMap == Unit.World)
         {
-            selectedUnit.GetComponent<Unit>().tileX = (int)((selectedUnit.transform.position.x - StartPosition.transform.position.x) /2);
-		    selectedUnit.GetComponent<Unit>().tileY = (int)((selectedUnit.transform.position.z - StartPosition.transform.position.z) /2);
+            if (((((selectedUnit.transform.position.x - (StartPosition.transform.position.x)) / 2) * 10) % 10) > 5)
+                selectedUnit.GetComponent<Unit>().tileX = (int)((selectedUnit.transform.position.x - (StartPosition.transform.position.x)) / 2) + 1;
+
+            else
+                selectedUnit.GetComponent<Unit>().tileX = (int)((selectedUnit.transform.position.x - (StartPosition.transform.position.x)) / 2);
+
+
+            if (((((selectedUnit.transform.position.z - (StartPosition.transform.position.z)) / 2) * 10) % 10) > 5)
+                selectedUnit.GetComponent<Unit>().tileY = (int)((selectedUnit.transform.position.z - (StartPosition.transform.position.z)) / 2) + 1;
+            else
+                selectedUnit.GetComponent<Unit>().tileY = (int)((selectedUnit.transform.position.z - (StartPosition.transform.position.z)) / 2);
         }
-        
-		//selectedUnit.GetComponent<Unit>().map[0] = this;
-        
-		GenerateMapData();
-		GeneratePathfindingGraph();
-		GenerateMapVisual();
-	}
+        else
+        {
 
-   
+        }
 
 
 
 
+    }
 
-    void GenerateMapData() {
-		// Allocate our map tiles
-		tiles = new int[mapSizeX,mapSizeY,2];
-       
-        int x,y;
-		
-		// Initialize our map tiles to be grass
-		for(x=0; x < mapSizeX; x++) {
-			for(y=0; y < mapSizeY; y++) {
-				tiles[x,y,WorldMap] = 0;
-               
+
+
+
+
+
+    void GenerateMapData()
+    {
+        // Allocate our map tiles
+        tiles = new int[mapSizeX, mapSizeY, 2];
+
+        int x, y;
+
+        // Initialize our map tiles to be grass
+        for (x = 0; x < mapSizeX; x++)
+        {
+            for (y = 0; y < mapSizeY; y++)
+            {
+                tiles[x, y, WorldMap] = 0;
+
             }
-		}
+        }
 
 
 
@@ -61,76 +86,79 @@ public class TileMap : MonoBehaviour {
         {
             for (int WallX = (int)(wallS[i].z); WallX < wallS[i].x; WallX++)
                 for (int WallY = (int)(wallS[i].w); WallY < wallS[i].y; WallY++)
-                    tiles[WallX, WallY,WorldMap] = 2;
+                    tiles[WallX, WallY, WorldMap] = 2;
         }
 
-        for (int i=0; i < wall.Length; i++) {
+        for (int i = 0; i < wall.Length; i++)
+        {
             for (int WallX = (int)(wall[i].z); WallX < wall[i].x; WallX++)
                 for (int WallY = (int)(wall[i].w); WallY < wall[i].y; WallY++)
-                    tiles[WallX, WallY,WorldMap] = 1;
-           }
-
- 
+                    tiles[WallX, WallY, WorldMap] = 1;
+        }
 
 
-   }
 
-   public float CostToEnterTile(int sourceX, int sourceY, int targetX, int targetY) {
 
-       TileType tt = tileTypes[ tiles[targetX,targetY,WorldMap] ];
+    }
 
-       if(UnitCanEnterTile(targetX, targetY) == false)
-           return Mathf.Infinity;
+    public float CostToEnterTile(int sourceX, int sourceY, int targetX, int targetY)
+    {
 
-       float cost = tt.movementCost;
+        TileType tt = tileTypes[tiles[targetX, targetY, WorldMap]];
 
-       if( sourceX!=targetX && sourceY!=targetY) {
-           // We are moving diagonally!  Fudge the cost for tie-breaking
-           // Purely a cosmetic thing!
-           cost += 0.001f;
-       }
+        if (UnitCanEnterTile(targetX, targetY) == false)
+            return Mathf.Infinity;
 
-       return cost;
+        float cost = tt.movementCost;
 
-   }
+        if (sourceX != targetX && sourceY != targetY)
+        {
+            // We are moving diagonally!  Fudge the cost for tie-breaking
+            // Purely a cosmetic thing!
+            cost += 0.001f;
+        }
 
-   void GeneratePathfindingGraph()
-   {
-       // Initialize the array
-       graph = new Node[mapSizeX, mapSizeY];
+        return cost;
 
-       // Initialize a Node for each spot in the array
-       for (int x = 0; x < mapSizeX; x++)
-       {
-           for (int y = 0; y < mapSizeY; y++)
-           {
-               graph[x, y] = new Node();
-               graph[x, y].x = x;
-               graph[x, y].y = y;
-           }
-       }
+    }
 
-       // Now that all the nodes exist, calculate their neighbours
-       // Now that all the nodes exist, calculate their neighbours
-       for (int x = 0; x < mapSizeX; x++)
-       {
-           for (int y = 0; y < mapSizeY; y++)
-           {
+    void GeneratePathfindingGraph()
+    {
+        // Initialize the array
+        graph = new Node[mapSizeX, mapSizeY];
 
-               // This is the 4-way connection version:
-               /*				if(x > 0)
-                                   graph[x,y].neighbours.Add( graph[x-1, y] );
-                               if(x < mapSizeX-1)
-                                   graph[x,y].neighbours.Add( graph[x+1, y] );
-                               if(y > 0)
-                                   graph[x,y].neighbours.Add( graph[x, y-1] );
-                               if(y < mapSizeY-1)
-                                   graph[x,y].neighbours.Add( graph[x, y+1] );
-               */
+        // Initialize a Node for each spot in the array
+        for (int x = 0; x < mapSizeX; x++)
+        {
+            for (int y = 0; y < mapSizeY; y++)
+            {
+                graph[x, y] = new Node();
+                graph[x, y].x = x;
+                graph[x, y].y = y;
+            }
+        }
 
-        // This is the 8-way connection version (allows diagonal movement)
-        // Try left
-        if (x > 0)
+        // Now that all the nodes exist, calculate their neighbours
+        // Now that all the nodes exist, calculate their neighbours
+        for (int x = 0; x < mapSizeX; x++)
+        {
+            for (int y = 0; y < mapSizeY; y++)
+            {
+
+                // This is the 4-way connection version:
+                /*				if(x > 0)
+                                    graph[x,y].neighbours.Add( graph[x-1, y] );
+                                if(x < mapSizeX-1)
+                                    graph[x,y].neighbours.Add( graph[x+1, y] );
+                                if(y > 0)
+                                    graph[x,y].neighbours.Add( graph[x, y-1] );
+                                if(y < mapSizeY-1)
+                                    graph[x,y].neighbours.Add( graph[x, y+1] );
+                */
+
+                // This is the 8-way connection version (allows diagonal movement)
+                // Try left
+                if (x > 0)
                 {
                     graph[x, y].neighbours.Add(graph[x - 1, y]);
                     if (y > 0)
@@ -157,10 +185,13 @@ public class TileMap : MonoBehaviour {
             }
         }
     }
-	void GenerateMapVisual() {
-		for(int x=0; x < mapSizeX; x++) {
-			for(int y=0; y < mapSizeY; y++) {
-				TileType tt = tileTypes[ tiles[x,y,WorldMap] ];
+    void GenerateMapVisual()
+    {
+        for (int x = 0; x < mapSizeX; x++)
+        {
+            for (int y = 0; y < mapSizeY; y++)
+            {
+                TileType tt = tileTypes[tiles[x, y, WorldMap]];
 
                 GameObject go = (GameObject)Instantiate(tt.tileVisualPrefab, StartPosition.transform.position + new Vector3(2 * x, 0, 2 * y), Quaternion.identity);
 
@@ -176,40 +207,42 @@ public class TileMap : MonoBehaviour {
                     Transform environemtParrent = environemt.GetComponent<Transform>();
                     go.transform.parent = environemtParrent.transform;
                 }
-                    
+
                 ClickableTile ct = go.GetComponent<ClickableTile>();
-/*
-				GameObject go = (GameObject)Instantiate( tt.tileVisualPrefab, StartPosition.transform.position +new Vector3(2*x, 0, 2 * y), Quaternion.identity );
-				GameObject environemt = GameObject.Find ("Environment");
-				Transform environemtParrent = environemt.GetComponent<Transform> ();
-				go.transform.parent = environemtParrent.transform;
-				ClickableTile ct = go.GetComponent<ClickableTile>();
-*/
+                /*
+                                GameObject go = (GameObject)Instantiate( tt.tileVisualPrefab, StartPosition.transform.position +new Vector3(2*x, 0, 2 * y), Quaternion.identity );
+                                GameObject environemt = GameObject.Find ("Environment");
+                                Transform environemtParrent = environemt.GetComponent<Transform> ();
+                                go.transform.parent = environemtParrent.transform;
+                                ClickableTile ct = go.GetComponent<ClickableTile>();
+                */
 
-				ct.tileX = x;
-				ct.tileY = y;
-				ct.map = this;
-			}
-		}
-	}
-
-	public Vector3 TileCoordToWorldCoord(int x, int y) {
-        return StartPosition.transform.position + new Vector3(2*x,  0,2* y);
-       
+                ct.tileX = x;
+                ct.tileY = y;
+                ct.map = this;
+            }
+        }
     }
 
-	public bool UnitCanEnterTile(int x, int y) {
+    public Vector3 TileCoordToWorldCoord(int x, int y)
+    {
+        return StartPosition.transform.position + new Vector3(2 * x, 0, 2 * y);
 
-		// We could test the unit's walk/hover/fly type against various
-		// terrain flags here to see if they are allowed to enter the tile.
+    }
 
-		return tileTypes[ tiles[x,y,WorldMap] ].isWalkable;
-	}
+    public bool UnitCanEnterTile(int x, int y)
+    {
+
+        // We could test the unit's walk/hover/fly type against various
+        // terrain flags here to see if they are allowed to enter the tile.
+
+        return tileTypes[tiles[x, y, WorldMap]].isWalkable;
+    }
 
     public void GeneratePathTo(int x, int y)
     {
         // Clear out our unit's old path.
-//        selectedUnit.GetComponent<Unit>().currentPath = null;
+        //        selectedUnit.GetComponent<Unit>().currentPath = null;
 
         if (UnitCanEnterTile(x, y) == false)
         {
@@ -224,13 +257,12 @@ public class TileMap : MonoBehaviour {
         List<Node> unvisited = new List<Node>();
 
         Node source = graph[
-                            selectedUnit.GetComponent<Unit>().tileX,
-                            selectedUnit.GetComponent<Unit>().tileY
+                                 x, y
                             ];
 
         Node target = graph[
-                            x,
-                            y
+                            selectedUnit.GetComponent<Unit>().tileX,
+                            selectedUnit.GetComponent<Unit>().tileY
                             ];
 
         dist[source] = 0;
@@ -250,7 +282,7 @@ public class TileMap : MonoBehaviour {
 
             unvisited.Add(v);
         }
-       
+
         while (unvisited.Count > 0)
         {
             // "u" is going to be the unvisited node with the smallest distance.
