@@ -57,10 +57,10 @@ public class ZombieNormalMovement : MonoBehaviour {
         if (PlayWorld == World)
         {
 
-            if (Math.Sqrt(Math.Pow(Convert.ToDouble(tileX - PlaytileX), 2) + Math.Pow(Convert.ToDouble(tileY - PlaytileY), 2)) < SeenRadius && TurnController.Instance.playerMovemnet)
+            if (Math.Sqrt(Math.Pow(Convert.ToDouble(tileX - PlaytileX), 2) + Math.Pow(Convert.ToDouble(tileY - PlaytileY), 2)) < SeenRadius && TurnController.Instance.playerMovemnet&& !GameOverAndWin.StopGame)
             {
                 GeneratePathTo(tileX, tileY);
-                Debug.Log("seen");
+                //Debug.Log("seen");
                 if (this.currentPath!=null && this.currentPath.Count >1)
                 {
 
@@ -83,7 +83,7 @@ public class ZombieNormalMovement : MonoBehaviour {
             }
             else
             {
-                Debug.Log("no seen");
+                //Debug.Log("no seen");
             }
 
 
