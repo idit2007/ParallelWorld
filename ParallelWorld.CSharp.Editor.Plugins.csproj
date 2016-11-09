@@ -558,6 +558,7 @@
     <None Include="Assets\Resources\Katsu\ScoreProfile.xml" />
     <None Include="Assets\Resources\Katsu\SocialConfig.xml" />
     <None Include="Assets\Resources\Readme.txt" />
+    <None Include="Assets\SciFi_Door\readme.txt" />
     <None Include="Assets\Scripts\Shaders\3DTextOneSided.shader" />
     <None Include="Assets\Scripts\Shaders\Glow.shader" />
     <None Include="Assets\Scripts\Shaders\TransparentFresnel.shader" />
