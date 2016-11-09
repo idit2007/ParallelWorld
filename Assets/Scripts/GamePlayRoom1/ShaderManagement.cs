@@ -4,8 +4,6 @@ using System.Collections;
 public class ShaderManagement : MonoBehaviour {
 	public Material[] oldMaterialsWorld1;
 	public Material[] oldMaterialsWorld2;
-	public Material hologramMaterialWorld1;
-	public Material hologramMaterialWorld2;
 	public Transform AllMaterialsWorld1;
 	public Transform AllMaterialsWorld2;
 	public Renderer floorWorld1;
@@ -18,6 +16,7 @@ public class ShaderManagement : MonoBehaviour {
 	private GameObject allMaterialHoloWorld1;
 	private GameObject allMaterialHoloWorld2;
 	private int i;
+	private int j;
 	public float alpha;
 	private bool holo;
 	// Use this for initialization
@@ -30,7 +29,7 @@ public class ShaderManagement : MonoBehaviour {
 	}
 	void Start () {
 		alpha = 0;
-
+		j = 0;
 		holo = false;
 		i = 0;
 		oldMaterialsWorld1=new Material[AllMaterialsWorld1.childCount];
@@ -77,27 +76,28 @@ public class ShaderManagement : MonoBehaviour {
 		allMaterialHoloWorld2.SetActive (true);
 
 
-		/*
+
 
 		foreach (Transform child in  AllMaterialsWorld1) {
 			Renderer newMaterialWorld1 = child.GetComponent<Renderer> ();
-			newMaterialWorld1.sharedMaterial = hologramMaterialWorld1;
+			newMaterialWorld1.sharedMaterial = world1;
 		   
 		}
 		foreach (Transform child in  AllMaterialsWorld2) {
 			Renderer newMaterialWorld2 = child.GetComponent<Renderer> ();
-			newMaterialWorld2.sharedMaterial = hologramMaterialWorld2;
+			newMaterialWorld2.sharedMaterial = world2;
 		}
-  */
+  
 		floorWorld1.sharedMaterial = newfloorMaterial;
 		floorWorld2.sharedMaterial = newfloorMaterial;
 
 	}
 	private void DefaultScene()
 	{
+		j = 0;
 		allMaterialHoloWorld1.SetActive (false);
 		allMaterialHoloWorld2.SetActive (false);
-		/*
+
 		foreach (Transform child in  AllMaterialsWorld1 ){
 			Renderer newMaterialWorld1=child.GetComponent<Renderer> ();
 			newMaterialWorld1.sharedMaterial = oldMaterialsWorld1[j];
@@ -109,7 +109,7 @@ public class ShaderManagement : MonoBehaviour {
 			newMaterialWorld2.sharedMaterial = oldMaterialsWorld2[j];
 			j++;
 		}
-*/
+
 		floorWorld1.sharedMaterial = oldfloorMaterial;
 		floorWorld2.sharedMaterial = oldfloorMaterial;
 	}

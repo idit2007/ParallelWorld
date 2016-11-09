@@ -390,6 +390,7 @@
      <None Include="Assets\Packages\Effects\ImageEffects\Shaders\Contrast Stretch\Adaptation.shader" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-kn-rIN\base_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-fa\base_strings.xml" />
+     <None Include="Assets\SciFi_Door\readme.txt" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-is-rIS\location_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-pa-rIN\location_strings.xml" />
      <None Include="Assets\PlayBento\Ingredients\Parse\Parse.Unity.xml" />

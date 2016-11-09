@@ -31,7 +31,7 @@ public class ZombieNormalMovement : MonoBehaviour {
 
     bool wite;
 
-    void FixedUpdate()
+    void Update()
     {
 
         PlaytileX = map[World].selectedUnit.GetComponent<Unit>().tileX;
