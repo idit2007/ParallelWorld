@@ -30,6 +30,9 @@ public class Unit : MonoBehaviour {
     void Start()
     {
         win = false;
+        tileX= 0;
+         tileY= 0;
+        World= 0;
     }
 
 
