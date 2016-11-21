@@ -10,8 +10,10 @@ public class TileMap : MonoBehaviour {
     public TileType[] tileTypes;
     public Vector4[] wall;
     public Vector4[] wallS;
-    public GameObject[] ZombieNormal;
+    public Vector4[] win;
 
+    public GameObject[] ZombieNormal;
+    
     int[,,] tiles;
     Node[,] graph;
 
@@ -19,6 +21,7 @@ public class TileMap : MonoBehaviour {
     public int mapSizeX = 15;
     public int mapSizeY = 19;
 
+    
 
 
     void Start()
@@ -47,12 +50,18 @@ public class TileMap : MonoBehaviour {
                 selectedUnit.GetComponent<Unit>().tileY = (int)((selectedUnit.transform.position.z - (StartPosition.transform.position.z)) / 2) + 1;
             else
                 selectedUnit.GetComponent<Unit>().tileY = (int)((selectedUnit.transform.position.z - (StartPosition.transform.position.z)) / 2);
+
+
+            if( 3 == tiles[selectedUnit.GetComponent<Unit>().tileX, selectedUnit.GetComponent<Unit>().tileY, WorldMap])
+                Unit.win=true;
+
         }
         else
         {
 
         }
 
+        
 
 
 
@@ -96,7 +105,12 @@ public class TileMap : MonoBehaviour {
                     tiles[WallX, WallY, WorldMap] = 1;
         }
 
-
+        for (int i = 0; i < win.Length; i++)
+        {
+            for (int WallX = (int)(win[i].z); WallX < win[i].x; WallX++)
+                for (int WallY = (int)(win[i].w); WallY < win[i].y; WallY++)
+                    tiles[WallX, WallY, WorldMap] = 3;
+        }
 
 
     }
@@ -194,6 +208,7 @@ public class TileMap : MonoBehaviour {
                 TileType tt = tileTypes[tiles[x, y, WorldMap]];
 
                 GameObject go = (GameObject)Instantiate(tt.tileVisualPrefab, StartPosition.transform.position + new Vector3(2 * x, 0, 2 * y), Quaternion.identity);
+                go.name = "X " + x + "Y " + y;
 
                 if (WorldMap == 0)
                 {
@@ -208,18 +223,7 @@ public class TileMap : MonoBehaviour {
                     go.transform.parent = environemtParrent.transform;
                 }
 
-                ClickableTile ct = go.GetComponent<ClickableTile>();
-                /*
-                                GameObject go = (GameObject)Instantiate( tt.tileVisualPrefab, StartPosition.transform.position +new Vector3(2*x, 0, 2 * y), Quaternion.identity );
-                                GameObject environemt = GameObject.Find ("Environment");
-                                Transform environemtParrent = environemt.GetComponent<Transform> ();
-                                go.transform.parent = environemtParrent.transform;
-                                ClickableTile ct = go.GetComponent<ClickableTile>();
-                */
-
-                ct.tileX = x;
-                ct.tileY = y;
-                ct.map = this;
+            
             }
         }
     }

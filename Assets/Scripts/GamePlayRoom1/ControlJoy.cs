@@ -34,7 +34,7 @@ public class ControlJoy : MonoBehaviour {
 		// Just use CnInputManager. instead of Input. and you're good to go
 
 		if (CnInputManager.GetAxis ("Horizontal") != 0 || CnInputManager.GetAxis ("Vertical") != 0) {
-			Debug.Log ("test");
+			//Debug.Log ("test");
 			if (done) {
 				StartCoroutine (HideEffect ());
 			}

@@ -8,6 +8,7 @@ public class Unit : MonoBehaviour {
     static public int World;
     public TileMap[] map;
     static public TileMap mapStatic;
+    static public bool win;
 
 
     public List<Node> currentPath = null;
@@ -28,14 +29,17 @@ public class Unit : MonoBehaviour {
 
     void Start()
     {
-
+        win = false;
+        tileX= 0;
+         tileY= 0;
+        World= 0;
     }
 
 
 
     void Update()
     {
-        Debug.Log("World " + World);
+        //Debug.Log("World " + World);
 
         /*
         if (currentPath != null) {

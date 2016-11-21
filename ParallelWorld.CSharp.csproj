@@ -100,6 +100,7 @@
     <Compile Include="Assets\EffectFinish.cs" />
     <Compile Include="Assets\Examples\KatsuObjects\PlayerProfile.cs" />
     <Compile Include="Assets\Examples\PlayBento\TasteUI.cs" />
+    <Compile Include="Assets\GameOverAndWin.cs" />
     <Compile Include="Assets\HologramShader\Scripts\HoloManager.cs" />
     <Compile Include="Assets\LeanTouch\Examples\SimpleDrag.cs" />
     <Compile Include="Assets\LeanTouch\Examples\SimpleInfo.cs" />
@@ -959,6 +960,7 @@
     <None Include="Assets\Resources\Katsu\ScoreProfile.xml" />
     <None Include="Assets\Resources\Katsu\SocialConfig.xml" />
     <None Include="Assets\Resources\Readme.txt" />
+    <None Include="Assets\SciFi_Door\readme.txt" />
     <None Include="Assets\Scripts\Shaders\3DTextOneSided.shader" />
     <None Include="Assets\Scripts\Shaders\Glow.shader" />
     <None Include="Assets\Scripts\Shaders\TransparentFresnel.shader" />
