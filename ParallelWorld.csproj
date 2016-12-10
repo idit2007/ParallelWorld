@@ -510,6 +510,7 @@
     <Compile Include="Assets\Scripts\GamePlayRoom1\TestCamear\Camera2.cs" />
     <Compile Include="Assets\Scripts\GamePlayRoom1\TestCamear\PlayerKeyBoardMovement.cs" />
     <Compile Include="Assets\Scripts\GamePlayRoom1\TurnController.cs" />
+    <Compile Include="Assets\Scripts\GamePlayRoom1\olo\EnemyNevmesh.cs" />
     <Compile Include="Assets\Scripts\Menu\AnimationBack.cs" />
     <Compile Include="Assets\Scripts\Menu\CurrentStage.cs" />
     <Compile Include="Assets\Scripts\Menu\LoadLevel.cs" />
