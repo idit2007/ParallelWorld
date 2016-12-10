@@ -9,7 +9,6 @@ public class MapController : MonoBehaviour
     void Start()
     {
         anim = GameObject.Find("MapFeild").GetComponent<Animator>();
-        BigMap = GameObject.FindGameObjectsWithTag("BigMap");
         BigMap[0].SetActive(false);
     }
 

@@ -501,6 +501,7 @@
     <Compile Include="Assets\Scripts\GamePlayRoom1\ControlJoy.cs" />
     <Compile Include="Assets\Scripts\GamePlayRoom1\EffectPlayerSlowMotion.cs" />
     <Compile Include="Assets\Scripts\GamePlayRoom1\EnemyMovement.cs" />
+    <Compile Include="Assets\Scripts\GamePlayRoom1\FrameRate.cs" />
     <Compile Include="Assets\Scripts\GamePlayRoom1\MapController.cs" />
     <Compile Include="Assets\Scripts\GamePlayRoom1\Movement.cs" />
     <Compile Include="Assets\Scripts\GamePlayRoom1\PlayerAttacked.cs" />
