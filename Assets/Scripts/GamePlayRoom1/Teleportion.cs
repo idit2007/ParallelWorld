@@ -5,7 +5,7 @@ public class Teleportion : MonoBehaviour {
 	private float teleportRange;
 	private bool world;
 	private GameObject Player;
-   public GameObject PlayerDummy;
+   //public GameObject PlayerDummy;
 
 	private GameObject particleTeleportionStart;
 	private GameObject particleTeleportionStop;
@@ -21,15 +21,10 @@ public class Teleportion : MonoBehaviour {
     public static Button TeleportButtonStatic;
 	private Button buttonWorld1;
 	private Button buttonWorld2;
-    // Use this for initialization
-
-
-	//test
 	private GameObject caM1;
     void Start () {
 
-//		mapWord1 = minimapTpsWorld1.GetComponent<RawImage> ();
-//		mapWord2 = minimapTpsWorld2.GetComponent<RawImage> ();
+
 		GameObject world1 = GameObject.Find ("World1");
 		GameObject world2 = GameObject.Find ("World2");
 		teleportRange = world2.transform.position.x - world1.transform.position.x;
@@ -37,7 +32,7 @@ public class Teleportion : MonoBehaviour {
 		teleportButton = GameObject.Find ("TeleportionButton");
 	
 		Player = GameObject.FindGameObjectWithTag("Player");
-        PlayerDummy = GameObject.FindGameObjectWithTag("PlayerDummy");
+        //PlayerDummy = GameObject.FindGameObjectWithTag("PlayerDummy");
 		particleTeleportionStart = GameObject.Find ("TeleportStart");
 		particleTeleportionStop= GameObject.Find ("TeleportStop");
 		blueFlash = GameObject.Find ("BlueFlash");
@@ -76,36 +71,25 @@ public class Teleportion : MonoBehaviour {
 		yield return new WaitForSeconds (0.1f);
 		world = !world;
 		if (!world) {
-		//	mapWord2.enabled = true;
-		//	mapWord1.enabled = false;
+
 			TurnController.Instance.CurrentWorld = 2;
             selectpoint.removeway = false;
-            Player.transform.position = new Vector3 (Player.transform.position.x + teleportRange, Player.transform.position.y, Player.transform.position.z);
-            PlayerDummy.transform.position = new Vector3(PlayerDummy.transform.position.x - teleportRange, PlayerDummy.transform.position.y, PlayerDummy.transform.position.z);
+            Player.transform.position = new Vector3(Player.transform.position.x + teleportRange, Player.transform.position.y, Player.transform.position.z);
             Unit.World = 1;
-            //Unit.DrawLineStatic[0].SetActive(false);
-          //  Unit.DrawLineStatic[1].SetActive(true);
 
 
 
-			//test
 
 		
         } 
 		else {
-		//	mapWord2.enabled = false;
-		//	mapWord1.enabled = true;
+
 			TurnController.Instance.CurrentWorld = 1;
             selectpoint.removeway = false;
             Player.transform.position = new Vector3 (Player.transform.position.x - teleportRange, Player.transform.position.y, Player.transform.position.z);
-            PlayerDummy.transform.position = new Vector3(PlayerDummy.transform.position.x + teleportRange, PlayerDummy.transform.position.y, PlayerDummy.transform.position.z);
+            //PlayerDummy.transform.position = new Vector3(PlayerDummy.transform.position.x + teleportRange, PlayerDummy.transform.position.y, PlayerDummy.transform.position.z);
             Unit.World = 0;
-//            Unit.DrawLineStatic[0].SetActive(true);
-     //       Unit.DrawLineStatic[1].SetActive(false);
 
-
-
-			//test
 			caM1.SetActive(true);
 
         }
