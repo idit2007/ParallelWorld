@@ -39,7 +39,8 @@ public class SelectStage : MonoBehaviour {
 	void Update()
 	{
 		
-
+		if(Screen.orientation!=ScreenOrientation.LandscapeLeft)
+			Screen.orientation = ScreenOrientation.LandscapeLeft;
 		Debug.Log (mainCamera.transform.rotation.y);
 		//	Debug.DrawLine(ray.origin, hit.point);
 		if (selected&&!zoomOut) {
