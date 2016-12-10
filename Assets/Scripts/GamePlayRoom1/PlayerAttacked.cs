@@ -33,6 +33,7 @@ public class PlayerAttacked : MonoBehaviour {
 		}
 	}
 	void OnCollisionEnter(Collision coll) {
+		
 		if (coll.gameObject.tag == "NormalZombie") {
 			bitted = true;
 			hpSlider.value -= 10;

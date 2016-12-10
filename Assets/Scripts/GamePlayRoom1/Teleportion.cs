@@ -49,10 +49,7 @@ public class Teleportion : MonoBehaviour {
 
     }
 
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
 	public void TeleportionCharacter()
 	{
 		StartCoroutine (TeleportAnimation());
