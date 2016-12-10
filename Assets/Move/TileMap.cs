@@ -75,7 +75,7 @@ public class TileMap : MonoBehaviour {
     void GenerateMapData()
     {
         // Allocate our map tiles
-        tiles = new int[mapSizeX, mapSizeY, 2];
+        tiles = new int[mapSizeX, mapSizeY, 3];
 
         int x, y;
 
