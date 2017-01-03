@@ -2,17 +2,21 @@
 using System.Collections;
 
 public class EnemyNevmesh : MonoBehaviour {
-	private NavMeshAgent navMeshAgent;
-	private GameObject player;
-	private GameObject effectTeleportSlow;
+	public NavMeshAgent navMeshAgent;
+	public GameObject player;
+	public GameObject effectTeleportSlow;
 	bool inArea;
 	// Use this for initialization
+	void Awake()
+	{
+		effectTeleportSlow = GameObject.Find ("EffectSlow");
+	}
 	void Start () {
 		
 		inArea = false;
 		navMeshAgent = GetComponent<NavMeshAgent>( );
 		 player = GameObject.FindGameObjectWithTag ("Player");
-		effectTeleportSlow = GameObject.Find ("EffectSlow");
+
 	}
 	void Update()
 	{

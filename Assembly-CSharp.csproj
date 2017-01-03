@@ -463,6 +463,8 @@
      <Compile Include="Assets\Scripts\GamePlayRoom1\CameraManagement.cs" />
      <Compile Include="Assets\Scripts\GamePlayRoom1\ChangeModeShader.cs" />
      <Compile Include="Assets\Scripts\GamePlayRoom1\ControlJoy.cs" />
+     <Compile Include="Assets\Scripts\GamePlayRoom1\Door.cs" />
+     <Compile Include="Assets\Scripts\GamePlayRoom1\DoorVictory.cs" />
      <Compile Include="Assets\Scripts\GamePlayRoom1\EffectPlayerSlowMotion.cs" />
      <Compile Include="Assets\Scripts\GamePlayRoom1\EnemyMovement.cs" />
      <Compile Include="Assets\Scripts\GamePlayRoom1\FrameRate.cs" />
