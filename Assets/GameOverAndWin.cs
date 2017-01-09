@@ -5,7 +5,6 @@ using UnityEngine.UI;
 public class GameOverAndWin : MonoBehaviour {
     private Slider hpSlider;
     private Slider virusSlider;
-    public GameObject win;
     public GameObject lose;
     public static bool StopGame;
     // Use this for initialization
@@ -13,7 +12,6 @@ public class GameOverAndWin : MonoBehaviour {
         hpSlider = GameObject.Find("HPSlider").GetComponent<Slider>();
         virusSlider = GameObject.Find("VirusSlider").GetComponent<Slider>();
         lose.SetActive(false);
-        win.SetActive(false);
         StopGame = false;
     }
 	
@@ -24,11 +22,7 @@ public class GameOverAndWin : MonoBehaviour {
                 lose.SetActive(true);
                 StopGame = true;
             }
-                if (Unit.win)
-            {
-                win.SetActive(true);
-                StopGame = true;
-            }   
+
     }
 
     public void Restart()

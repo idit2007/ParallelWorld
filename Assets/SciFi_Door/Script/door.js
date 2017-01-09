@@ -8,5 +8,6 @@ function OnTriggerEnter (obj : Collider) {
 
 function OnTriggerExit (obj : Collider) {
 	var thedoor = gameObject.FindWithTag("SF_Door");
-	thedoor.GetComponent.<Animation>().Play("close");
+		thedoor.GetComponent.<Animation>().Play("close");
+	
 }
