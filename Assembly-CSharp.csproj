@@ -687,6 +687,7 @@
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-th\base_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-et-rEE\location_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-nb\common_strings.xml" />
+     <None Include="Assets\Machine Shop Equipment\Readme.txt" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-el\location_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-ca\common_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-ky-rKG\common_strings.xml" />
@@ -742,6 +743,7 @@
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-fr\location_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-ms-rMY\wallet_strings.xml" />
      <None Include="Assets\Packages\Effects\ImageEffects\Shaders\CreaseApply.shader" />
+     <None Include="Assets\Locker\Shaders\VIS_BumpSpec.shader" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-pl\wallet_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-sl\wallet_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-ro\base_strings.xml" />
