@@ -10,6 +10,7 @@ public class DoorVictory : MonoBehaviour {
 		if (coll.gameObject.tag == "Player") {
 
 			anim.SetTrigger ("openDoor");
+			if(winPopup!=null)
 			winPopup.SetActive (true);
 
 		}
