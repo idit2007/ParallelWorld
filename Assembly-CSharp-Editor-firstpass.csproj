@@ -290,6 +290,7 @@
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-nl\base_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\layout\place_autocomplete_item_prediction.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-en-rIN\common_strings.xml" />
+     <None Include="Assets\1nfern0\SubmachineGun\submachinegunshader.shader" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-sq-rAL\location_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-fr\location_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-ms-rMY\wallet_strings.xml" />
