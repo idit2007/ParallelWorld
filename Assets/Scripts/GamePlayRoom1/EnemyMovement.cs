@@ -6,7 +6,7 @@ public class EnemyMovement : MonoBehaviour {
 	SphereCollider enemeyArea;
 	GameObject player;               // Reference to the player's position.
 	Rigidbody rb;
-	public NavMeshAgent nav;               // Reference to the nav mesh agent.
+	public UnityEngine.AI.NavMeshAgent nav;               // Reference to the nav mesh agent.
 	private float minTarX=-3;
 	private float minTarZ=-3;
 	private float maxTarX=3;
@@ -23,7 +23,7 @@ public class EnemyMovement : MonoBehaviour {
 		// Set up the references.
 		enemeyArea=GetComponent<SphereCollider>();
 		player = GameObject.FindGameObjectWithTag("Player");
-		nav = GetComponent<NavMeshAgent>();
+		nav = GetComponent<UnityEngine.AI.NavMeshAgent>();
 		rb=GetComponent<Rigidbody>();
 		enemeyArea.isTrigger = true;
 		target= false;
