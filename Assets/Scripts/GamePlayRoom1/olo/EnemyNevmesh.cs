@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class EnemyNevmesh : MonoBehaviour {
-	public NavMeshAgent navMeshAgent;
+	public UnityEngine.AI.NavMeshAgent navMeshAgent;
 	public GameObject player;
 	public GameObject effectTeleportSlow;
 	bool inArea;
@@ -14,7 +14,7 @@ public class EnemyNevmesh : MonoBehaviour {
 	void Start () {
 		
 		inArea = false;
-		navMeshAgent = GetComponent<NavMeshAgent>( );
+		navMeshAgent = GetComponent<UnityEngine.AI.NavMeshAgent>( );
 		 player = GameObject.FindGameObjectWithTag ("Player");
 
 	}
