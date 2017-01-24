@@ -8,8 +8,9 @@ public class ShaderManagement : MonoBehaviour {
 	public Transform AllMaterialsWorld2;
 	public Renderer floorWorld1;
 	public Renderer floorWorld2;
-	public Material newfloorMaterial;
-	public Material oldfloorMaterial;
+	public Material BlackfloorMaterial;
+	public Material floorMaterialWorld1;
+	public Material floorMaterialWorld2;
 	public Material world1;
 	public Material world2;
 	private GameObject effect;
@@ -88,8 +89,8 @@ public class ShaderManagement : MonoBehaviour {
 			newMaterialWorld2.sharedMaterial = world2;
 		}
   
-		floorWorld1.sharedMaterial = newfloorMaterial;
-		floorWorld2.sharedMaterial = newfloorMaterial;
+		floorWorld1.sharedMaterial = BlackfloorMaterial;
+		floorWorld2.sharedMaterial = BlackfloorMaterial;
 
 	}
 	private void DefaultScene()
@@ -110,8 +111,8 @@ public class ShaderManagement : MonoBehaviour {
 			j++;
 		}
 
-		floorWorld1.sharedMaterial = oldfloorMaterial;
-		floorWorld2.sharedMaterial = oldfloorMaterial;
+		floorWorld1.sharedMaterial = floorMaterialWorld1;
+		floorWorld2.sharedMaterial = floorMaterialWorld2;
 	}
 
 	public void TeleportionChangeShader()
