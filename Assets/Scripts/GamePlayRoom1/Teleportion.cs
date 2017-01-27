@@ -18,7 +18,7 @@ public class Teleportion : MonoBehaviour {
 	public Animator animWorld2;
 	private RawImage mapWord1;
 	public RawImage mapWord2;
-    public static Button TeleportButtonStatic;
+
 	private Button buttonWorld1;
 	private Button buttonWorld2;
 	private GameObject caM1;
@@ -29,7 +29,7 @@ public class Teleportion : MonoBehaviour {
 		GameObject world2 = GameObject.Find ("World2");
 		teleportRange = world2.transform.position.x - world1.transform.position.x;
 		world = true;
-		teleportButton = GameObject.Find ("TeleportionButton");
+		teleportButton = GameObject.Find ("TeleportButton");
 	
 		Player = GameObject.FindGameObjectWithTag("Player");
         //PlayerDummy = GameObject.FindGameObjectWithTag("PlayerDummy");
@@ -40,7 +40,6 @@ public class Teleportion : MonoBehaviour {
 		particleTeleportionStart.SetActive (false);
 		particleTeleportionStop.SetActive (false);
 		blueFlash.SetActive (false);
-        TeleportButtonStatic = GameObject.Find("TeleportionButton").GetComponent<Button>();
 
 
 
