@@ -935,6 +935,9 @@
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-sv\base_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-zh-rTW\wallet_strings.xml" />
      <None Include="Assets\Packages\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendForBloom.shader" />
+ <Reference Include="UnityEngine.Advertisements">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -950,11 +953,14 @@
  <Reference Include="UnityEngine.HoloLens">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
  </Reference>
+ <Reference Include="UnityEngine.Purchasing">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityPurchasing/UnityEngine.Purchasing.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.VR">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
  <Reference Include="Parse.Unity">
- <HintPath>/Users/ItBangchokdee/Desktop/ParallelWorld/Assets/PlayBento/Ingredients/Parse/Parse.Unity.dll</HintPath>
+ <HintPath>/Users/ItBangchokdee/Library/Mobile Documents/com~apple~CloudDocs/ParallelWorld/Assets/PlayBento/Ingredients/Parse/Parse.Unity.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
