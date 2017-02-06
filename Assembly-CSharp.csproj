@@ -960,7 +960,7 @@
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
  <Reference Include="Parse.Unity">
- <HintPath>/Users/ItBangchokdee/Library/Mobile Documents/com~apple~CloudDocs/ParallelWorld/Assets/PlayBento/Ingredients/Parse/Parse.Unity.dll</HintPath>
+ <HintPath>/Users/ItBangchokdee/Desktop/ParallelWorld/Assets/PlayBento/Ingredients/Parse/Parse.Unity.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
