@@ -33,9 +33,9 @@ public class PlayerAttacked : MonoBehaviour {
 		}
 	}
 	void OnCollisionEnter(Collision coll) {
-		Debug.Log ("!bitted");
+		
 		if (coll.gameObject.tag == "NormalZombie") {
-			Debug.Log ("2222");
+			
 			bitted = true;
 			hpSlider.value -= 10;
 			StartCoroutine (RedFlashShow());
