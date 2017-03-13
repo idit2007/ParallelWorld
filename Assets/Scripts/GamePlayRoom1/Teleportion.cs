@@ -32,7 +32,6 @@ public class Teleportion : MonoBehaviour {
 		teleportButton = GameObject.Find ("TeleportButton");
 	
 		Player = GameObject.FindGameObjectWithTag("Player");
-        //PlayerDummy = GameObject.FindGameObjectWithTag("PlayerDummy");
 		particleTeleportionStart = GameObject.Find ("TeleportStart");
 		particleTeleportionStop= GameObject.Find ("TeleportStop");
 		blueFlash = GameObject.Find ("BlueFlash");
