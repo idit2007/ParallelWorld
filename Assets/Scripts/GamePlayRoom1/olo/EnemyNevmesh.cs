@@ -50,5 +50,12 @@ public class EnemyNevmesh : MonoBehaviour {
 			anim.SetBool ("run",false);
 		}
 	}
+	void OnCollisionEnter(Collision coll) {
+
+		if (coll.gameObject.tag == "Player") {
+
+			anim.SetTrigger("attack");
+		}
+	}
 
 }

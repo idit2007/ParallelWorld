@@ -7,6 +7,7 @@ public class PlayerAttacked : MonoBehaviour {
 	private Slider hpSlider;
 	private Slider virusSlider;
 	private bool bitted;
+	private bool protect;
 	private Text hpText;
 	private Text virusText;
 	// Use this for initialization
@@ -17,7 +18,8 @@ public class PlayerAttacked : MonoBehaviour {
 		redFlash.SetActive (false);
 		hpSlider = GameObject.Find ("HPSlider").GetComponent<Slider>();
 		virusSlider = GameObject.Find ("VirusSlider").GetComponent<Slider>();
-		bitted = false;
+		bitted =true;
+		protect = false;
 		hpSlider.maxValue = 100;
 		virusSlider.maxValue = 100;
 		hpSlider.value = hpSlider.maxValue;
@@ -28,24 +30,29 @@ public class PlayerAttacked : MonoBehaviour {
 	void Update () {
 		hpText.text=hpSlider.value.ToString()+" / 100";
 		virusText.text=((int)virusSlider.value).ToString()+" / 100";
-		if (bitted && TurnController.Instance.playerMovemnet) {
-			virusSlider .value -= Time.deltaTime*10;
+		if (protect&& TurnController.Instance.playerMovemnet) {
+			virusSlider .value -= Time.deltaTime*6;
 		}
 	}
 	void OnCollisionEnter(Collision coll) {
 		
-		if (coll.gameObject.tag == "NormalZombie") {
+		if (coll.gameObject.tag == "NormalZombie"&&bitted) {
 			
-			bitted = true;
-			hpSlider.value -= 10;
+
+			bitted = false;
 			StartCoroutine (RedFlashShow());
 		}
 	}
 
 	IEnumerator RedFlashShow()
 	{
+		
+		yield return new WaitForSeconds (0.5f);
 		redFlash.SetActive (true);
 		yield return new WaitForSeconds (0.1f);
 		redFlash.SetActive (false);
+		hpSlider.value -= 10;
+		bitted = true;
+		protect = true;
 	}
 }

@@ -18,3 +18,7 @@
 /Users/ItBangchokdee/Desktop/ParallelWorld/Temp/bin/Debug/Parse.Unity.dll
 /Users/ItBangchokdee/Desktop/ParallelWorld/Temp/bin/Debug/Assembly-CSharp-firstpass.dll
 /Users/ItBangchokdee/Desktop/ParallelWorld/Temp/bin/Debug/Assembly-CSharp-firstpass.dll.mdb
+/Users/ItBangchokdee/Desktop/ParallelWorld/Temp/bin/Debug/UnityEngine.PlaymodeTestsRunner.dll
+/Users/ItBangchokdee/Desktop/ParallelWorld/Temp/bin/Debug/UnityEngine.Analytics.dll
+/Users/ItBangchokdee/Desktop/ParallelWorld/Temp/bin/Debug/UnityEngine.HoloLens.dll
+/Users/ItBangchokdee/Desktop/ParallelWorld/Temp/bin/Debug/UnityEngine.VR.dll

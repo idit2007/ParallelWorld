@@ -462,6 +462,7 @@
      <Compile Include="Assets\Scripts\GamePlay\Victory.cs" />
      <Compile Include="Assets\Scripts\GamePlayRoom1\CameraFollow1.cs" />
      <Compile Include="Assets\Scripts\GamePlayRoom1\CameraManagement.cs" />
+     <Compile Include="Assets\Scripts\GamePlayRoom1\CameraTopView.cs" />
      <Compile Include="Assets\Scripts\GamePlayRoom1\ChangeModeShader.cs" />
      <Compile Include="Assets\Scripts\GamePlayRoom1\ControlJoy.cs" />
      <Compile Include="Assets\Scripts\GamePlayRoom1\Door.cs" />

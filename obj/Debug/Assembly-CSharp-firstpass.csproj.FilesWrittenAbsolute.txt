@@ -16,3 +16,7 @@
 /Users/ItBangchokdee/Desktop/ParallelWorld/Temp/bin/Debug/Unity.CecilTools.dll
 /Users/ItBangchokdee/Desktop/ParallelWorld/Temp/bin/Debug/Mono.Cecil.Pdb.dll
 /Users/ItBangchokdee/Desktop/ParallelWorld/Temp/bin/Debug/Mono.Cecil.Mdb.dll
+/Users/ItBangchokdee/Desktop/ParallelWorld/Temp/bin/Debug/UnityEngine.PlaymodeTestsRunner.dll
+/Users/ItBangchokdee/Desktop/ParallelWorld/Temp/bin/Debug/UnityEngine.Analytics.dll
+/Users/ItBangchokdee/Desktop/ParallelWorld/Temp/bin/Debug/UnityEngine.HoloLens.dll
+/Users/ItBangchokdee/Desktop/ParallelWorld/Temp/bin/Debug/UnityEngine.VR.dll
