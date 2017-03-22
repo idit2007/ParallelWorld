@@ -87,10 +87,10 @@ public class SelectStage : MonoBehaviour {
 
 			if (Physics.Raycast(ray, out hit, 100)) {
 			if (hit.transform.gameObject.tag == "StageButton") {
-				budding2 = GameObject.Find (hit.transform.gameObject.name+"B2");
+				budding2 = GameObject.Find (hit.transform.gameObject.name);
 				selected = false;
 				whitePanel.SetActive (true);
-				budding2.SetActive (false);
+
 				Renderer newMaterial=hit.transform.GetComponent<Renderer> ();
 				newMaterial.sharedMaterial = newBuildingMaterial;
 				Debug.Log ("Hit!");
@@ -104,7 +104,7 @@ public class SelectStage : MonoBehaviour {
 	{
 		zoomOut = true;
 		zoomInFinish = false;
-		budding2.SetActive (true);
+
 		Renderer newMaterial=hit.transform.GetComponent<Renderer> ();
 		newMaterial.sharedMaterial = oldBuildingMaterial;
 	
@@ -112,7 +112,7 @@ public class SelectStage : MonoBehaviour {
 	}
 	public void StartButton()
 	{
-		Application.LoadLevel(1);
+		Application.LoadLevel(hit.transform.gameObject.name);
 	}
 
 }

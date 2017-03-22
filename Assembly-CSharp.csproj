@@ -63,6 +63,7 @@
      <Compile Include="Assets\0-Excluded\OpenIAB\OpenIABManager.cs" />
      <Compile Include="Assets\Arkham Interactive\Industrial\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
      <Compile Include="Assets\EffectFinish.cs" />
+     <Compile Include="Assets\Endding.cs" />
      <Compile Include="Assets\Examples\KatsuObjects\PlayerProfile.cs" />
      <Compile Include="Assets\Examples\PlayBento\TasteUI.cs" />
      <Compile Include="Assets\GameOverAndWin.cs" />
@@ -81,6 +82,7 @@
      <Compile Include="Assets\LeanTouch\Examples\SimpleZoom.cs" />
      <Compile Include="Assets\LeanTouch\Scripts\LeanFinger.cs" />
      <Compile Include="Assets\LeanTouch\Scripts\LeanTouch.cs" />
+     <Compile Include="Assets\LoseEndding.cs" />
      <Compile Include="Assets\Move\ClickableTile.cs" />
      <Compile Include="Assets\Move\Node.cs" />
      <Compile Include="Assets\Move\TileMap.cs" />
@@ -470,6 +472,8 @@
      <Compile Include="Assets\Scripts\GamePlayRoom1\EffectPlayerSlowMotion.cs" />
      <Compile Include="Assets\Scripts\GamePlayRoom1\EnemyMovement.cs" />
      <Compile Include="Assets\Scripts\GamePlayRoom1\FrameRate.cs" />
+     <Compile Include="Assets\Scripts\GamePlayRoom1\GameEnd.cs" />
+     <Compile Include="Assets\Scripts\GamePlayRoom1\GameScoreController.cs" />
      <Compile Include="Assets\Scripts\GamePlayRoom1\MapController.cs" />
      <Compile Include="Assets\Scripts\GamePlayRoom1\Movement.cs" />
      <Compile Include="Assets\Scripts\GamePlayRoom1\PlayerAttacked.cs" />
@@ -477,6 +481,7 @@
      <Compile Include="Assets\Scripts\GamePlayRoom1\Teleportion.cs" />
      <Compile Include="Assets\Scripts\GamePlayRoom1\TestCamear\Camera2.cs" />
      <Compile Include="Assets\Scripts\GamePlayRoom1\TestCamear\PlayerKeyBoardMovement.cs" />
+     <Compile Include="Assets\Scripts\GamePlayRoom1\TimeScore.cs" />
      <Compile Include="Assets\Scripts\GamePlayRoom1\TurnController.cs" />
      <Compile Include="Assets\Scripts\GamePlayRoom1\olo\EnemyNevmesh.cs" />
      <Compile Include="Assets\Scripts\Menu\AnimationBack.cs" />
