@@ -10,8 +10,7 @@ namespace PlayBento
 
 	public class ScoreData{
 		public int NumberStage;
-		public int Stars;
-		public float height;
+		public float time;
 		public int Score;
 	}
 }

@@ -25,18 +25,6 @@ public class GameOverAndWin : MonoBehaviour {
 
     }
 
-    public void Restart()
-    {
-        Application.LoadLevel(Application.loadedLevel);
-    }
 
-    public void blacktomenu()
-    {
-        Application.LoadLevel("Menu2");
-    }
-
-    public void NextState()
-    {
-        
-    }
+  
 }

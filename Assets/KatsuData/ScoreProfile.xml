@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScoreProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ScoreList>
+    <ScoreData>
+      <NumberStage>1</NumberStage>
+      <time>21.92971</time>
+      <Score>79</Score>
+    </ScoreData>
+    <ScoreData>
+      <NumberStage>2</NumberStage>
+      <time>22.1407661</time>
+      <Score>78</Score>
+    </ScoreData>
+  </ScoreList>
+</ScoreProfile>

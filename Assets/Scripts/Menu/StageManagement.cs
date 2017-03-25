@@ -2,7 +2,6 @@
 using System.Collections;
 using PlayBento;
 public class StageManagement : MonoBehaviour {
-	public GameObject[] star;  					 //Array's star image
 	private GameObject stage;    				 //Current stage
 	private GameObject nStage; 				     //Next stage.
 	public  int numberStage;  				     //Number of current stage
@@ -17,9 +16,8 @@ public class StageManagement : MonoBehaviour {
 
 	void Start () 
 	{
-			PB.Init ();
+			
 			sp = Local.GetProfile (typeof(ScoreProfile)) as ScoreProfile;
-		star = new GameObject[3];
 		stage = this.gameObject;
 		numberStage = int.Parse(this.gameObject.name);
 		nStage = GameObject.Find ((numberStage+1).ToString());
@@ -29,9 +27,7 @@ public class StageManagement : MonoBehaviour {
 			{
 				sd = sp.ScoreList [numberStage - 1];    //Index stage
 			}
-		star[0]=this.transform.Find ("Star1").gameObject;
-		star[1]=this.transform.Find ("Star2").gameObject;
-		star[2]=this.transform.Find ("Star3").gameObject;
+	
 
 	}
 	// Update is called once per frame
@@ -53,23 +49,19 @@ public class StageManagement : MonoBehaviour {
 					}
 
 				} 
-		         //Set number of stars in current stage.
 				if(sd!=null)
 				{
 
-			       if (sd.Score > ScoreManageMent.Instance.starScore [0])
-			        {
-						star [0].SetActive (true);
+					if (sd.Score >0)
+					{
+						
 						nStage.SetActive (true);
 					}
-			       if (sd.Score >  ScoreManageMent.Instance.starScore [1])
-						star [1].SetActive (true);
-			       if (sd.Score > ScoreManageMent.Instance.starScore [2])
-						star [2].SetActive (true);
-
+				
 
 				}
-				
+				         //Set number of stars in current stage.
+
 					done = false;
 
 	}

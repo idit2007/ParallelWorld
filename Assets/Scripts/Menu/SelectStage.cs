@@ -12,7 +12,7 @@ public class SelectStage : MonoBehaviour {
 	private Vector3 lookRotation;
 	public Material newBuildingMaterial;
 	public Material oldBuildingMaterial;
-	public GameObject budding2;
+	public GameObject selectedCurrentStage;
 	private GameObject UI;
 	private GameObject whitePanel;
 	private Ray ray;
@@ -87,7 +87,7 @@ public class SelectStage : MonoBehaviour {
 
 			if (Physics.Raycast(ray, out hit, 100)) {
 			if (hit.transform.gameObject.tag == "StageButton") {
-				budding2 = GameObject.Find (hit.transform.gameObject.name);
+				selectedCurrentStage = GameObject.Find (hit.transform.gameObject.name);
 				selected = false;
 				whitePanel.SetActive (true);
 
@@ -107,12 +107,19 @@ public class SelectStage : MonoBehaviour {
 
 		Renderer newMaterial=hit.transform.GetComponent<Renderer> ();
 		newMaterial.sharedMaterial = oldBuildingMaterial;
-	
+		TimeScore.currentStage = 0;
 
 	}
 	public void StartButton()
 	{
-		Application.LoadLevel(hit.transform.gameObject.name);
+		int x = 0;
+		string stage = selectedCurrentStage.name;
+		char st = stage [1];
+		int.TryParse(st.ToString(),out x);
+		TimeScore.currentStage = x;
+		Debug.Log ("GOo stage = "+x);
+
+		Application.LoadLevel(selectedCurrentStage.name);
 	}
 
 }

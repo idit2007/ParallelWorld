@@ -64,7 +64,7 @@
      <Compile Include="Assets\Arkham Interactive\Industrial\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
      <Compile Include="Assets\EffectFinish.cs" />
      <Compile Include="Assets\Endding.cs" />
-     <Compile Include="Assets\Examples\KatsuObjects\PlayerProfile.cs" />
+     <Compile Include="Assets\Examples\PlayBento\PlayerProfile.cs" />
      <Compile Include="Assets\Examples\PlayBento\TasteUI.cs" />
      <Compile Include="Assets\GameOverAndWin.cs" />
      <Compile Include="Assets\HologramShader\Scripts\HoloManager.cs" />
@@ -449,7 +449,6 @@
      <Compile Include="Assets\Scripts\GamePlay\CloseMap.cs" />
      <Compile Include="Assets\Scripts\GamePlay\CreateObject.cs" />
      <Compile Include="Assets\Scripts\GamePlay\CreateUIObject.cs" />
-     <Compile Include="Assets\Scripts\GamePlay\DetailManagement.cs" />
      <Compile Include="Assets\Scripts\GamePlay\FloatObject.cs" />
      <Compile Include="Assets\Scripts\GamePlay\Gem.cs" />
      <Compile Include="Assets\Scripts\GamePlay\InputGamePlayManagement.cs" />
@@ -460,9 +459,6 @@
      <Compile Include="Assets\Scripts\GamePlay\PopUpShow.cs" />
      <Compile Include="Assets\Scripts\GamePlay\RotatonControl.cs" />
      <Compile Include="Assets\Scripts\GamePlay\SetActive.cs" />
-     <Compile Include="Assets\Scripts\GamePlay\ShowScore.cs" />
-     <Compile Include="Assets\Scripts\GamePlay\Victory.cs" />
-     <Compile Include="Assets\Scripts\GamePlayRoom1\CameraFollow1.cs" />
      <Compile Include="Assets\Scripts\GamePlayRoom1\CameraManagement.cs" />
      <Compile Include="Assets\Scripts\GamePlayRoom1\CameraTopView.cs" />
      <Compile Include="Assets\Scripts\GamePlayRoom1\ChangeModeShader.cs" />
@@ -487,7 +483,6 @@
      <Compile Include="Assets\Scripts\Menu\AnimationBack.cs" />
      <Compile Include="Assets\Scripts\Menu\CurrentStage.cs" />
      <Compile Include="Assets\Scripts\Menu\LoadLevel.cs" />
-     <Compile Include="Assets\Scripts\Menu\MenuDrag.cs" />
      <Compile Include="Assets\Scripts\Menu\PanelButton.cs" />
      <Compile Include="Assets\Scripts\Menu\ScollMap.cs" />
      <Compile Include="Assets\Scripts\Menu\ScoreManageMent.cs" />
@@ -495,7 +490,6 @@
      <Compile Include="Assets\Scripts\Menu\SelectStage.cs" />
      <Compile Include="Assets\Scripts\Menu\StageManagement.cs" />
      <Compile Include="Assets\Scripts\Menu\WorldSelect.cs" />
-     <Compile Include="Assets\Scripts\Profile\DetailProfile.cs" />
      <Compile Include="Assets\Scripts\Profile\ScoreProfile.cs" />
      <Compile Include="Assets\Scripts\Test.cs" />
      <Compile Include="Assets\Scripts\Title\Login.cs" />
@@ -581,6 +575,7 @@
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-iw\wallet_strings.xml" />
      <None Include="Assets\Packages\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfFieldScatter.shader" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-sl\common_strings.xml" />
+     <None Include="Assets\KatsuData\ScoreProfile.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-gu-rIN\location_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-mr-rIN\common_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-pt\location_strings.xml" />
@@ -711,7 +706,6 @@
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-my-rMM\location_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-si-rLK\location_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-pl\location_strings.xml" />
-     <None Include="Assets\KatsuData\ScoreProfile1.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-en-rAU\base_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-iw\location_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-ca\base_strings.xml" />
@@ -817,7 +811,6 @@
      <None Include="Assets\Packages\Effects\ImageEffects\Shaders\CameraMotionBlur.shader" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-pt\wallet_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-ca\wallet_strings.xml" />
-     <None Include="Assets\KatsuData\PlayerProfile.xml" />
      <None Include="Assets\Packages\Effects\ImageEffects\Shaders\_Antialiasing\DLAA.shader" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-tr\common_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-fi\location_strings.xml" />

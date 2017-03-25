@@ -1,22 +1,16 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/LoseEndding.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Menu/ScoreManageMent.cs">
     <Files>
-      <File FileName="Assets/Scripts/GamePlayRoom1/TestCamear/Camera2.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GamePlayRoom1/ControlJoy.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GamePlayRoom1/MapController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GamePlayRoom1/PlayerAttacked.cs" Line="1" Column="1" />
-      <File FileName="Assets/Packages/Cinema Suite/Cinema Director/Cutscene Items/Global Items/Utility/LoadLevelEvent.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GamePlayRoom1/Teleportion.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GamePlayRoom1/olo/EnemyNevmesh.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GamePlayRoom1/CameraManagement.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Menu/SelectStage.cs" Line="32" Column="60" />
-      <File FileName="Assets/Scripts/GamePlayRoom1/CameraFollow1.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GamePlayRoom1/CameraTopView.cs" Line="1" Column="1" />
-      <File FileName="Assets/Endding.cs" Line="9" Column="39" />
-      <File FileName="Assets/Scripts/GamePlayRoom1/TurnController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Menu/StageManagement.cs" Line="4" Column="1" />
-      <File FileName="Assets/LoseEndding.cs" Line="31" Column="5" />
+      <File FileName="Assets/Scripts/Menu/SelectStage.cs" Line="123" Column="3" />
+      <File FileName="Assets/Scripts/GamePlayRoom1/GameScoreController.cs" Line="19" Column="1" />
+      <File FileName="Assets/Scripts/GamePlayRoom1/TimeScore.cs" Line="18" Column="4" />
+      <File FileName="Assets/Scripts/Menu/ScoreManageMent.cs" Line="43" Column="38" />
+      <File FileName="Assets/Scripts/Menu/StageManagement.cs" Line="11" Column="9" />
+      <File FileName="Assets/PlayBento/Ingredients/Facebook/Scripts/Utils/FacebookLogger.cs" Line="105" Column="1" />
+      <File FileName="Assets/Resources/Katsu/ScoreProfile.xml" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Profile/ScoreProfile.cs" Line="8" Column="15" />
+      <File FileName="Assets/PlayBento/Blocks/Local.cs" Line="61" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

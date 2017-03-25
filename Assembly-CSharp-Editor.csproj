@@ -239,6 +239,7 @@
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-iw\wallet_strings.xml" />
      <None Include="Assets\Packages\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfFieldScatter.shader" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-sl\common_strings.xml" />
+     <None Include="Assets\KatsuData\ScoreProfile.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-gu-rIN\location_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-mr-rIN\common_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-pt\location_strings.xml" />
@@ -369,7 +370,6 @@
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-my-rMM\location_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-si-rLK\location_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-pl\location_strings.xml" />
-     <None Include="Assets\KatsuData\ScoreProfile1.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-en-rAU\base_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-iw\location_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-ca\base_strings.xml" />
@@ -475,7 +475,6 @@
      <None Include="Assets\Packages\Effects\ImageEffects\Shaders\CameraMotionBlur.shader" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-pt\wallet_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-ca\wallet_strings.xml" />
-     <None Include="Assets\KatsuData\PlayerProfile.xml" />
      <None Include="Assets\Packages\Effects\ImageEffects\Shaders\_Antialiasing\DLAA.shader" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-tr\common_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-fi\location_strings.xml" />
