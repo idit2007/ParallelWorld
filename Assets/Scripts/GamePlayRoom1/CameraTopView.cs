@@ -28,7 +28,7 @@ public class CameraTopView : MonoBehaviour {
 			if (cameraTopHight < 30)
 				cameraTopHight += Time.deltaTime * 20;
 
-			Debug.Log (playerTransform+" "+mainCamera.transform.position);
+//			Debug.Log (playerTransform+" "+mainCamera.transform.position);
 		//	mainCamera.transform.position = Vector3.MoveTowards (mainCamera.transform.position, playerTransform , 20 * Time.deltaTime);
 			if (mainCamera.transform.rotation.x < 0.70f) {
 				mainCamera.transform.Rotate (Vector3.right * Time.deltaTime * 80, Space.Self);

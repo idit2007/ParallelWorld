@@ -6,6 +6,7 @@ public class GameOverAndWin : MonoBehaviour {
     private Slider hpSlider;
     private Slider virusSlider;
     public GameObject lose;
+	public GameObject victoryPopup;
     public static bool StopGame;
     // Use this for initialization
     void Start () {
@@ -19,6 +20,7 @@ public class GameOverAndWin : MonoBehaviour {
 	void Update () {
                  if(virusSlider.value == 0 || hpSlider.value == 0)
             {
+			if(!victoryPopup.activeSelf)
                 lose.SetActive(true);
                 StopGame = true;
             }

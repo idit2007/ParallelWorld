@@ -10,6 +10,8 @@ public class PlayerAttacked : MonoBehaviour {
 	private bool protect;
 	private Text hpText;
 	private Text virusText;
+	private Rigidbody rgb;
+	private Vector3 v3;
 	// Use this for initialization
 	void Start () {
 		hpText = GameObject.Find ("HPText").GetComponent<Text>();
@@ -24,6 +26,8 @@ public class PlayerAttacked : MonoBehaviour {
 		virusSlider.maxValue = 100;
 		hpSlider.value = hpSlider.maxValue;
 		virusSlider.value = virusSlider.maxValue;
+		rgb = GetComponent<Rigidbody> ();
+		v3 = new Vector3 (Random.Range(-10,10),0,Random.Range(-10,10));
 	}
 
 	// Update is called once per frame
@@ -40,11 +44,23 @@ public class PlayerAttacked : MonoBehaviour {
 			
 
 			bitted = false;
-			StartCoroutine (RedFlashShow());
+			StartCoroutine (NormalZombieRedFlashShow());
+		}
+		if (coll.gameObject.tag == "RedZombie"&&bitted) {
+
+
+			bitted = false;
+			StartCoroutine (RedZombieRedFlashShow());
+		}
+		if (coll.gameObject.tag == "BlueZombie"&&bitted) {
+
+
+			bitted = false;
+			StartCoroutine (BlueZombieRedFlashShow());
 		}
 	}
 
-	IEnumerator RedFlashShow()
+	IEnumerator NormalZombieRedFlashShow()
 	{
 		
 		yield return new WaitForSeconds (0.5f);
@@ -52,6 +68,29 @@ public class PlayerAttacked : MonoBehaviour {
 		yield return new WaitForSeconds (0.1f);
 		redFlash.SetActive (false);
 		hpSlider.value -= 10;
+		bitted = true;
+		protect = true;
+	}
+	IEnumerator RedZombieRedFlashShow()
+	{
+
+		yield return new WaitForSeconds (0.5f);
+		redFlash.SetActive (true);
+		yield return new WaitForSeconds (0.1f);
+		redFlash.SetActive (false);
+		hpSlider.value -= 30;
+		bitted = true;
+		protect = true;
+	}
+	IEnumerator BlueZombieRedFlashShow()
+	{
+
+		yield return new WaitForSeconds (0.5f);
+		redFlash.SetActive (true);
+		rgb.AddForce (v3);
+		yield return new WaitForSeconds (0.1f);
+		redFlash.SetActive (false);
+		hpSlider.value -= 100;
 		bitted = true;
 		protect = true;
 	}

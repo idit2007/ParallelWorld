@@ -27,7 +27,7 @@ public class TimeScore : MonoBehaviour {
 	//Set active/unactive star  follow score.
 	void Update()
 	{    
-		Debug.Log (currentStage);
+		//Debug.Log (currentStage);
 		timeScoreText.text= "Time: "+(string.Format("{0:0.00}",playTime));
 		if (gameStart)
 			playTime += Time.deltaTime;

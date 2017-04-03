@@ -1,16 +1,17 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Menu/ScoreManageMent.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Menu/ScollMap.cs">
     <Files>
-      <File FileName="Assets/Scripts/Menu/SelectStage.cs" Line="123" Column="3" />
-      <File FileName="Assets/Scripts/GamePlayRoom1/GameScoreController.cs" Line="19" Column="1" />
-      <File FileName="Assets/Scripts/GamePlayRoom1/TimeScore.cs" Line="18" Column="4" />
-      <File FileName="Assets/Scripts/Menu/ScoreManageMent.cs" Line="43" Column="38" />
-      <File FileName="Assets/Scripts/Menu/StageManagement.cs" Line="11" Column="9" />
-      <File FileName="Assets/PlayBento/Ingredients/Facebook/Scripts/Utils/FacebookLogger.cs" Line="105" Column="1" />
-      <File FileName="Assets/Resources/Katsu/ScoreProfile.xml" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Profile/ScoreProfile.cs" Line="8" Column="15" />
-      <File FileName="Assets/PlayBento/Blocks/Local.cs" Line="61" Column="4" />
+      <File FileName="Assets/Scripts/Menu/ScoreManageMent.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GamePlayRoom1/DoorVictory.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GamePlayRoom1/EventKeys.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GamePlayRoom1/EventHelp.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GamePlayRoom1/ControlJoy.cs" Line="1" Column="1" />
+      <File FileName="Assets/GameOverAndWin.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GamePlayRoom1/CameraTopView.cs" Line="11" Column="25" />
+      <File FileName="Assets/Scripts/GamePlayRoom1/TimeScore.cs" Line="30" Column="5" />
+      <File FileName="Assets/Scripts/Menu/SelectStage.cs" Line="120" Column="3" />
+      <File FileName="Assets/Scripts/Menu/ScollMap.cs" Line="9" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
