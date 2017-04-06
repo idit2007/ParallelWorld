@@ -241,7 +241,6 @@
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-th\base_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-et-rEE\location_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-nb\common_strings.xml" />
-     <None Include="Assets\Machine Shop Equipment\Readme.txt" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-el\location_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-ca\common_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-ky-rKG\common_strings.xml" />
@@ -286,7 +285,6 @@
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-nl\base_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\layout\place_autocomplete_item_prediction.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-en-rIN\common_strings.xml" />
-     <None Include="Assets\1nfern0\SubmachineGun\submachinegunshader.shader" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-sq-rAL\location_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-fr\location_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-ms-rMY\wallet_strings.xml" />

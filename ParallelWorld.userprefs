@@ -1,17 +1,9 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Menu/ScollMap.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GamePlayRoom1/Teleportion.cs">
     <Files>
       <File FileName="Assets/Scripts/Menu/ScoreManageMent.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GamePlayRoom1/DoorVictory.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GamePlayRoom1/EventKeys.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GamePlayRoom1/EventHelp.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GamePlayRoom1/ControlJoy.cs" Line="1" Column="1" />
-      <File FileName="Assets/GameOverAndWin.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GamePlayRoom1/CameraTopView.cs" Line="11" Column="25" />
-      <File FileName="Assets/Scripts/GamePlayRoom1/TimeScore.cs" Line="30" Column="5" />
-      <File FileName="Assets/Scripts/Menu/SelectStage.cs" Line="120" Column="3" />
-      <File FileName="Assets/Scripts/Menu/ScollMap.cs" Line="9" Column="1" />
+      <File FileName="Assets/Scripts/GamePlayRoom1/Teleportion.cs" Line="92" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

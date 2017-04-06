@@ -56,7 +56,6 @@ public class Teleportion : MonoBehaviour {
 	IEnumerator TeleportAnimation()
 	{
 
-        selectpoint.removeway = true;
         Button teleportButtonC = teleportButton.GetComponent<Button>();
 		teleportButtonC.interactable = false;
 		particleTeleportionStart.SetActive (true);
@@ -68,9 +67,7 @@ public class Teleportion : MonoBehaviour {
 		if (!world) {
 
 			TurnController.Instance.CurrentWorld = 2;
-            selectpoint.removeway = false;
             Player.transform.position = new Vector3(Player.transform.position.x + teleportRange, Player.transform.position.y, Player.transform.position.z);
-            Unit.World = 1;
 
 
 
@@ -80,10 +77,8 @@ public class Teleportion : MonoBehaviour {
 		else {
 
 			TurnController.Instance.CurrentWorld = 1;
-            selectpoint.removeway = false;
             Player.transform.position = new Vector3 (Player.transform.position.x - teleportRange, Player.transform.position.y, Player.transform.position.z);
             //PlayerDummy.transform.position = new Vector3(PlayerDummy.transform.position.x + teleportRange, PlayerDummy.transform.position.y, PlayerDummy.transform.position.z);
-            Unit.World = 0;
 
 			caM1.SetActive(true);
 
