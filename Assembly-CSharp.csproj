@@ -63,8 +63,6 @@
      <Compile Include="Assets\0-Excluded\OpenIAB\OpenIABManager.cs" />
      <Compile Include="Assets\EffectFinish.cs" />
      <Compile Include="Assets\Endding.cs" />
-     <Compile Include="Assets\Examples\PlayBento\PlayerProfile.cs" />
-     <Compile Include="Assets\Examples\PlayBento\TasteUI.cs" />
      <Compile Include="Assets\GameLavelText.cs" />
      <Compile Include="Assets\GameOverAndWin.cs" />
      <Compile Include="Assets\HologramShader\Scripts\HoloManager.cs" />
