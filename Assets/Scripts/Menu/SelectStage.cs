@@ -93,7 +93,7 @@ public class SelectStage : MonoBehaviour {
 
 				Renderer newMaterial=hit.transform.GetComponent<Renderer> ();
 				newMaterial.sharedMaterial = newBuildingMaterial;
-				Debug.Log ("Hit!");
+			
 				target = hit.transform;
 				zoomTarget = new Vector3 (target.position.x,2,target.position.z-2.5f);
 				selected = true;
