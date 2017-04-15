@@ -1,4 +1,4 @@
-﻿
+﻿#define FREE_BENTO
 
 using System;
 using System.IO;
@@ -76,7 +76,6 @@ namespace PlayBento
 		public KatsuObject Get (Type type)
 		{
 			#if FREE_BENTO
-			ShowLicenseBadge ();
 			#endif
 			for (int i = 0; i < objects.Count; i++) {
 				if (objects [i].ToString () == type.ToString ()) {
@@ -92,7 +91,6 @@ namespace PlayBento
 		public void Load ()
 		{
 			#if FREE_BENTO
-			ShowLicenseBadge ();
 			#endif
 			for (int i = 0; i < objects.Count; i++) {
 				Read (objects[i]);
@@ -105,7 +103,6 @@ namespace PlayBento
 		public void Save ()
 		{
 			#if FREE_BENTO
-			ShowLicenseBadge ();
 			#endif
 			if (Platform.isEditor ()) 
 			{
@@ -188,15 +185,6 @@ namespace PlayBento
 			return textAsset.text;
 		}
 
-		#if FREE_BENTO
-		private void ShowLicenseBadge()
-		{
-			if (GameObject.FindObjectOfType (typeof(LicenseBadge)) == null) {
-				GameObject licenseBadge = new GameObject();
-				licenseBadge.name = "License Badge";
-				licenseBadge.AddComponent(typeof(LicenseBadge));
-			}
-		}
-		#endif
+	
 	}
 }

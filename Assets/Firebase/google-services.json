@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "379277192697",
+    "firebase_url": "https://parallelworld-1a50e.firebaseio.com",
+    "project_id": "parallelworld-1a50e",
+    "storage_bucket": "parallelworld-1a50e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:379277192697:android:5096cb8115c276e4",
+        "android_client_info": {
+          "package_name": "com.ThornGameGenius.ParallelWorld"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "379277192697-8tdtnkklfltlimbvnpsljk59tmge3k0q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCU6l-R7d3xJ_CaZL-Z3xN1aD1F9ClhSJg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
