@@ -20,6 +20,7 @@ public class SelectStage : MonoBehaviour {
 	private bool zoomInFinish;
 	private bool zoomOut;
 	private float rotX;
+	MeshRenderer mr;
 	void Start()
 	{
 		Screen.orientation = ScreenOrientation.LandscapeLeft;
@@ -41,14 +42,13 @@ public class SelectStage : MonoBehaviour {
 		
 		if(Screen.orientation!=ScreenOrientation.LandscapeLeft)
 			Screen.orientation = ScreenOrientation.LandscapeLeft;
-		Debug.Log (mainCamera.transform.rotation.y);
 		//	Debug.DrawLine(ray.origin, hit.point);
 		if (selected&&!zoomOut) {
 			//mainCamera.transform.rotation = _lookRotation;
 		
 
 			mainCamera.transform.position = Vector3.MoveTowards (mainCamera.transform.position, zoomTarget, 10 * Time.deltaTime);
-			if (mainCamera.transform.rotation.x > 0)
+			if (mainCamera.transform.rotation.x > 100)
 				mainCamera.transform.Rotate (Vector3.left * Time.deltaTime * 60, Space.Self);
 			if (mainCamera.transform.position == zoomTarget && !zoomInFinish) {
 				UI.SetActive (true);
@@ -90,12 +90,11 @@ public class SelectStage : MonoBehaviour {
 				selectedCurrentStage = GameObject.Find (hit.transform.gameObject.name);
 				selected = false;
 				whitePanel.SetActive (true);
-
-				Renderer newMaterial=hit.transform.GetComponent<Renderer> ();
-				newMaterial.sharedMaterial = newBuildingMaterial;
-			
+				LeaderBoard.pressStage = hit.transform.gameObject.name;
+				mr=hit.transform.GetComponent<MeshRenderer> ();
+				mr.enabled = false;
 				target = hit.transform;
-				zoomTarget = new Vector3 (target.position.x,2,target.position.z-2.5f);
+				zoomTarget = new Vector3 (target.position.x+1,1f,target.position.z-1);
 				selected = true;
 			}
 		}
@@ -104,9 +103,7 @@ public class SelectStage : MonoBehaviour {
 	{
 		zoomOut = true;
 		zoomInFinish = false;
-
-		Renderer newMaterial=hit.transform.GetComponent<Renderer> ();
-		newMaterial.sharedMaterial = oldBuildingMaterial;
+		mr.enabled = true;
 		TimeScore.currentStage = 0;
 
 	}

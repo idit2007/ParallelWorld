@@ -141,8 +141,14 @@
  <Reference Include="Firebase.Auth">
  <HintPath>/Users/ItBangchokdee/Desktop/ParallelWorld/Assets/Firebase/Plugins/Firebase.Auth.dll</HintPath>
  </Reference>
+ <Reference Include="Firebase.Database">
+ <HintPath>/Users/ItBangchokdee/Desktop/ParallelWorld/Assets/Firebase/Plugins/Firebase.Database.dll</HintPath>
+ </Reference>
  <Reference Include="Google.MiniJson">
  <HintPath>/Users/ItBangchokdee/Desktop/ParallelWorld/Assets/Firebase/Plugins/Google.MiniJson.dll</HintPath>
+ </Reference>
+ <Reference Include="Google.Sharpen">
+ <HintPath>/Users/ItBangchokdee/Desktop/ParallelWorld/Assets/Firebase/Plugins/Google.Sharpen.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Compat">
  <HintPath>/Users/ItBangchokdee/Desktop/ParallelWorld/Assets/Firebase/Plugins/Unity.Compat.dll</HintPath>
@@ -167,12 +173,6 @@
  </Reference>
  <Reference Include="UnityEditor.OSXStandalone.Extensions">
  <HintPath>/Applications/Unity/Unity.app/Contents/PlaybackEngines/macstandalonesupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
- </Reference>
- <Reference Include="Firebase.Database">
- <HintPath>/Users/ItBangchokdee/Desktop/ParallelWorld/Assets/Firebase/Plugins/Firebase.Database.dll</HintPath>
- </Reference>
- <Reference Include="Google.Sharpen">
- <HintPath>/Users/ItBangchokdee/Desktop/ParallelWorld/Assets/Firebase/Plugins/Google.Sharpen.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

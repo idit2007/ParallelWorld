@@ -18,6 +18,7 @@ public class FireBaseInIt : MonoBehaviour {
 	public InputField passField;
 	public InputField newUserEmailField;
 	public InputField newUserPassField;
+	public static string UserAccount;
 	void Start()
 	{
 		InitializeFirebase ();
@@ -32,7 +33,7 @@ public class FireBaseInIt : MonoBehaviour {
 			}
 			if (task.IsFaulted) {
 				Debug.LogError("SignInWithEmailAndPasswordAsync encountered an error: " + task.Exception);
-				popupText.text="Your email or passworld dont correct";
+				popupText.text="Your email or passworld don't correct";
 				popup.SetActive(true);
 				ResetText ();
 				return;
@@ -41,6 +42,7 @@ public class FireBaseInIt : MonoBehaviour {
 			Firebase.Auth.FirebaseUser newUser = task.Result;
 			Debug.LogFormat("User signed in successfully: {0} ({1})",
 				newUser.DisplayName, newUser.UserId);
+			UserAccount=newUser.UserId;
 			Application.LoadLevel ("Menu");
 		});
 	

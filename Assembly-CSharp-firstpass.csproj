@@ -128,20 +128,20 @@
  <Reference Include="Firebase.Auth">
  <HintPath>/Users/ItBangchokdee/Desktop/ParallelWorld/Assets/Firebase/Plugins/Firebase.Auth.dll</HintPath>
  </Reference>
+ <Reference Include="Firebase.Database">
+ <HintPath>/Users/ItBangchokdee/Desktop/ParallelWorld/Assets/Firebase/Plugins/Firebase.Database.dll</HintPath>
+ </Reference>
  <Reference Include="Google.MiniJson">
  <HintPath>/Users/ItBangchokdee/Desktop/ParallelWorld/Assets/Firebase/Plugins/Google.MiniJson.dll</HintPath>
+ </Reference>
+ <Reference Include="Google.Sharpen">
+ <HintPath>/Users/ItBangchokdee/Desktop/ParallelWorld/Assets/Firebase/Plugins/Google.Sharpen.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Compat">
  <HintPath>/Users/ItBangchokdee/Desktop/ParallelWorld/Assets/Firebase/Plugins/Unity.Compat.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Tasks">
  <HintPath>/Users/ItBangchokdee/Desktop/ParallelWorld/Assets/Firebase/Plugins/Unity.Tasks.dll</HintPath>
- </Reference>
- <Reference Include="Firebase.Database">
- <HintPath>/Users/ItBangchokdee/Desktop/ParallelWorld/Assets/Firebase/Plugins/Firebase.Database.dll</HintPath>
- </Reference>
- <Reference Include="Google.Sharpen">
- <HintPath>/Users/ItBangchokdee/Desktop/ParallelWorld/Assets/Firebase/Plugins/Google.Sharpen.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

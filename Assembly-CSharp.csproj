@@ -118,7 +118,7 @@
      <Compile Include="Assets\Scripts\GamePlayRoom1\olo\EnemyNevmesh.cs" />
      <Compile Include="Assets\Scripts\Menu\AnimationBack.cs" />
      <Compile Include="Assets\Scripts\Menu\CurrentStage.cs" />
-     <Compile Include="Assets\Scripts\Menu\GameDatabase.cs" />
+     <Compile Include="Assets\Scripts\Menu\LeaderBoard.cs" />
      <Compile Include="Assets\Scripts\Menu\LoadLevel.cs" />
      <Compile Include="Assets\Scripts\Menu\PanelButton.cs" />
      <Compile Include="Assets\Scripts\Menu\ScollMap.cs" />
@@ -191,20 +191,20 @@
  <Reference Include="Firebase.Auth">
  <HintPath>/Users/ItBangchokdee/Desktop/ParallelWorld/Assets/Firebase/Plugins/Firebase.Auth.dll</HintPath>
  </Reference>
+ <Reference Include="Firebase.Database">
+ <HintPath>/Users/ItBangchokdee/Desktop/ParallelWorld/Assets/Firebase/Plugins/Firebase.Database.dll</HintPath>
+ </Reference>
  <Reference Include="Google.MiniJson">
  <HintPath>/Users/ItBangchokdee/Desktop/ParallelWorld/Assets/Firebase/Plugins/Google.MiniJson.dll</HintPath>
+ </Reference>
+ <Reference Include="Google.Sharpen">
+ <HintPath>/Users/ItBangchokdee/Desktop/ParallelWorld/Assets/Firebase/Plugins/Google.Sharpen.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Compat">
  <HintPath>/Users/ItBangchokdee/Desktop/ParallelWorld/Assets/Firebase/Plugins/Unity.Compat.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Tasks">
  <HintPath>/Users/ItBangchokdee/Desktop/ParallelWorld/Assets/Firebase/Plugins/Unity.Tasks.dll</HintPath>
- </Reference>
- <Reference Include="Firebase.Database">
- <HintPath>/Users/ItBangchokdee/Desktop/ParallelWorld/Assets/Firebase/Plugins/Firebase.Database.dll</HintPath>
- </Reference>
- <Reference Include="Google.Sharpen">
- <HintPath>/Users/ItBangchokdee/Desktop/ParallelWorld/Assets/Firebase/Plugins/Google.Sharpen.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
