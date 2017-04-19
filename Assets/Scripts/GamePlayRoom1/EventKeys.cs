@@ -21,7 +21,7 @@ public class EventKeys : MonoBehaviour {
 			blackPanel.SetActive (true);
 			if(target!=null)
 			target.SetActive (true);
-			popupText.text = "Now you get a key.";
+			popupText.text = "Now you get a Keycard to open the door.";
 			popup.SetActive (true);
 			if(door1!=null)
 			door1.enabled = true;

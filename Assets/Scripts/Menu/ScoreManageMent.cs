@@ -77,11 +77,11 @@ public class ScoreManageMent : MonoBehaviour {
 	}
 	public void PlayAgain()
 	{
-		Application.LoadLevel ("P"+TimeScore.currentStage.ToString()+"V2");
+		Application.LoadLevel ("Stage"+TimeScore.currentStage.ToString());
 	}
 	public void NextStage()
 	{
 		TimeScore.currentStage++;
-		Application.LoadLevel ("P"+TimeScore.currentStage.ToString()+"V2");
+		Application.LoadLevel ("Stage"+TimeScore.currentStage.ToString());
 	}
 }

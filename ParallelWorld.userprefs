@@ -1,16 +1,17 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GamePlayRoom1/EnemyMovement.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GamePlayRoom1/EventHelp.cs">
     <Files>
-      <File FileName="Assets/KatsuData/ScoreProfile.xml" Line="15" Column="16" />
-      <File FileName="Assets/Scripts/GamePlayRoom1/GameScoreController.cs" Line="26" Column="27" />
-      <File FileName="Assets/Scripts/Menu/SelectStage.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Menu/ScollMap.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GamePlayRoom1/EnemyMovement.cs" Line="1" Column="1" />
-      <File FileName="Assets/Firebase/FireBaseInIt.cs" Line="22" Column="14" />
-      <File FileName="Assets/Scripts/Menu/ScoreManageMent.cs" Line="6" Column="34" />
-      <File FileName="Assets/Scripts/Menu/StageManagement.cs" Line="92" Column="2" />
-      <File FileName="Assets/Scripts/Menu/ScoreStage.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Menu/LeaderBoard.cs" Line="32" Column="17" />
+      <File FileName="Assets/Scripts/Menu/SelectStage.cs" Line="90" Column="59" />
+      <File FileName="Assets/Scripts/Menu/StageManagement.cs" Line="64" Column="41" />
+      <File FileName="Assets/KatsuData/ScoreProfile.xml" Line="14" Column="15" />
+      <File FileName="Assets/Scripts/GamePlayRoom1/EffectPlayerSlowMotion.cs" Line="6" Column="32" />
+      <File FileName="Assets/Scripts/GamePlayRoom1/EventHelp.cs" Line="41" Column="3" />
+      <File FileName="Assets/Scripts/GamePlayRoom1/InstrutionTutorial.cs" Line="11" Column="2" />
+      <File FileName="Assets/Scripts/GamePlayRoom1/TimeScore.cs" Line="17" Column="20" />
+      <File FileName="Assets/GameLavelText.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Menu/ScoreManageMent.cs" Line="80" Column="45" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

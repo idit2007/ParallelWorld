@@ -15,6 +15,8 @@ public class StageManagement : MonoBehaviour {
 	private int[] starScore;
 	public Sprite[]rankImage;
 	public Image showRank; 
+	public Text rankNameText;
+	private int buffStage;
 	//Check situation that finish.
 	// Use this for initialization
 	void Awake()
@@ -45,40 +47,46 @@ public class StageManagement : MonoBehaviour {
 	{
 		this.transform.Rotate (0,Time.deltaTime*10,0);
 				//Do this once time.
-				if (done)
-				{                                 
-					//If it's first stage set it to active stage.
-					if (numberStage == 1)              
-					{
-						this.gameObject.SetActive (true);
-					}
+		if (done) {                                 
+			//If it's first stage set it to active stage.
+			if (numberStage == 1) {
+				this.gameObject.SetActive (true);
+			}
 					//If stage more than list set them to disble stage.
-					else  if(numberStage>sp.ScoreList.Count)
-					{
-						this.gameObject.SetActive (false);
-					}
+					else if (numberStage > sp.ScoreList.Count) {
+				this.gameObject.SetActive (false);
+			}
 
-				} 
-				if(sd!=null)
-				{
+		} 
+			if (sd != null) {
 
-					if (sd.Score >0)
-					{
-						
-						nStage.SetActive (true);
-					}
-				    
-					if (sd.Score >60)
-				      showRank.sprite = rankImage [2];
-					else if(sd.Score >40)
-				      showRank.sprite = rankImage [1];
-			        else if(sd.Score >20)
-			          showRank.sprite = rankImage [0];
+			if (sd.Score > 0&&done) {
+					rankNameText.text = "Rank: Curese";
+					nStage.SetActive (true);
 				}
-				         //Set number of stars in current stage.
+			if (LeaderBoard.pressStage == "Stage" + this.gameObject.name) {
+				Debug.Log ("In r");
+				if (sd.Score > 60) {
+					showRank.sprite = rankImage [3];
+					rankNameText.text = "Rank: Destinator";
+				} else if (sd.Score > 40) {
+					showRank.sprite = rankImage [2];
+					rankNameText.text = "Rank: Conqueror";
+				} else if (sd.Score > 20) {
+					showRank.sprite = rankImage [1];
+					rankNameText.text = "Rank: Survivor";
+				}
+			} else if (LeaderBoard.pressStage == null) {
+				rankNameText.text = "Rank: Curese";
+				showRank.sprite = rankImage [0];
+			}
+			}
+			//Set number of stars in current stage.
 
-					done = false;
-
+			done = false;
+		
+	//	if(TimeScore.currentStage!=buffStage)
+			
 	}
 
 

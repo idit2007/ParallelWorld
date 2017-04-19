@@ -66,7 +66,10 @@ public class ShaderManagement : MonoBehaviour {
 		}
 			world1.SetFloat( "_ColorIntensity", alpha );
 		world2.SetFloat( "_ColorIntensity", alpha );
-
+		if (EffectPlayerSlowMotion.Instance.playerMove&&EffectPlayerSlowMotion.Instance.done1) {
+			StartCoroutine (WaitEffectChangeshaderBack());
+			EffectPlayerSlowMotion.Instance.done1 = false;
+		}
 	}
 	// Update is called once per frame
 
@@ -117,21 +120,28 @@ public class ShaderManagement : MonoBehaviour {
 
 	public void TeleportionChangeShader()
 	{
+		EffectPlayerSlowMotion.Instance.done1 = true;
+		EffectPlayerSlowMotion.Instance.playerMove = false;
+
 		StartCoroutine (WaitEffectChangeshader());
+
 	}
 
 	IEnumerator WaitEffectChangeshader()
 	{
 
 
-		yield return new WaitForSeconds (1f);
+		yield return new WaitForSeconds (0.2f);
 		HoloGramScene ();
 		holo = true;
-		yield return new WaitForSeconds (3f);
+
+	}
+	IEnumerator WaitEffectChangeshaderBack()
+	{
+		yield return new WaitForSeconds (0.5f);
 		DefaultScene ();
 		holo = false;
 
 	}
-
 }
 

@@ -108,6 +108,7 @@
      <Compile Include="Assets\Scripts\GamePlayRoom1\FrameRate.cs" />
      <Compile Include="Assets\Scripts\GamePlayRoom1\GameEnd.cs" />
      <Compile Include="Assets\Scripts\GamePlayRoom1\GameScoreController.cs" />
+     <Compile Include="Assets\Scripts\GamePlayRoom1\InstrutionTutorial.cs" />
      <Compile Include="Assets\Scripts\GamePlayRoom1\MapController.cs" />
      <Compile Include="Assets\Scripts\GamePlayRoom1\Movement.cs" />
      <Compile Include="Assets\Scripts\GamePlayRoom1\PlayerAttacked.cs" />
@@ -118,6 +119,7 @@
      <Compile Include="Assets\Scripts\GamePlayRoom1\olo\EnemyNevmesh.cs" />
      <Compile Include="Assets\Scripts\Menu\AnimationBack.cs" />
      <Compile Include="Assets\Scripts\Menu\CurrentStage.cs" />
+     <Compile Include="Assets\Scripts\Menu\GameRank.cs" />
      <Compile Include="Assets\Scripts\Menu\LeaderBoard.cs" />
      <Compile Include="Assets\Scripts\Menu\LoadLevel.cs" />
      <Compile Include="Assets\Scripts\Menu\PanelButton.cs" />

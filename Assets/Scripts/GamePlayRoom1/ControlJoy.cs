@@ -36,15 +36,16 @@ public class ControlJoy : MonoBehaviour {
 		// Just use CnInputManager. instead of Input. and you're good to go
 
 		if (CnInputManager.GetAxis ("Horizontal") != 0 || CnInputManager.GetAxis ("Vertical") != 0) {
-			
 			if (done) {
+				EffectPlayerSlowMotion.Instance.playerMove = true;
+
 				StartCoroutine (HideEffect ());
 			}
 		}
 			if (!anim.gameObject.activeSelf && TurnController.Instance.playerMovemnet) {
 				var inputVector = new Vector3 (CnInputManager.GetAxis ("Horizontal"), CnInputManager.GetAxis ("Vertical"));
 				Vector3 movementVector = Vector3.zero;
-			    
+
 				// If we have some input
 			if (inputVector.sqrMagnitude > 0.001f) {
 				movementVector = _mainCameraTransform.TransformDirection (inputVector);
@@ -52,6 +53,7 @@ public class ControlJoy : MonoBehaviour {
 				movementVector.Normalize ();
 				_transform.forward = movementVector;
 				novaAnim.SetBool ("Run", true);
+
 			}
 			else {
 				novaAnim.SetBool ("Run", false);
@@ -83,12 +85,12 @@ public class ControlJoy : MonoBehaviour {
 		slowUI.SetActive (false);
 
 
-
 	}
 	public void TeleportPause()
 	{
+		EffectPlayerSlowMotion.Instance.playerMove = false;
+
 		StartCoroutine (ShowEffect ());
-		TurnController.Instance.playerMovemnet = false;
 
 	}
 }

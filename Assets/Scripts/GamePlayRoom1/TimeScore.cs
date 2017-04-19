@@ -7,7 +7,7 @@ public class TimeScore : MonoBehaviour {
 	// Use this for initialization
 	private static TimeScore instance;
 	public static float playTime;
-	public static int currentStage;
+	public static int currentStage=0;
 	public bool gameStart;
 	public Text timeScoreText;
 	//use singleton.

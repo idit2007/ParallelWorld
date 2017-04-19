@@ -23,7 +23,7 @@ public class EventHelp : MonoBehaviour {
 
 		if (coll.gameObject.tag == "Player") {
 			blackPanel.SetActive (true);
-			popupText.text = "people this say....";
+			EventHlepNovel ();
 			popup.SetActive (true);
 			if(door1!=null)
 			door1.enabled = true;
@@ -36,5 +36,16 @@ public class EventHelp : MonoBehaviour {
 			collKey.enabled = false;
 			this.gameObject.SetActive (false);
 		}
+	}
+	private void EventHlepNovel()
+	{
+		popupText.fontSize = 45;
+		 if (TimeScore.currentStage == 2)
+			popupText.text = "ขอบใจที่มานะแต่ฉันคงไม่รอดแล้ว โปรดไปช่วยลูกสาวฉันที่แลปเคมีที ส่วนเรื่องของนายนั่น... แอ๊ก(กระอักเลือดตาย)";
+		else if (TimeScore.currentStage == 3)
+			popupText.text = "แม่ฉันส่งนายมาหรอ แต่ฉันก็คงไม่รอดเหมือนกันและทุกคนก็คงติดเชื้อหมดแล้ว นายไปช่วยไปหาวิศวกรที่อยู้ห้องอาหารนะเขารู้ต้องทำอย่างไร";
+		else if (TimeScore.currentStage == 5)
+			popupText.text = "นายเองสินะ เธอบอกฉันว่านายจะมา เอานี้ไปนี้คือวิธีการเปิดระบบควบคุมระเบิด แต่นายต้องไปห้องควบคุมเพื่ออนุมัติ เร็วเข้า";
+
 	}
 }

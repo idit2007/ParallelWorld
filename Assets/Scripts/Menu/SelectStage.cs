@@ -111,11 +111,9 @@ public class SelectStage : MonoBehaviour {
 	{
 		int x = 0;
 		string stage = selectedCurrentStage.name;
-		char st = stage [1];
+		char st = stage [5];
 		int.TryParse(st.ToString(),out x);
 		TimeScore.currentStage = x;
-//		Debug.Log ("GOo stage = "+x);
-
 		Application.LoadLevel(selectedCurrentStage.name);
 	}
 

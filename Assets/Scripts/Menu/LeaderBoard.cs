@@ -11,7 +11,7 @@ public class LeaderBoard : MonoBehaviour {
 	public Text[]rankScoreText;
 	public Text[]rankTimeText;
 	public Text[]rankUserText;
-	public string[]bufferRankScoreText;
+	private string[]bufferRankScoreText;
 	private string[]bufferRankTimeText;
 	private string[]bufferRankUserText;
 	private const int MaxScores = 5;
@@ -29,13 +29,13 @@ public class LeaderBoard : MonoBehaviour {
 
 			leaderBoard = new ArrayList();
 			leaderBoard.Add("Firebase Top " + MaxScores.ToString() + " Scores");
-			
+		ClearBoard ();
 		}
 	// Update is called once per frame
 	public void QueryLeaderBoard()
 	{
 		int n=0,i=0;
-		Debug.Log ("pressStage= "+pressStage);
+
 		FirebaseDatabase.DefaultInstance
 			.GetReference(pressStage).OrderByChild("Score")
 			.ValueChanged += (object sender2, ValueChangedEventArgs e2) => {
@@ -86,6 +86,7 @@ public class LeaderBoard : MonoBehaviour {
 			rankScoreText[i].text="Score: -";
 			rankTimeText[i].text="TIme: -";
 			rankUserText[i].text="";
+			LeaderBoard.pressStage = null;
 		}
 	}
 }
