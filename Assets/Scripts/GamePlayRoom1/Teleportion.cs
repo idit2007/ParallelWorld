@@ -18,7 +18,7 @@ public class Teleportion : MonoBehaviour {
 	public Animator animWorld2;
 	private RawImage mapWord1;
 	public RawImage mapWord2;
-
+	public Button teleportButtonC;
 	private Button buttonWorld1;
 	private Button buttonWorld2;
 	private GameObject caM1;
@@ -40,7 +40,7 @@ public class Teleportion : MonoBehaviour {
 		particleTeleportionStop.SetActive (false);
 		blueFlash.SetActive (false);
 
-
+		teleportButtonC = teleportButton.GetComponent<Button>();
 
 		//test
 		caM1=GameObject.Find("Camera");
@@ -53,10 +53,11 @@ public class Teleportion : MonoBehaviour {
 		StartCoroutine (TeleportAnimation());
 
 	}
+
 	IEnumerator TeleportAnimation()
 	{
 
-        Button teleportButtonC = teleportButton.GetComponent<Button>();
+      
 		teleportButtonC.interactable = false;
 		particleTeleportionStart.SetActive (true);
 		blueFlash.SetActive (true);

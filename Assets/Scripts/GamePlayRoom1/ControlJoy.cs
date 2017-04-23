@@ -2,7 +2,6 @@
 using System.Collections;
 using CnControls;
 public class ControlJoy : MonoBehaviour {
-	private GameObject player;
 	private GameObject slowUI;
 	public Animator anim;
 	private Animator novaAnim;
@@ -22,11 +21,10 @@ public class ControlJoy : MonoBehaviour {
 	}
 	void Start()
 	{
-		player = GameObject.Find ("Player2");
 		slowUI = GameObject.Find ("SlowMotionFlash");
-		anim = GameObject.Find ("EffectSlow").GetComponent<Animator>();
 		novaAnim = GetComponent<Animator>();
 		anim.gameObject.SetActive (false);
+		if(slowUI!=null)
 		slowUI.SetActive (false);
 		done = false;
 		done2 = true;

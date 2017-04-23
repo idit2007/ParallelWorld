@@ -1,17 +1,23 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GamePlayRoom1/EventHelp.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GamePlayRoom1/PlayerAttacked.cs">
     <Files>
-      <File FileName="Assets/Scripts/Menu/LeaderBoard.cs" Line="32" Column="17" />
-      <File FileName="Assets/Scripts/Menu/SelectStage.cs" Line="90" Column="59" />
-      <File FileName="Assets/Scripts/Menu/StageManagement.cs" Line="64" Column="41" />
-      <File FileName="Assets/KatsuData/ScoreProfile.xml" Line="14" Column="15" />
-      <File FileName="Assets/Scripts/GamePlayRoom1/EffectPlayerSlowMotion.cs" Line="6" Column="32" />
-      <File FileName="Assets/Scripts/GamePlayRoom1/EventHelp.cs" Line="41" Column="3" />
-      <File FileName="Assets/Scripts/GamePlayRoom1/InstrutionTutorial.cs" Line="11" Column="2" />
-      <File FileName="Assets/Scripts/GamePlayRoom1/TimeScore.cs" Line="17" Column="20" />
+      <File FileName="Assets/Scripts/GamePlayRoom1/PlayerAttacked.cs" Line="35" Column="1" />
+      <File FileName="Assets/Scripts/GamePlayRoom1/EventKeys.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Menu/LeaderBoard.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Menu/SelectStage.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Menu/StageManagement.cs" Line="1" Column="1" />
+      <File FileName="Assets/KatsuData/ScoreProfile.xml" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GamePlayRoom1/EffectPlayerSlowMotion.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GamePlayRoom1/EventHelp.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GamePlayRoom1/InstrutionTutorial.cs" Line="22" Column="54" />
+      <File FileName="Assets/Scripts/GamePlayRoom1/TimeScore.cs" Line="1" Column="1" />
       <File FileName="Assets/GameLavelText.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Menu/ScoreManageMent.cs" Line="80" Column="45" />
+      <File FileName="Assets/Scripts/Menu/ScoreManageMent.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GamePlayRoom1/ShaderManagement.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GamePlayRoom1/ControlJoy.cs" Line="32" Column="16" />
+      <File FileName="Assets/Firebase/FireBaseInIt.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GamePlayRoom1/Teleportion.cs" Line="41" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

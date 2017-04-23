@@ -59,6 +59,7 @@
      <None Include="Assets\Plugins\Android\firebase-common-10.2.0\proguard.txt" />
      <None Include="Assets\KatsuData\PlayerProfile.xml" />
      <None Include="Assets\Resources\Katsu\BentoProfile.xml" />
+     <None Include="Assets\Micro Farmer\Shader\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
      <None Include="Assets\Scripts\Shaders\Glow.shader" />
      <None Include="Assets\Scripts\Shaders\3DTextOneSided.shader" />
      <None Include="Assets\Resources\Katsu\IAPConfig.xml" />
@@ -75,12 +76,16 @@
      <None Include="Assets\MACHIN3\Skybox\Blueprint-Schematic_02-05_Deep_Sea_readme.txt" />
      <None Include="Assets\Resources\Holographic\Scripts\unlitAlpha.shader" />
      <None Include="Assets\HologramShader\Shaders\HologramShader.shader" />
+     <None Include="Assets\Micro Farmer\Shader\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />
      <None Include="Assets\Resources\Katsu\QuestionConfig.xml" />
      <None Include="Assets\PlayServicesResolver\proguard-messaging-workaround.txt" />
      <None Include="Assets\HologramShader\Shaders\HologramShaderLight.shader" />
      <None Include="Assets\Locker\Shaders\VIS_BumpSpec.shader" />
      <None Include="Assets\Resources\Katsu\BentoConfig.xml" />
      <None Include="Assets\Firebase\Editor\FirebaseDatabase.txt" />
+     <None Include="Assets\Micro Farmer\Shader\Toon Shading\Sources\Shaders\Toony-LightedOutline.shader" />
+     <None Include="Assets\Micro Farmer\Shader\Toon Shading\Sources\Shaders\Toony-Lighted.shader" />
+     <None Include="Assets\Micro Farmer\ReadMe_[ v 1.0 ]_ 12_12.txt" />
      <None Include="Assets\PlayServicesResolver\Editor\play-services-resolver.txt" />
      <None Include="Assets\Resources\Readme.txt" />
      <None Include="Assets\Teleport_Particle_Effect\ClickLeftMouseToTriggerTeleport.txt" />

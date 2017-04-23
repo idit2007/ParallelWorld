@@ -4,16 +4,16 @@ using UnityEngine.UI;
 public class PlayerAttacked : MonoBehaviour {
 	 
 	private GameObject redFlash;
-	private Slider hpSlider;
-	private Slider virusSlider;
+	public Slider hpSlider;
+	public Slider virusSlider;
 	private bool bitted;
 	private bool protect;
-	private Text hpText;
-	private Text virusText;
+	public Text hpText;
+	public Text virusText;
 	private Rigidbody rgb;
 	private Vector3 v3;
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		hpText = GameObject.Find ("HPText").GetComponent<Text>();
 		virusText = GameObject.Find ("VirusText").GetComponent<Text>();
 		redFlash = GameObject.Find ("AttackedFlash");

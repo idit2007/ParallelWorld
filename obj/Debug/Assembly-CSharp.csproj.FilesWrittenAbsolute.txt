@@ -22,3 +22,10 @@
 /Users/ItBangchokdee/Desktop/ParallelWorld/Temp/bin/Debug/UnityEngine.Analytics.dll
 /Users/ItBangchokdee/Desktop/ParallelWorld/Temp/bin/Debug/UnityEngine.HoloLens.dll
 /Users/ItBangchokdee/Desktop/ParallelWorld/Temp/bin/Debug/UnityEngine.VR.dll
+/Users/ItBangchokdee/Desktop/ParallelWorld/Temp/bin/Debug/Firebase.App.dll
+/Users/ItBangchokdee/Desktop/ParallelWorld/Temp/bin/Debug/Firebase.Auth.dll
+/Users/ItBangchokdee/Desktop/ParallelWorld/Temp/bin/Debug/Firebase.Database.dll
+/Users/ItBangchokdee/Desktop/ParallelWorld/Temp/bin/Debug/Google.MiniJson.dll
+/Users/ItBangchokdee/Desktop/ParallelWorld/Temp/bin/Debug/Google.Sharpen.dll
+/Users/ItBangchokdee/Desktop/ParallelWorld/Temp/bin/Debug/Unity.Compat.dll
+/Users/ItBangchokdee/Desktop/ParallelWorld/Temp/bin/Debug/Unity.Tasks.dll

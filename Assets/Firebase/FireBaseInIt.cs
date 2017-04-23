@@ -4,12 +4,15 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
-
+using Firebase;
+using Firebase.Database;
+using Firebase.Unity.Editor;
 
 public class FireBaseInIt : MonoBehaviour {
 	Firebase.Auth.FirebaseAuth auth;
 	Firebase.Auth.FirebaseUser user;
 	Firebase.DependencyStatus dependencyStatus = Firebase.DependencyStatus.UnavailableOther;
+	DatabaseReference mDatabaseRef;
 	private string email = "";
 	private string password = "";
 	public GameObject popup;
@@ -18,10 +21,16 @@ public class FireBaseInIt : MonoBehaviour {
 	public InputField passField;
 	public InputField newUserEmailField;
 	public InputField newUserPassField;
+	public InputField username;
 	public static string UserAccount;
 	void Start()
 	{
 		InitializeFirebase ();
+		// Set up the Editor before calling into the realtime database.
+		FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://parallelworld-1a50e.firebaseio.com/");
+
+		// Get the root reference location of the database.
+		mDatabaseRef = FirebaseDatabase.DefaultInstance.RootReference;
 	}
 	public void Signin() {
 		email = emailField.text;
@@ -52,6 +61,7 @@ public class FireBaseInIt : MonoBehaviour {
 	{
 		email = newUserEmailField.text;
 		password = newUserPassField.text;
+
 		auth.CreateUserWithEmailAndPasswordAsync(email, password).ContinueWith(task => {
 			if (task.IsCanceled) {
 				Debug.LogError("CreateUserWithEmailAndPasswordAsync was canceled.");
@@ -70,6 +80,7 @@ public class FireBaseInIt : MonoBehaviour {
 			Firebase.Auth.FirebaseUser newUser = task.Result;
 			Debug.LogFormat("Firebase user created successfully: {0} ({1})",
 				newUser.DisplayName, newUser.UserId);
+
 		});
 
 
@@ -100,5 +111,6 @@ public class FireBaseInIt : MonoBehaviour {
 	{
 		email = "";
 		password = "";
+
 	}
 }
