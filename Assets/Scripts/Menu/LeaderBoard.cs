@@ -37,7 +37,7 @@ public class LeaderBoard : MonoBehaviour {
 		int n=0,i=0;
 
 		FirebaseDatabase.DefaultInstance
-			.GetReference(pressStage).OrderByChild("Score")
+			.GetReference("Stage"+pressStage).OrderByChild("Score")
 			.ValueChanged += (object sender2, ValueChangedEventArgs e2) => {
 			if (e2.DatabaseError != null) {
 				Debug.LogError(e2.DatabaseError.Message);
@@ -60,18 +60,24 @@ public class LeaderBoard : MonoBehaviour {
 						bufferRankTimeText[n]="Time: "+childSnapshot.Child("Time").Value.ToString();
 						bufferRankUserText[n]=childSnapshot.Key.ToString();
 						n++;
-						Debug.Log(bufferRankScoreText[n]);
 					}
 
 				}
 				int j=0;
 				for(i=n-1;i>=0;i--){
-					Debug.Log("now here");
+					
 					rankScoreText[j].text=bufferRankScoreText[i];
 					rankTimeText[j].text=bufferRankTimeText[i];
 					rankUserText[j].text=bufferRankUserText[i];
 					j++;
 				}
+				Debug.Log("now here");
+				for(i=4;i>n-1;i--){
+					rankScoreText[i].text="Score: -";
+					rankTimeText[i].text="Time: -";
+					rankUserText[i].text="";
+				}
+
 			}
 
 		};
@@ -82,10 +88,9 @@ public class LeaderBoard : MonoBehaviour {
 	public void ClearBoard()
 	{
 		for(int i=0;i<5;i++){
-			Debug.Log("now here");
 			rankScoreText[i].text="Score: -";
-			rankTimeText[i].text="TIme: -";
-			rankUserText[i].text="";
+			rankTimeText[i].text="Time: -";
+			rankUserText[i].text="Loading";
 			LeaderBoard.pressStage = null;
 		}
 	}

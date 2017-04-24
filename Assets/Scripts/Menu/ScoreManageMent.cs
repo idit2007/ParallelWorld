@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 using PlayBento;
+using UnityEngine.SceneManagement;
 public class ScoreManageMent : MonoBehaviour {
 	private static ScoreManageMent instance;
 	public float score=0;                 //Score's vaule           
@@ -39,14 +40,15 @@ public class ScoreManageMent : MonoBehaviour {
 		// Get the root reference location of the database.
 		mDatabaseRef = FirebaseDatabase.DefaultInstance.RootReference;
 		sp = Local.GetProfile (typeof(ScoreProfile)) as ScoreProfile;
-		SaveScore ();
-
+		if (TimeScore.currentStage > 0)
+			SaveScore ();
+		else if (TimeScore.currentStage == 0)
+			TutorialSaveScore ();
 	}
 
 	  //Save score when player play finish.
 	public void SaveScore(){
-		Debug.Log ("In");
-		Debug.Log (TimeScore.currentStage);
+
 		ScoreData sd;
 		intScore = 100-(int)TimeScore.playTime;
 		if (TimeScore.currentStage <= sp.ScoreList.Count) {
@@ -70,18 +72,31 @@ public class ScoreManageMent : MonoBehaviour {
 		Local.SaveProfile ();
 
 	}
+	public void TutorialSaveScore(){
+
+		ScoreData sd;
+		if (sp.ScoreList.Count == 0) {
+			sd = new ScoreData ();
+			sp.ScoreList.Add (sd);
+			sd.time = 0;
+			sd.Score = 0;
+			sd.NumberStage = 1;
+	
+			Local.SaveProfile ();
+		}
+	}
 	public void BacktoMap()
 	{
-		Application.LoadLevel ("Menu");
+		SceneManager.LoadScene ("Menu");
 
 	}
 	public void PlayAgain()
 	{
-		Application.LoadLevel ("Stage"+TimeScore.currentStage.ToString());
+		SceneManager.LoadScene ("Stage"+TimeScore.currentStage.ToString());
 	}
 	public void NextStage()
 	{
 		TimeScore.currentStage++;
-		Application.LoadLevel ("Stage"+TimeScore.currentStage.ToString());
+		SceneManager.LoadScene ("Stage"+TimeScore.currentStage.ToString());
 	}
 }

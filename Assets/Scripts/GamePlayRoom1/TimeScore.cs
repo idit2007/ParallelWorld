@@ -28,6 +28,7 @@ public class TimeScore : MonoBehaviour {
 	void Update()
 	{    
 		//Debug.Log (currentStage);
+		if(timeScoreText!=null)
 		timeScoreText.text= "Time: "+(string.Format("{0:0.00}",playTime));
 		if (gameStart)
 			playTime += Time.deltaTime;

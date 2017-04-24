@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using UnityEngine.SceneManagement;
 public class SelectStage : MonoBehaviour {
 	private GameObject mainCamera;
 	private Vector3 cameraDefaultPosition;
@@ -13,6 +13,7 @@ public class SelectStage : MonoBehaviour {
 	public Material newBuildingMaterial;
 	public Material oldBuildingMaterial;
 	public GameObject selectedCurrentStage;
+	private GameObject panelStage;
 	private GameObject UI;
 	private GameObject whitePanel;
 	private Ray ray;
@@ -20,9 +21,11 @@ public class SelectStage : MonoBehaviour {
 	private bool zoomInFinish;
 	private bool zoomOut;
 	private float rotX;
+	public GameObject blackPanel;
 	MeshRenderer mr;
 	void Start()
 	{
+		panelStage = GameObject.Find ("PanelStage");
 		Screen.orientation = ScreenOrientation.LandscapeLeft;
 		whitePanel = GameObject.Find ("WhitePanel");
 		UI = GameObject.Find ("UI");
@@ -68,53 +71,55 @@ public class SelectStage : MonoBehaviour {
 			}
 		}
 	}
-	protected virtual void OnEnable()
-	{
-		// Hook into the OnFingerTap event
-		Lean.LeanTouch.OnFingerTap += OnFingerTap;
-	}
 
-	protected virtual void OnDisable()
-	{
-		// Unhook into the OnFingerTap event
-		Lean.LeanTouch.OnFingerTap -= OnFingerTap;
-	}
 
-	public void OnFingerTap(Lean.LeanFinger finger)
-	{
-		
-		 ray = Camera.main.ScreenPointToRay(finger.ScreenPosition);
-
-			if (Physics.Raycast(ray, out hit, 100)) {
-			if (hit.transform.gameObject.tag == "StageButton") {
-				selectedCurrentStage = GameObject.Find (hit.transform.gameObject.name);
-				selected = false;
-				whitePanel.SetActive (true);
-				LeaderBoard.pressStage = hit.transform.gameObject.name;
-				mr=hit.transform.GetComponent<MeshRenderer> ();
-				mr.enabled = false;
-				target = hit.transform;
-				zoomTarget = new Vector3 (target.position.x+1,1f,target.position.z-1);
-				selected = true;
-			}
-		}
-	}
 	public void BackButton()
 	{
 		zoomOut = true;
 		zoomInFinish = false;
 		mr.enabled = true;
 		TimeScore.currentStage = 0;
+		panelStage.SetActive (true);
 
 	}
 	public void StartButton()
 	{
+		blackPanel.SetActive (true);
 		int x = 0;
 		string stage = selectedCurrentStage.name;
-		char st = stage [5];
+		char st = stage [0];
 		int.TryParse(st.ToString(),out x);
 		TimeScore.currentStage = x;
-		Application.LoadLevel(selectedCurrentStage.name);
+		StartCoroutine (StartGamedelay());
 	}
+	public void SelectButton(string stageNum)
+	{
 
+		selected = false;
+		selectedCurrentStage = GameObject.Find (stageNum);
+		whitePanel.SetActive (true);
+		LeaderBoard.pressStage = stageNum;
+		mr=GameObject.Find ("Stage"+stageNum).GetComponent<MeshRenderer> ();
+		mr.enabled = false;
+		target = selectedCurrentStage.transform;
+		zoomTarget = new Vector3 (target.position.x+1,1f,target.position.z-1);
+		selected = true;
+		panelStage.SetActive (false);
+
+	}
+	public void StartTutorial()
+	{
+		blackPanel.SetActive (true);
+		StartCoroutine (StartTutorialdelay());
+	}
+	IEnumerator StartTutorialdelay()
+	{
+		yield return new WaitForSeconds (0.5f);
+		SceneManager.LoadScene ("tutorial");
+	}
+	IEnumerator StartGamedelay()
+	{
+		yield return new WaitForSeconds (0.5f);
+		SceneManager.LoadScene("Stage"+selectedCurrentStage.name);
+	}
 }

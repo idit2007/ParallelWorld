@@ -18,8 +18,7 @@ namespace CustomJoystick
 
         private void Update()
         {
-			float moveHorizontal = Input.GetAxisRaw ("Horizontal");
-			float moveVertical = Input.GetAxisRaw ("Vertical");
+	
             var movementVector = new Vector3(CnInputManager.GetAxis("Horizontal"), 0f, CnInputManager.GetAxis("Vertical"));
             if (movementVector.sqrMagnitude < 0.00001f) return;
 

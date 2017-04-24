@@ -3,28 +3,8 @@
   <ScoreList>
     <ScoreData>
       <NumberStage>1</NumberStage>
-      <time>14.6760111</time>
-      <Score>86</Score>
-    </ScoreData>
-    <ScoreData>
-      <NumberStage>2</NumberStage>
-      <time>30.8852787</time>
-      <Score>25</Score>
-    </ScoreData>
-    <ScoreData>
-      <NumberStage>3</NumberStage>
-      <time>30.8852787</time>
-      <Score>25</Score>
-    </ScoreData>
-    <ScoreData>
-      <NumberStage>4</NumberStage>
-      <time>30.8852787</time>
-      <Score>25</Score>
-    </ScoreData>
-    <ScoreData>
-      <NumberStage>5</NumberStage>
-      <time>30.8852787</time>
-      <Score>25</Score>
+      <time>0</time>
+      <Score>0</Score>
     </ScoreData>
   </ScoreList>
 </ScoreProfile>

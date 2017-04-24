@@ -8,11 +8,9 @@ using System.Collections;
 
 public class ThidPersonExampleController : MonoBehaviour
 {
-	private GameObject player;
 	private GameObject slowUI;
 	public Animator anim;
 	private bool done;
-	private bool done2;
     private float MovementSpeed = 5f;
 
     private Transform _mainCameraTransform;
@@ -27,13 +25,11 @@ public class ThidPersonExampleController : MonoBehaviour
     }
 	void Start()
 	{
-		player = GameObject.Find ("Player2");
 		slowUI = GameObject.Find ("SlowMotionFlash");
 		anim = GameObject.Find ("EffectSlow").GetComponent<Animator>();
 		anim.gameObject.SetActive (false);
 		slowUI.SetActive (false);
 		done = true;
-		done2 = true;
 	}
     public void Update()
     {
