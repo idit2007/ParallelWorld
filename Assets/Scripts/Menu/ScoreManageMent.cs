@@ -62,6 +62,7 @@ public class ScoreManageMent : MonoBehaviour {
 			mDatabaseRef.Child("Stage"+TimeScore.currentStage.ToString()).Child(email).Child("Score").SetValueAsync(intScore);
 			mDatabaseRef.Child("Stage"+TimeScore.currentStage.ToString()).Child(email).Child("Time").SetValueAsync((int)TimeScore.playTime);
 		}
+
 		if (intScore > sd.Score) {
 			sd.time=TimeScore.playTime;
 			sd.Score =intScore;

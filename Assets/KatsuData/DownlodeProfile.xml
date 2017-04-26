@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DownlodeProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <DownlodeList>
+    <DownlodeData>
+      <NumberStage>101</NumberStage>
+      <NameStage>101
+
+</NameStage>
+      <time>16.975708</time>
+      <Score>84</Score>
+    </DownlodeData>
+  </DownlodeList>
+</DownlodeProfile>
