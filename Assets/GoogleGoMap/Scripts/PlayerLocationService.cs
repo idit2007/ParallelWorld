@@ -4,6 +4,7 @@ using System.Collections;
 public class PlayerLocationService : MonoBehaviour {
 
 	public GeoPoint loc = new GeoPoint();
+	public GeoPoint locOld = new GeoPoint();
 	[HideInInspector]
 	public float trueHeading;
 	public bool locServiceIsRunning = false;
@@ -37,6 +38,7 @@ public class PlayerLocationService : MonoBehaviour {
 
 		// Start service before querying location
 		Input.location.Start();
+		//locOld = 
 		// Wait until service initializes
 		while (Input.location.status == LocationServiceStatus.Initializing && maxWait > 0)
 		{
@@ -59,6 +61,7 @@ public class PlayerLocationService : MonoBehaviour {
 		} else if (Input.location.status == LocationServiceStatus.Running){
 			GameManager.Instance.playerStatus = GameManager.PlayerStatus.TiedToDevice;
 			loc.setLatLon_deg (Input.location.lastData.latitude, Input.location.lastData.longitude);
+			locOld.setLatLon_deg (Input.location.lastData.latitude, Input.location.lastData.longitude);
 			Debug.Log ("Location: " + Input.location.lastData.latitude.ToString ("R") + " " + Input.location.lastData.longitude.ToString ("R") + " " + Input.location.lastData.altitude + " " + Input.location.lastData.horizontalAccuracy + " " + Input.location.lastData.timestamp);
 			locServiceIsRunning = true;
 			lastLocUpdate = Input.location.lastData.timestamp;
@@ -75,11 +78,22 @@ public class PlayerLocationService : MonoBehaviour {
 		while (true) {
 			if (lastLocUpdate != Input.location.lastData.timestamp) {
 				loc.setLatLon_deg (Input.location.lastData.latitude, Input.location.lastData.longitude);
+				if (loc.lat_d == locOld.lat_d && loc.lon_d == locOld.lon_d) {
+					Player.SetBool ("Run",false);
+				} 
+				else 
+				{
+					Player.SetBool ("Run", true);
+				}
 				trueHeading = Input.compass.trueHeading;
+				locOld.setLatLon_deg (Input.location.lastData.latitude, Input.location.lastData.longitude);
 				Debug.Log ("Location: " + Input.location.lastData.latitude.ToString ("R") + " " + Input.location.lastData.longitude.ToString ("R") + " " + Input.location.lastData.altitude + " " + Input.location.lastData.horizontalAccuracy + " " + Input.location.lastData.timestamp);
 				//locServiceIsRunning = true;
+
 				lastLocUpdate = Input.location.lastData.timestamp;
 			}
+
+			
 			yield return new WaitForSeconds(locationUpdateInterval);
 		}
 	}

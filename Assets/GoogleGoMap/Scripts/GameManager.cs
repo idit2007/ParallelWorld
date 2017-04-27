@@ -22,7 +22,7 @@ public class GameManager : Singleton<GameManager> {
 		get { return _playerStatus; }
 		set { _playerStatus = value; }
 	}
-	public Animator Player;
+	//public Animator Player;
 
 	void Awake (){
 
@@ -65,6 +65,7 @@ public class GameManager : Singleton<GameManager> {
 		foreach (GameObject obj in objectsOnMap) {
 			obj.GetComponent<ObjectPosition> ().setPositionOnMap ();
 		}
+			
     }
 
     void Update () {
@@ -76,15 +77,21 @@ public class GameManager : Singleton<GameManager> {
 
 		// playerGeoPosition = getMainMapMap ().getPositionOnMap(new Vector2(player.transform.position.x, player.transform.position.z));
 		playerGeoPosition = new GeoPoint();
+
 		// GeoPoint playerGeoPosition = getMainMapMap ().getPositionOnMap(new Vector2(player.transform.position.x, player.transform.position.z));
 		if (playerStatus == PlayerStatus.TiedToDevice) {
 			playerGeoPosition = player_loc.loc;
+
 			player.GetComponent<ObjectPosition> ().setPositionOnMap (playerGeoPosition);
-			Player.SetBool ("Run",false);
+
+
+
 		} else if (playerStatus == PlayerStatus.FreeFromDevice){
-			Player.SetBool ("Run",true);
+			
+
 			playerGeoPosition = getMainMapMap ().getPositionOnMap(new Vector2(player.transform.position.x, player.transform.position.z));
 		}
+
 
 
 		var tileCenterMercator = getMainMapMap ().tileCenterMercator (playerGeoPosition);
