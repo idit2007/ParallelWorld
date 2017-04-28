@@ -1,16 +1,22 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
+
 
 public class PlayerLocationService : MonoBehaviour {
 
 	public GeoPoint loc = new GeoPoint();
-	public GeoPoint locOld = new GeoPoint();
+	//public GeoPoint locOld = new GeoPoint();
 	[HideInInspector]
 	public float trueHeading;
 	public bool locServiceIsRunning = false;
 	public int maxWait = 30; // seconds
 	private float locationUpdateInterval = 0.2f; // seconds
 	private double lastLocUpdate = 0.0; //seconds
+
+	public Text locText;
+	public Text locOldText;
+	public Text at;
 
 	public Animator Player;
 
@@ -61,7 +67,7 @@ public class PlayerLocationService : MonoBehaviour {
 		} else if (Input.location.status == LocationServiceStatus.Running){
 			GameManager.Instance.playerStatus = GameManager.PlayerStatus.TiedToDevice;
 			loc.setLatLon_deg (Input.location.lastData.latitude, Input.location.lastData.longitude);
-			locOld.setLatLon_deg (Input.location.lastData.latitude, Input.location.lastData.longitude);
+			//locOld.setLatLon_deg (Input.location.lastData.latitude, Input.location.lastData.longitude);
 			Debug.Log ("Location: " + Input.location.lastData.latitude.ToString ("R") + " " + Input.location.lastData.longitude.ToString ("R") + " " + Input.location.lastData.altitude + " " + Input.location.lastData.horizontalAccuracy + " " + Input.location.lastData.timestamp);
 			locServiceIsRunning = true;
 			lastLocUpdate = Input.location.lastData.timestamp;
@@ -75,25 +81,39 @@ public class PlayerLocationService : MonoBehaviour {
 	public IEnumerator RunLocationService()
 	{
 		double lastLocUpdate = 0.0;
+		//int  cout=0;
+		//int  NoRun=0;
 		while (true) {
 			if (lastLocUpdate != Input.location.lastData.timestamp) {
+				Player.SetBool ("Run", true);
+				//at.text="Update";
+				//cout=cout+1;
 				loc.setLatLon_deg (Input.location.lastData.latitude, Input.location.lastData.longitude);
+				/*
+				locText.text="Loc: " +loc.lat_d.ToString()+ " "+loc.lon_d .ToString();
+				locOldText.text="LocOld: " +locOld.lat_d.ToString()+ " "+locOld.lon_d .ToString();
+
 				if (loc.lat_d == locOld.lat_d && loc.lon_d == locOld.lon_d) {
 					Player.SetBool ("Run",false);
+					NoRun=NoRun+1;
 				} 
 				else 
 				{
-					Player.SetBool ("Run", true);
+					Player.SetBool ("Run",true);
 				}
+				locOld.setLatLon_deg (Input.location.lastData.latitude, Input.location.lastData.longitude);*/
 				trueHeading = Input.compass.trueHeading;
-				locOld.setLatLon_deg (Input.location.lastData.latitude, Input.location.lastData.longitude);
 				Debug.Log ("Location: " + Input.location.lastData.latitude.ToString ("R") + " " + Input.location.lastData.longitude.ToString ("R") + " " + Input.location.lastData.altitude + " " + Input.location.lastData.horizontalAccuracy + " " + Input.location.lastData.timestamp);
 				//locServiceIsRunning = true;
-
 				lastLocUpdate = Input.location.lastData.timestamp;
+
+			} 
+			else 
+			{
+				Player.SetBool ("Run",false);
 			}
 
-			
+			//at.text="Wait "+cout.ToString()+"NoRun "+NoRun.ToString();
 			yield return new WaitForSeconds(locationUpdateInterval);
 		}
 	}
