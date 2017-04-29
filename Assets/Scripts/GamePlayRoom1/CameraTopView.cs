@@ -42,7 +42,7 @@ public class CameraTopView : MonoBehaviour {
 			if (cameraTopHight >20)
 				cameraTopHight -= Time.deltaTime * 20;
 		//	mainCamera.transform.position = Vector3.MoveTowards (mainCamera.transform.position, cameraDefaultPosition, 10 * Time.deltaTime);
-			if (mainCamera.transform.rotation.x > 0.46f)
+			if (mainCamera.transform.rotation.x > 0.6f)
 				mainCamera.transform.Rotate (Vector3.left * Time.deltaTime * 80, Space.Self);
 			
 		}
