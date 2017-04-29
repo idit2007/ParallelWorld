@@ -80,7 +80,9 @@ public class FireBaseInIt : MonoBehaviour {
 			Firebase.Auth.FirebaseUser newUser = task.Result;
 			Debug.LogFormat("Firebase user created successfully: {0} ({1})",
 				newUser.DisplayName, newUser.UserId);
-
+			mDatabaseRef.Child("User").Child(newUser.UserId).Child("Email").SetValueAsync(email);
+			mDatabaseRef.Child("User").Child(newUser.UserId).Child("Password").SetValueAsync(password);
+			mDatabaseRef.Child("User").Child(newUser.UserId).Child("Username").SetValueAsync(username.text);
 		});
 
 
@@ -113,4 +115,5 @@ public class FireBaseInIt : MonoBehaviour {
 		password = "";
 
 	}
+
 }

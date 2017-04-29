@@ -15,7 +15,7 @@ public class ScoreManageMent : MonoBehaviour {
 	public int intScore;
 	private ScoreProfile sp;
 	private string email = "test";
-	public string Username;
+	private string username="test";
 	DatabaseReference mDatabaseRef;
 	//Singleton
 	public static ScoreManageMent Instance
@@ -28,6 +28,7 @@ public class ScoreManageMent : MonoBehaviour {
 
 	void Awake()
 	{
+		QueryName ();
 		instance = this;
 		PB.Init ();
 	}
@@ -39,6 +40,7 @@ public class ScoreManageMent : MonoBehaviour {
 
 		// Get the root reference location of the database.
 		mDatabaseRef = FirebaseDatabase.DefaultInstance.RootReference;
+
 		sp = Local.GetProfile (typeof(ScoreProfile)) as ScoreProfile;
 		if (TimeScore.currentStage > 0)
 			SaveScore ();
@@ -48,7 +50,6 @@ public class ScoreManageMent : MonoBehaviour {
 
 	  //Save score when player play finish.
 	public void SaveScore(){
-
 		ScoreData sd;
 		intScore = 100-(int)TimeScore.playTime;
 		if (TimeScore.currentStage <= sp.ScoreList.Count) {
@@ -61,6 +62,7 @@ public class ScoreManageMent : MonoBehaviour {
 			sp.ScoreList.Add (sd);
 			mDatabaseRef.Child("Stage"+TimeScore.currentStage.ToString()).Child(email).Child("Score").SetValueAsync(intScore);
 			mDatabaseRef.Child("Stage"+TimeScore.currentStage.ToString()).Child(email).Child("Time").SetValueAsync((int)TimeScore.playTime);
+			mDatabaseRef.Child("Stage"+TimeScore.currentStage.ToString()).Child(email).Child("Username").SetValueAsync(username);
 		}
 
 		if (intScore > sd.Score) {
@@ -69,6 +71,8 @@ public class ScoreManageMent : MonoBehaviour {
 			sd.NumberStage = TimeScore.currentStage;
 			mDatabaseRef.Child("Stage"+TimeScore.currentStage.ToString()).Child(email).Child("Score").SetValueAsync(intScore);
 			mDatabaseRef.Child("Stage"+TimeScore.currentStage.ToString()).Child(email).Child("Time").SetValueAsync((int)TimeScore.playTime);
+			mDatabaseRef.Child("Stage"+TimeScore.currentStage.ToString()).Child(email).Child("Username").SetValueAsync(username);
+
 		}
 		Local.SaveProfile ();
 
@@ -86,6 +90,7 @@ public class ScoreManageMent : MonoBehaviour {
 			Local.SaveProfile ();
 		}
 	}
+
 	public void BacktoMap()
 	{
 		SceneManager.LoadScene ("Menu");
@@ -99,5 +104,39 @@ public class ScoreManageMent : MonoBehaviour {
 	{
 		TimeScore.currentStage++;
 		SceneManager.LoadScene ("Stage"+TimeScore.currentStage.ToString());
+	}
+	public void QueryName()
+	{
+		int n=0,i=0;
+
+		mDatabaseRef.Child("User")
+			.ValueChanged += (object sender2, ValueChangedEventArgs e2) => {
+			if (e2.DatabaseError != null) {
+				Debug.LogError(e2.DatabaseError.Message);
+				return;
+			}
+
+
+			if (e2.Snapshot != null && e2.Snapshot.ChildrenCount > 0) {
+				foreach (var childSnapshot in e2.Snapshot.Children) {
+					if (childSnapshot.Child("Username") == null
+						|| childSnapshot.Child("Username").Value == null) {
+						Debug.LogError("Bad data in sample.  Did you forget to call SetEditorDatabaseUrl with your project id?");
+						break;
+					} else {
+						if(childSnapshot.Key.ToString()==email){
+							username=childSnapshot.Child("Username").Value.ToString();
+						}
+					}
+
+				}
+
+
+			}
+
+		};
+
+
+
 	}
 }

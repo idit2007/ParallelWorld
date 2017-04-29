@@ -83,13 +83,18 @@
      <None Include="Assets\Firebase\Plugins\link.xml" />
      <None Include="Assets\Resources\Katsu\ScoreProfile.xml" />
      <None Include="Assets\KatsuData\ScoreProfile.xml" />
+     <None Include="Assets\KatsuData\DownlodeProfile.xml" />
      <None Include="Assets\PlayBento\Assets\log.xml" />
      <None Include="Assets\Resources\Katsu\DetailProfile.xml" />
+     <None Include="Assets\GoogleGoMap\README.txt" />
+     <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
      <None Include="Assets\Plugins\Android\Firebase\AndroidManifest.xml" />
      <None Include="Assets\MACHIN3\Skybox\Blueprint-Schematic_02-05_Deep_Sea_readme.txt" />
      <None Include="Assets\Resources\Holographic\Scripts\unlitAlpha.shader" />
      <None Include="Assets\HologramShader\Shaders\HologramShader.shader" />
+     <None Include="Assets\GoogleGoMap\Instructions.txt" />
      <None Include="Assets\Micro Farmer\Shader\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />
+     <None Include="Assets\Resources\Katsu\DownlodeProfile.xml" />
      <None Include="Assets\Resources\Katsu\QuestionConfig.xml" />
      <None Include="Assets\PlayServicesResolver\proguard-messaging-workaround.txt" />
      <None Include="Assets\HologramShader\Shaders\HologramShaderLight.shader" />
@@ -107,6 +112,7 @@
      <None Include="Assets\SciFi_Door\readme.txt" />
      <None Include="Assets\Resources\Katsu\PushConfig.xml" />
      <None Include="Assets\Firebase\Plugins\Http\link.xml" />
+     <None Include="Assets\GoogleGoMap\The MIT License.txt" />
      <None Include="Assets\Resources\Katsu\PlayerProfile.xml" />
      <None Include="Assets\Resources\Katsu\AdConfig.xml" />
  <Reference Include="UnityEngine.UI">

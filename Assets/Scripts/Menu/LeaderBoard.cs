@@ -58,7 +58,7 @@ public class LeaderBoard : MonoBehaviour {
 				
 						bufferRankScoreText[n]="Score: "+childSnapshot.Child("Score").Value.ToString();
 						bufferRankTimeText[n]="Time: "+childSnapshot.Child("Time").Value.ToString();
-						bufferRankUserText[n]=childSnapshot.Key.ToString();
+						bufferRankUserText[n]=childSnapshot.Child("Username").Value.ToString();;
 						n++;
 					}
 
