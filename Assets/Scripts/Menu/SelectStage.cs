@@ -25,6 +25,7 @@ public class SelectStage : MonoBehaviour {
 	MeshRenderer mr;
 	void Start()
 	{
+		TimeScore.currentStage = 0;
 		panelStage = GameObject.Find ("PanelStage");
 		Screen.orientation = ScreenOrientation.LandscapeLeft;
 		whitePanel = GameObject.Find ("WhitePanel");
@@ -68,6 +69,7 @@ public class SelectStage : MonoBehaviour {
 			if (mainCamera.transform.position == cameraDefaultPosition && zoomOut) {
 				zoomOut = false;
 				whitePanel.SetActive (false);
+				panelStage.SetActive (true);
 			}
 		}
 	}
@@ -79,7 +81,7 @@ public class SelectStage : MonoBehaviour {
 		zoomInFinish = false;
 		mr.enabled = true;
 		TimeScore.currentStage = 0;
-		panelStage.SetActive (true);
+
 
 	}
 	public void StartButton()

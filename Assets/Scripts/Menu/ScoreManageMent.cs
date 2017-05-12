@@ -16,6 +16,7 @@ public class ScoreManageMent : MonoBehaviour {
 	private ScoreProfile sp;
 	private string email = "test";
 	private string username="test";
+	private bool done;
 	DatabaseReference mDatabaseRef;
 	//Singleton
 	public static ScoreManageMent Instance
@@ -28,26 +29,34 @@ public class ScoreManageMent : MonoBehaviour {
 
 	void Awake()
 	{
+		FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://parallelworld-1a50e.firebaseio.com/");
+
+		// Get the root reference location of the database.
+		mDatabaseRef = FirebaseDatabase.DefaultInstance.RootReference;
 		QueryName ();
 		instance = this;
 		PB.Init ();
 	}
 	void Start()
 	{
+		done = false;
 		email = FireBaseInIt.UserAccount;
 		// Set up the Editor before calling into the realtime database.
-		FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://parallelworld-1a50e.firebaseio.com/");
-
-		// Get the root reference location of the database.
-		mDatabaseRef = FirebaseDatabase.DefaultInstance.RootReference;
+	
 
 		sp = Local.GetProfile (typeof(ScoreProfile)) as ScoreProfile;
-		if (TimeScore.currentStage > 0)
-			SaveScore ();
-		else if (TimeScore.currentStage == 0)
-			TutorialSaveScore ();
+	
 	}
-
+	void Update()
+	{
+		if (TimeScore.currentStage > 0 && done) {
+			SaveScore ();
+			done = false;
+		} else if (TimeScore.currentStage == 0 && !done) {
+			TutorialSaveScore ();
+			done = true;
+		}
+	}
 	  //Save score when player play finish.
 	public void SaveScore(){
 		ScoreData sd;
@@ -109,7 +118,9 @@ public class ScoreManageMent : MonoBehaviour {
 	{
 		int n=0,i=0;
 
-		mDatabaseRef.Child("User")
+
+		FirebaseDatabase.DefaultInstance
+			.GetReference("User")
 			.ValueChanged += (object sender2, ValueChangedEventArgs e2) => {
 			if (e2.DatabaseError != null) {
 				Debug.LogError(e2.DatabaseError.Message);
@@ -124,9 +135,12 @@ public class ScoreManageMent : MonoBehaviour {
 						Debug.LogError("Bad data in sample.  Did you forget to call SetEditorDatabaseUrl with your project id?");
 						break;
 					} else {
+						Debug.Log("In");
 						if(childSnapshot.Key.ToString()==email){
 							username=childSnapshot.Child("Username").Value.ToString();
+			
 						}
+						done=true;
 					}
 
 				}

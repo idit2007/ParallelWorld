@@ -20,6 +20,12 @@ public class InstrutionTutorial : MonoBehaviour {
 			insTuText.text = "Keep the keycard on table.";
 		else if (TimeScore.currentStage == 6)
 			insTuText.text = "Keep some keycard on table.\n !Watch out for new zombies.";
+		else if (TimeScore.currentStage == 7)
+			insTuText.text = "Keep the keycard on table.";
+		else if (TimeScore.currentStage == 8)
+			insTuText.text = "Keep some keycard on table.\n !Watch out for new zombies.";
+		else if (TimeScore.currentStage == 9)
+			insTuText.text = "Keep some keycard on table.\n !Watch out for new zombies.";
 	}
 	void Update()
 	{
@@ -43,6 +49,15 @@ public class InstrutionTutorial : MonoBehaviour {
 			} else if (LeaderBoard.pressStage == "6") {
 				insTuText.text = "บทที่ 6 Blue Zombie!.\n ก่อนทางไปห้องควบคุมนั่น Nova ได้เจอกับซอบบี้ตัวใหม่ ซึ่งถ้าไม่ระวังละก็ได้ตายแน่นอน";
 				TimeScore.currentStage = 6;
+			} else if (LeaderBoard.pressStage == "7") {
+				insTuText.text = "บทที่ 4 Red Zombie!.\n ถึง Nova เขาจะมีพลังพิเศษ แต่เขาจะเอาตัวรอดอย่างไรกับซอมบี้พิเศษมาจากมนุษย์ทดลองที่วิ่งเร็วขององค์กร แล้วเขาจะไปห้องอาหารทันหรือเปล่า.";
+				TimeScore.currentStage = 7;
+			} else if (LeaderBoard.pressStage == "8") {
+				insTuText.text = "บทที่ 5 วางแผนระเบิดองค์กร.\n ณ ห้องอาหาร Nova ได้เจอกับวิศวกรที่รู้วิธีระเบิดองค์กรนี้ทิ้งแต่ต้องไปยังห้องควบคุมก่อน.";
+				TimeScore.currentStage =8;
+			} else if (LeaderBoard.pressStage == "9") {
+				insTuText.text = "บทที่ 6 Blue Zombie!.\n ก่อนทางไปห้องควบคุมนั่น Nova ได้เจอกับซอบบี้ตัวใหม่ ซึ่งถ้าไม่ระวังละก็ได้ตายแน่นอน";
+				TimeScore.currentStage = 9;
 			}
 			
 		}

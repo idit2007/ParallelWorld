@@ -11,7 +11,8 @@ public class StageManagement : MonoBehaviour {
 	private ScoreProfile sp;                     
 	private ScoreData sd;
 	public ScoreData psd; 
-	private bool done;   
+	private bool done; 
+	private bool done2;
 	private int[] starScore;
 	public Sprite[]rankImage;
 	public Image showRank; 
@@ -40,7 +41,8 @@ public class StageManagement : MonoBehaviour {
 			{
 				sd = sp.ScoreList [numberStage - 1];    //Index stage
 			}
-	
+		done = true;
+		done2 = true;
 
 	}
 	// Update is called once per frame
@@ -54,21 +56,29 @@ public class StageManagement : MonoBehaviour {
 				 if (numberStage > sp.ScoreList.Count) {
 				this.gameObject.SetActive (false);
 			}
+			done = false;
+		}
 
-		} 
 			if (sd != null) {
-			if (sd.Score == 0&&done) {
+			if (sd.Score == 0) {
+				
 				rankNameText.text = "Rank: Curese";
 				stage.SetActive (true);
 				closeSB[numberStage].interactable=true;
+				done2 = false;
 			}
-			if (sd.Score > 0&&done) {
+			if (sd.Score > 0) {
+				Debug.Log (numberStage+"nstage= "+nStage);
 					rankNameText.text = "Rank: Curese";
+				stage.SetActive (true);
+				closeSB[numberStage].interactable=true;
 					nStage.SetActive (true);
 				closeSB[numberStage+1].interactable=true;
+				done2 = false;
 				}
+
+
 			if (LeaderBoard.pressStage == this.gameObject.name) {
-				Debug.Log ("In r");
 				if (sd.Score > 60) {
 					showRank.sprite = rankImage [3];
 					rankNameText.text = "Rank: Destinator";
@@ -86,7 +96,7 @@ public class StageManagement : MonoBehaviour {
 			}
 			//Set number of stars in current stage.
 
-			done = false;
+
 		
 	//	if(TimeScore.currentStage!=buffStage)
 			
