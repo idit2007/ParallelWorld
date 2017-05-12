@@ -22,8 +22,17 @@ public class PlayerAttacked : MonoBehaviour {
 		virusSlider = GameObject.Find ("VirusSlider").GetComponent<Slider>();
 		bitted =true;
 		protect = false;
-		hpSlider.maxValue = 100;
-		virusSlider.maxValue = 100;
+
+		if(BuffStatus.buffStatus==1)
+			hpSlider.maxValue = 500;
+		else
+			hpSlider.maxValue = 100;
+
+		if(BuffStatus.buffStatus==2)
+			virusSlider.maxValue = 500;
+		else
+			virusSlider.maxValue = 100;
+		
 		hpSlider.value = hpSlider.maxValue;
 		virusSlider.value = virusSlider.maxValue;
 		rgb = GetComponent<Rigidbody> ();
