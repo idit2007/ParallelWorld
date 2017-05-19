@@ -101,6 +101,9 @@
      <Compile Include="Assets\Resources\Holographic\Scripts\roboGui.cs" />
      <Compile Include="Assets\Resources\Holographic\Scripts\sliders.cs" />
      <Compile Include="Assets\Resources\Holographic\Scripts\transparency.cs" />
+     <Compile Include="Assets\Scripts\ADs\ADsUnity.cs" />
+     <Compile Include="Assets\Scripts\ADs\BuffStatus.cs" />
+     <Compile Include="Assets\Scripts\ADs\buff.cs" />
      <Compile Include="Assets\Scripts\BaseLocation\BaseLocationMode.cs" />
      <Compile Include="Assets\Scripts\BaseLocation\BlackToModeLocationBase.cs" />
      <Compile Include="Assets\Scripts\BaseLocation\GotoMenu.cs" />
@@ -129,6 +132,7 @@
      <Compile Include="Assets\Scripts\GamePlayRoom1\InstrutionTutorial.cs" />
      <Compile Include="Assets\Scripts\GamePlayRoom1\MapController.cs" />
      <Compile Include="Assets\Scripts\GamePlayRoom1\Movement.cs" />
+     <Compile Include="Assets\Scripts\GamePlayRoom1\Option.cs" />
      <Compile Include="Assets\Scripts\GamePlayRoom1\PlayerAttacked.cs" />
      <Compile Include="Assets\Scripts\GamePlayRoom1\ShaderManagement.cs" />
      <Compile Include="Assets\Scripts\GamePlayRoom1\Teleportion.cs" />
@@ -236,6 +240,9 @@
  </Reference>
  <Reference Include="Unity.Tasks">
  <HintPath>/Users/ItBangchokdee/Desktop/ParallelWorld/Assets/Firebase/Plugins/Unity.Tasks.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Advertisements.Editor">
+ <HintPath>/Users/ItBangchokdee/Desktop/ParallelWorld/Assets/UnityAds/UnityEngine.Advertisements.Editor.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

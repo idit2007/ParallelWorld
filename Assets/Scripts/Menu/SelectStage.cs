@@ -15,6 +15,7 @@ public class SelectStage : MonoBehaviour {
 	public GameObject selectedCurrentStage;
 	private GameObject panelStage;
 	private GameObject UI;
+	private GameObject exitB;
 	private GameObject whitePanel;
 	private Ray ray;
 	private RaycastHit hit;
@@ -27,6 +28,7 @@ public class SelectStage : MonoBehaviour {
 	{
 		TimeScore.currentStage = 0;
 		panelStage = GameObject.Find ("PanelStage");
+		exitB = GameObject.Find ("ExitB");
 		Screen.orientation = ScreenOrientation.LandscapeLeft;
 		whitePanel = GameObject.Find ("WhitePanel");
 		UI = GameObject.Find ("UI");
@@ -56,6 +58,7 @@ public class SelectStage : MonoBehaviour {
 				mainCamera.transform.Rotate (Vector3.left * Time.deltaTime * 60, Space.Self);
 			if (mainCamera.transform.position == zoomTarget && !zoomInFinish) {
 				UI.SetActive (true);
+
 				zoomInFinish = true;
 			}
 
@@ -70,6 +73,7 @@ public class SelectStage : MonoBehaviour {
 				zoomOut = false;
 				whitePanel.SetActive (false);
 				panelStage.SetActive (true);
+				exitB.SetActive (true);
 			}
 		}
 	}
@@ -96,7 +100,7 @@ public class SelectStage : MonoBehaviour {
 	}
 	public void SelectButton(string stageNum)
 	{
-
+		exitB.SetActive (false);
 		selected = false;
 		selectedCurrentStage = GameObject.Find (stageNum);
 		whitePanel.SetActive (true);

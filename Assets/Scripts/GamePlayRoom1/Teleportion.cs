@@ -21,10 +21,9 @@ public class Teleportion : MonoBehaviour {
 	public Button teleportButtonC;
 	private Button buttonWorld1;
 	private Button buttonWorld2;
-	private GameObject caM1;
-    void Start () {
+   void Start () {
 
-
+		ScoreManageMent.numOfTeleport = 0;
 		GameObject world1 = GameObject.Find ("World1");
 		GameObject world2 = GameObject.Find ("World2");
 		teleportRange = world2.transform.position.x - world1.transform.position.x;
@@ -43,7 +42,6 @@ public class Teleportion : MonoBehaviour {
 		teleportButtonC = teleportButton.GetComponent<Button>();
 
 		//test
-		caM1=GameObject.Find("Camera");
 
     }
 
@@ -51,6 +49,7 @@ public class Teleportion : MonoBehaviour {
 	public void TeleportionCharacter()
 	{
 		StartCoroutine (TeleportAnimation());
+		ScoreManageMent.numOfTeleport++;
 
 	}
 
@@ -61,9 +60,8 @@ public class Teleportion : MonoBehaviour {
 		teleportButtonC.interactable = false;
 		particleTeleportionStart.SetActive (true);
 		blueFlash.SetActive (true);
-		yield return new WaitForSeconds (2f);
+		yield return new WaitForSeconds (1.5f);
 		blueFlash.SetActive (false);
-		yield return new WaitForSeconds (0.1f);
 		world = !world;
 		if (!world) {
 
@@ -81,7 +79,6 @@ public class Teleportion : MonoBehaviour {
             Player.transform.position = new Vector3 (Player.transform.position.x - teleportRange, Player.transform.position.y, Player.transform.position.z);
             //PlayerDummy.transform.position = new Vector3(PlayerDummy.transform.position.x + teleportRange, PlayerDummy.transform.position.y, PlayerDummy.transform.position.z);
 
-			caM1.SetActive(true);
 
         }
 		explosionLight.SetActive (false);

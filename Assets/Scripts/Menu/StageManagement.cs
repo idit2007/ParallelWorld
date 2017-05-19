@@ -68,24 +68,25 @@ public class StageManagement : MonoBehaviour {
 				done2 = false;
 			}
 			if (sd.Score > 0) {
-				Debug.Log (numberStage+"nstage= "+nStage);
 					rankNameText.text = "Rank: Curese";
 				stage.SetActive (true);
 				closeSB[numberStage].interactable=true;
+				if (nStage != null) {
 					nStage.SetActive (true);
-				closeSB[numberStage+1].interactable=true;
+					closeSB [numberStage + 1].interactable = true;
+				}
 				done2 = false;
 				}
 
 
 			if (LeaderBoard.pressStage == this.gameObject.name) {
-				if (sd.Score > 60) {
+				if (sd.Score > 200) {
 					showRank.sprite = rankImage [3];
 					rankNameText.text = "Rank: Destinator";
-				} else if (sd.Score > 40) {
+				} else if (sd.Score > 100) {
 					showRank.sprite = rankImage [2];
 					rankNameText.text = "Rank: Conqueror";
-				} else if (sd.Score > 20) {
+				} else if (sd.Score > 0) {
 					showRank.sprite = rankImage [1];
 					rankNameText.text = "Rank: Survivor";
 				}

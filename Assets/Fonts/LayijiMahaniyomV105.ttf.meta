@@ -3,17 +3,19 @@ guid: 8b1acd01fd92d4fdba9b77718d070c4a
 timeCreated: 1465540206
 licenseType: Free
 TrueTypeFontImporter:
-  serializedVersion: 3
+  serializedVersion: 4
   fontSize: 16
   forceTextureCase: -2
-  characterSpacing: 1
-  characterPadding: 0
+  characterSpacing: 0
+  characterPadding: 1
   includeFontData: 1
-  fontNames: []
+  fontName: Layiji MaHaNiYom V1.5
+  fontNames:
+  - Layiji MaHaNiYom V1.5
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
   userData: 
-  assetBundleName: 
+  assetBundleName: menu
   assetBundleVariant: 

@@ -25,8 +25,8 @@ public class EnemyNevmesh : MonoBehaviour {
 	{
 		
 		if (inArea&&!effectTeleportSlow.activeSelf) {
-			navMeshAgent.enabled = true;
-			navMeshAgent.SetDestination (player.transform.position);
+			StartCoroutine (prePareNav());
+
 		}
 		else 
 			navMeshAgent.enabled = false;
@@ -62,6 +62,11 @@ public class EnemyNevmesh : MonoBehaviour {
 
 			anim.SetTrigger("attack");
 		}
+	}
+	IEnumerator prePareNav(){
+		yield return new WaitForSeconds (0.2f);
+		navMeshAgent.enabled = true;
+		navMeshAgent.SetDestination (player.transform.position);
 	}
 
 }

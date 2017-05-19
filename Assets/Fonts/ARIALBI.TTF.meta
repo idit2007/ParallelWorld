@@ -3,13 +3,15 @@ guid: ec7d5eaeddf1663479e144b254195411
 timeCreated: 1467449286
 licenseType: Free
 TrueTypeFontImporter:
-  serializedVersion: 3
+  serializedVersion: 4
   fontSize: 16
   forceTextureCase: -2
-  characterSpacing: 1
-  characterPadding: 0
+  characterSpacing: 0
+  characterPadding: 1
   includeFontData: 1
-  fontNames: []
+  fontName: Arial
+  fontNames:
+  - Arial
   fallbackFontReferences:
   - {fileID: 12800000, guid: 21782330a9d868142b62b9299b31f918, type: 3}
   - {fileID: 12800000, guid: 9782a3a15a799cc4280c3f949e00f7c6, type: 3}
@@ -23,5 +25,5 @@ TrueTypeFontImporter:
   fontRenderingMode: 0
   ascentCalculationMode: 1
   userData: 
-  assetBundleName: 
+  assetBundleName: menu
   assetBundleVariant: 

@@ -1,0 +1,486 @@
+ManifestFileVersion: 0
+CRC: 1258500255
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 4ce4c3e0abd91c373a499decd076a233
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 1d68ab10cefb89adb62029f6e939bca4
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 20
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 50
+  Script: {instanceID: 0}
+- Class: 54
+  Script: {instanceID: 0}
+- Class: 58
+  Script: {instanceID: 0}
+- Class: 64
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 81
+  Script: {instanceID: 0}
+- Class: 82
+  Script: {instanceID: 0}
+- Class: 83
+  Script: {instanceID: 0}
+- Class: 84
+  Script: {instanceID: 0}
+- Class: 89
+  Script: {instanceID: 0}
+- Class: 90
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 92
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 102
+  Script: {instanceID: 0}
+- Class: 108
+  Script: {instanceID: 0}
+- Class: 111
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 12001, guid: 0000000000000000e000000000000000, type: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 1179ec3045a57424084e34f135a42a1e, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 51445240993634dcca3288c1ccbf958d, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 645b14f0049fa5c46bcc63da716f1783, type: 3}
+- Class: 114
+  Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+- Class: 114
+  Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: a22556020a20db046a5cd444dbdb4d0f, type: 3}
+- Class: 114
+  Script: {fileID: 1392445389, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+- Class: 114
+  Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+- Class: 114
+  Script: {fileID: -98529514, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+- Class: 114
+  Script: {fileID: -113659843, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+- Class: 114
+  Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 28b387620e22f4c01b88015e7e67d30a, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: a8d3968294210ba4a9d2bb96dfa74a16, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4b2467633434e654c9e79b3f7563d361, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 379879a35859971478f3f070a5e82552, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 2fa290c3290a9e04cb780c61b130e5af, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 64c5af248069d45d18f816252014f1b2, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 198d06152e63f62498c716df9d055a51, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 15aa632517b93b5438ffbbbdfe98661d, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0f6ae34570738c447a8f81bcb10d610c, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 83abdd66eafa14764bb45a087282f01f, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 277fcb37708b4184482c0224c51fcaa7, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: eeb64258239543b4db1c80658a0d4f2c, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0e64feb8eef8642d48de705f8b9cb291, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 6f80d719f998a67438e69f9f995732ae, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 270da6896b596574496cec3d53e73c04, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: adc22fd91f90a6242a8604f702bc8775, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: eb7ac65bbe0382646b9ea5e64465c9f7, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: a5f34a5b885d20448b6339c97a167a33, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: aa74138b38933f24d9c730d6670e08a7, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5a0afb2c0279d43d6b4bf0350c1a4d4f, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: ff185d6cb967c4847ad2bf3dca14795a, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: d08f91df3bd212f429df17f53ce2f364, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: a45c5a622e8b2db40abad4f3a6e8dbbf, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: c3d7b34a3bb2d4e4b926e7e729d3d410, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 124
+  Script: {instanceID: 0}
+- Class: 128
+  Script: {instanceID: 0}
+- Class: 135
+  Script: {instanceID: 0}
+- Class: 136
+  Script: {instanceID: 0}
+- Class: 137
+  Script: {instanceID: 0}
+- Class: 143
+  Script: {instanceID: 0}
+- Class: 195
+  Script: {instanceID: 0}
+- Class: 198
+  Script: {instanceID: 0}
+- Class: 199
+  Script: {instanceID: 0}
+- Class: 205
+  Script: {instanceID: 0}
+- Class: 212
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+- Class: 222
+  Script: {instanceID: 0}
+- Class: 224
+  Script: {instanceID: 0}
+Assets:
+- Assets/ModelAndAnimation_Maya/RedZombie/RedZombieWalk.fbx
+- Assets/Materials/mWall2.mat
+- Assets/Resources/Holographic/controls/Materials/buttonSelect.mat
+- Assets/Scripts/Shaders/TransparentFresnel.shader
+- Assets/Resources/Holographic/controls/Materials/label.mat
+- Assets/Chalet style furniture/Models/table_1.FBX
+- Assets/Fonts/ARIALNBI.TTF
+- Assets/ModelAndAnimation_Maya/Nova/Run_test.fbx
+- Assets/Models/Materials/all hair vol.mat
+- Assets/Prefabs/BlueZombie.prefab
+- Assets/MACHIN3/Skybox/Textures/blueprint02_05.psd
+- Assets/ModelAndAnimation_Maya/BlueZombie/BlueZombieId.fbx
+- Assets/Teleport_Particle_Effect/FBX/Materials/Rubble_mtl.mat
+- Assets/HologramShader/DemoScene/Materials/HoloMatPlane 3.mat
+- Assets/ModelAndAnimation_Maya/RedZombie/Materials/MAT_Head_BC.mat
+- Assets/Fonts/LayijiMahaniyomV105.ttf
+- Assets/ModelAndAnimation_Maya/RED/Teleport.fbx
+- Assets/Teleport_Particle_Effect/FBX/Materials/Lamp_Metal_mtl.mat
+- Assets/Teleport_Particle_Effect/FBX/Materials/HoloWorld4.mat
+- Assets/Micro Farmer/Models/Legacy/Farmer@MF_Idle.FBX
+- Assets/HologramShader/DemoScene/Materials/HoloMatDemoGreen.mat
+- Assets/Standard Assets/Prototyping/Prefabs/PlatformPrototype02x01x02.prefab
+- Assets/Models/Materials/hair test.mat
+- Assets/Micro Farmer/Prefaps/Humanoid/Farmer_Humanoid.prefab
+- Assets/HologramShader/DemoScene/Materials/HoloMatPlane 2.mat
+- Assets/Fonts/ARIALN.TTF
+- Assets/Micro Farmer/Models/Legacy/Farmer@MF_Talk.FBX
+- Assets/Micro Farmer/Shader/Toon Shading/Toony-Basic.mat
+- Assets/Materials/MAT_Body_BC.mat
+- Assets/ModelAndAnimation_Maya/Zombie/Run.fbx
+- Assets/ModelAndAnimation_Maya/Nova/face/Materials/face n foot red smile.mat
+- Assets/Chalet style furniture/Prefabs/kitchen_table_1.prefab
+- Assets/Micro Farmer/Models/Legacy/Shelf.FBX
+- Assets/FreeAnimatedSpaceMan/Models/Plane.FBX
+- Assets/Machine Shop Equipment/Materials/Mill_Diffuse_Texture.mat
+- Assets/Resources/Holographic/controls/Materials/fieldNormal.mat
+- Assets/Models/Rack/Rag.fbx
+- Assets/ModelAndAnimation_Maya/Nova/face/Materials/face n foot red sad.mat
+- Assets/FreeAnimatedSpaceMan/Animations/Idle_Rifle_01.FBX
+- Assets/FreeAnimatedSpaceMan/Models/space_man_model.FBX
+- Assets/Chalet style furniture/Materials/bed.mat
+- Assets/ZRNAssets/PQAssets/Query-Chan-SD/Models/Query-chan_Black_SD/Materials/uv_face_defo_black.mat
+- Assets/Chalet style furniture/Models/kitchen_table_1.FBX
+- Assets/FreeAnimatedSpaceMan/Animations/Run_Rifle_Left.FBX
+- Assets/ModelAndAnimation_Maya/Nova/face/Materials/face n foot blue sad.mat
+- Assets/Micro Farmer/Models/Mecanim/Farmer@MF_Work.FBX
+- Assets/Standard Assets/Characters/ThirdPersonCharacter/Materials/EthanWhite.mat
+- Assets/Fonts/ARIALBD.TTF
+- Assets/ModelAndAnimation_Maya/RED/texture/Materials/MAT_Belt_BC.mat
+- Assets/Chalet style furniture/Models/tv_shelf.FBX
+- Assets/Chalet style furniture/Prefabs/bollard.prefab
+- Assets/Japanese-Style Series/Materials/Event.mat
+- Assets/Micro Farmer/Models/Legacy/Materials/Famer.mat
+- Assets/Teleport_Particle_Effect/FBX/Materials/World1.mat
+- Assets/Skyboxes/PurpleNebula/PurpleNebula.mat
+- Assets/Locker/3dobjects_props/Materials/spind_01a_spec.mat
+- Assets/Models/Pallet/Materials/Pallet.mat
+- Assets/Teleport_Particle_Effect/FBX/Materials/alphaslow.mat
+- Assets/ZRNAssets/PQAssets/Query-Chan-SD/Models/Query-chan_Black_SD/Materials/tex_querybody_normal_black.mat
+- Assets/ModelAndAnimation_Maya/RedZombie/RedZombiePreRun.fbx
+- Assets/ModelAndAnimation_Maya/BlueZombie/BlueZombieWalk.fbx
+- Assets/ModelAndAnimation_Maya/Zombie/texture/Materials/MAT_shirt.mat
+- Assets/Models/Rack/rack.fbx
+- Assets/Models/ComTable.prefab
+- Assets/ModelAndAnimation_Maya/Nova/face/Materials/face n foot red idle.mat
+- Assets/Resources/Holographic/Materials/outer-space-hd-wallpaper.mat
+- Assets/Helica/PM-40/Meshes/Desk.FBX
+- Assets/ModelAndAnimation_Maya/RedZombie/texture/Materials/MAT_Body_BC.mat
+- Assets/Teleport_Particle_Effect/FBX/Materials/Exposion.mat
+- Assets/Chalet style furniture/Materials/bidet.mat
+- Assets/Models/Com.FBX
+- Assets/Micro Farmer/Models/Legacy/Farmer@MF_Beg.FBX
+- Assets/Prefabs/NormalZombie.prefab
+- Assets/Chalet style furniture/Models/bidet.FBX
+- Assets/Resources/Holographic/controls/Materials/buttonNormal.mat
+- Assets/Standard Assets/CNControls/Prefabs/Joystick.prefab
+- Assets/Japanese-Style Series/Materials/World1Minimap.mat
+- Assets/Micro Farmer/Models/Legacy/Farmer@MF_Walk.FBX
+- Assets/Prefabs/UI/PopUp.prefab
+- Assets/ModelAndAnimation_Maya/RedZombie/texture/Materials/MAT_Head_BC.mat
+- Assets/Teleport_Particle_Effect/FBX/Materials/HoloWorld2.mat
+- Assets/ModelAndAnimation_Maya/BlueZombie/Materials/MAT_Body.mat
+- Assets/Move/MiimapWorld1.prefab
+- Assets/Chalet style furniture/Models/rack.FBX
+- Assets/GamePoly/Cryo Tube/Model/Cryo_Tube.FBX
+- Assets/ModelAndAnimation_Maya/BlueZombie/texture/Materials/MAT_Pant.mat
+- Assets/Materials/all hair vol.mat
+- Assets/Resources/Holographic/controls/Materials/window 1.mat
+- Assets/Models/DC/Location.prefab
+- Assets/Teleport_Particle_Effect/FBX/Materials/Wooden_Crate_mtl.mat
+- Assets/Chalet style furniture/Prefabs/rack.prefab
+- Assets/Teleport_Particle_Effect/FBX/Materials/Spark_Partcles_mtl.mat
+- Assets/Models/Item/Materials/lambert2.mat
+- Assets/Materials/Materials/World1Minimap 1.mat
+- Assets/Locker/3dobjects_props/Materials/colmesh.mat
+- Assets/Standard Assets/Prototyping/Prefabs/FloorPrototype08x01x08.prefab
+- Assets/FreeAnimatedSpaceMan/Materials/SpaceMan_Rank_02_Blue.mat
+- Assets/run_test.fbx
+- Assets/Micro Farmer/Models/Legacy/Farmer@MF_Work.FBX
+- Assets/Chalet style furniture/Prefabs/lamp.prefab
+- Assets/Teleport_Particle_Effect/FBX/Materials/Smoke.mat
+- Assets/Micro Farmer/Prefaps/Legacy/Farmer.prefab
+- Assets/SciFi_Door/Materials/collider.mat
+- Assets/Chalet style furniture/Prefabs/table_1.prefab
+- Assets/Models/CubeFlip/CubeFlip.FBX
+- Assets/Resources/Holographic/controls/Materials/div.mat
+- Assets/Chalet style furniture/Prefabs/kitchen_table_2.prefab
+- Assets/Chalet style furniture/Prefabs/toilet.prefab
+- Assets/Micro Farmer/Models/Mecanim/Farmer@MF_Idle.FBX
+- Assets/SciFi_Door/Prefabs/Door_Prefab.prefab
+- Assets/Assets_TVs/prefabs/wall_mount.prefab
+- Assets/Micro Farmer/Models/Mecanim/Farmer@MF_Beg.FBX
+- Assets/Teleport_Particle_Effect/Prefabs/Teleport_Fast.prefab
+- Assets/FreeAnimatedSpaceMan/Prefab/space_man_model.prefab
+- Assets/Chalet style furniture/Materials/glass.mat
+- Assets/Materials/MAT_face.mat
+- Assets/FreeAnimatedSpaceMan/Animations/Run_Rifle_Forward.FBX
+- Assets/Micro Farmer/Prefaps/Legacy/Shelf.prefab
+- Assets/Teleport_Particle_Effect/Prefabs/Teleport.prefab
+- Assets/Models/CubeFlip/Materials/Blank.mat
+- Assets/Materials/Materials/Event.mat
+- Assets/Micro Farmer/Models/Mecanim/Shelf.FBX
+- Assets/Standard Assets/CNControls/Prefabs/2 Ways DPad Horizontal.prefab
+- Assets/Teleport_Particle_Effect/FBX/Materials/World2.mat
+- Assets/Machine Shop Equipment/Mill.fbx
+- Assets/ModelAndAnimation_Maya/Nova/face/Materials/face n foot blue smile.mat
+- Assets/Materials/MAT_shirt.mat
+- Assets/HologramShader/DemoScene/Materials/HoloMatPlane 5.mat
+- Assets/Chalet style furniture/Materials/pillow.mat
+- Assets/Chalet style furniture/Prefabs/table_2.prefab
+- Assets/Materials/bganimation.mat
+- Assets/Chalet style furniture/Prefabs/washbasin.prefab
+- Assets/Models/Rack/Materials/rack.mat
+- Assets/Resources/Holographic/prefab/GUI Camera.prefab
+- Assets/Materials/MAT_Face_BC.mat
+- Assets/Materials/mFont.mat
+- Assets/ModelAndAnimation_Maya/RedZombie/RedZombieId.fbx
+- Assets/Sprites/Materials/Title.mat
+- Assets/HologramShader/DemoScene/Materials/Skybox.mat
+- Assets/Models/Pallet/pallet.fbx
+- Assets/Materials/mWall1.mat
+- Assets/Helica/PM-40/Meshes/PM-40_Mesh.FBX
+- Assets/GamePoly/Cryo Tube/Materials/cryo_glass.mat
+- Assets/Fonts/ARIAL.TTF
+- Assets/Japanese-Style Series/Rooms/Corridor Pack/model/Materials/Japanese-Style
+  Stairs02.mat
+- Assets/Resources/Holographic/output/main/bg/Materials/bg7.mat
+- Assets/HologramShader/DemoScene/Materials/HoloMatPlane.mat
+- Assets/Materials/MAT_Belt_BC.mat
+- Assets/SciFi_Door/SF_Door.fbx
+- Assets/ModelAndAnimation_Maya/Nova/3d.fbm/Materials/face n foot.mat
+- Assets/HologramShader/DemoScene/Materials/HoloMatDemoRedPattern.mat
+- Assets/Move/Minimap1.prefab
+- Assets/Assets_TVs/models/Materials/screen_off.mat
+- Assets/Chalet style furniture/Models/toilet.FBX
+- Assets/Standard Assets/CNControls/Prefabs/4 Ways DPad.prefab
+- Assets/Models/Materials/com.mat
+- Assets/Chalet style furniture/Materials/bidet_s.mat
+- Assets/Resources/Holographic/controls/Materials/checkbox.mat
+- Assets/ModelAndAnimation_Maya/Zombie/ID.fbx
+- Assets/Prefabs/Particle.prefab
+- Assets/ModelAndAnimation_Maya/RED/Walk.fbx
+- Assets/Materials/t shirt.mat
+- Assets/Prefabs/Nova.prefab
+- Assets/Japanese-Style Series/Rooms/Corridor Pack/model/Materials/Japanese-Style
+  Stairs99.mat
+- Assets/Micro Farmer/Models/Legacy/Materials/default.mat
+- Assets/Teleport_Particle_Effect/FBX/Materials/Ground_mtl.mat
+- Assets/ModelAndAnimation_Maya/RedZombie/Materials/MAT_Cloth_BC.mat
+- Assets/Materials/Roofs.mat
+- Assets/ModelAndAnimation_Maya/Nova/IDe.fbx
+- Assets/Materials/Materials/BG White 2.mat
+- Assets/ModelAndAnimation_Maya/RED/Materials/asBlack.mat
+- Assets/Materials/mFont_Green.mat
+- Assets/Models/Rack/RagBridge.fbx
+- Assets/Chalet style furniture/Models/table_2.FBX
+- Assets/ModelAndAnimation_Maya/Nova/face/Materials/face n foot blue rage.mat
+- Assets/Models/Boxs/box01.fbx
+- Assets/HologramShader/DemoScene/Materials/HoloMatDemoRed.mat
+- Assets/Resources/Holographic/output/main/bullets/bullet_prefab.prefab
+- Assets/Standard Assets/CNControls/Examples/Scenes/Third Person/MultipurposeCameraRig.prefab
+- Assets/Chalet style furniture/Models/kitchen_table_2.FBX
+- Assets/Chalet style furniture/Materials/tile.mat
+- Assets/Prefabs/UI/UICollection.prefab
+- Assets/Teleport_Particle_Effect/Materials/Smoke_Particle_c.mat
+- Assets/SciFi_Door/Materials/Door_DF.mat
+- Assets/Chalet style furniture/Prefabs/bed.prefab
+- Assets/Standard Assets/Prototyping/Prefabs/JoinInnerPrototype01x06x01.prefab
+- Assets/Prefabs/UI/Win.prefab
+- Assets/Prefabs/chair.prefab
+- Assets/Standard Assets/CNControls/Prefabs/SensitiveJoystick.prefab
+- Assets/Resources/Holographic/controls/Materials/fieldSelect.mat
+- Assets/Japanese-Style Series/Materials/World1Minimap 1.mat
+- Assets/Fonts/ARIBLK.TTF
+- Assets/SciFi_Door/Materials/No Name.mat
+- Assets/HologramShader/DemoScene/Materials/HoloMatPlane 1.mat
+- Assets/ModelAndAnimation_Maya/RED/texture/Materials/MAT_Face_BC.mat
+- Assets/Chalet style furniture/Models/chair.FBX
+- Assets/Models/Item/Box.fbx
+- Assets/Teleport_Particle_Effect/FBX/Materials/budding2.mat
+- Assets/Models/Materials/table.mat
+- Assets/Move/MiimapWorld2.prefab
+- Assets/Teleport_Particle_Effect/FBX/Materials/lambert1.mat
+- Assets/ModelAndAnimation_Maya/RED/Materials/asWhite.mat
+- Assets/ModelAndAnimation_Maya/Zombie/texture/Materials/MAT_pant.mat
+- Assets/Japanese-Style Series/Rooms/Corridor Pack/model/kaidan_01.fbx
+- Assets/Micro Farmer/Models/Mecanim/Materials/Famer.mat
+- Assets/Materials/MAT_pant.mat
+- Assets/ModelAndAnimation_Maya/Zombie/texture/Materials/MAT_face.mat
+- Assets/Fonts/ARIALNI.TTF
+- Assets/Models/Rack/Materials/Rag.mat
+- Assets/MACHIN3/Skybox/Materials/Blueprint02_05.mat
+- Assets/ModelAndAnimation_Maya/Zombie/Attack.fbx
+- Assets/Locker/3dobjects_props/spind.fbx
+- Assets/ModelAndAnimation_Maya/BlueZombie/texture/Materials/MAT_Face.mat
+- Assets/Standard Assets/CNControls/Prefabs/Button.prefab
+- Assets/Models/CubeFlip/Materials/01 - Default.mat
+- Assets/Fonts/ARIALI.TTF
+- Assets/Fonts/LayijiMahaniyomV105ot.otf
+- Assets/Models/Materials/face n foot.mat
+- Assets/ModelAndAnimation_Maya/Nova/Lost.fbx
+- Assets/Resources/Holographic/controls/Materials/check.mat
+- Assets/Chalet style furniture/Models/bar_counter.FBX
+- Assets/Standard Assets/CNControls/Examples/Scenes/2D/Character Graphics/Alien.prefab
+- Assets/ZRNAssets/PQAssets/Query-Chan-SD/Models/Query-chan_Black_SD/Models/PQ_mini_Black.fbx
+- Assets/Chalet style furniture/Models/bed.FBX
+- Assets/Models/Boxs/Materials/box01_01.mat
+- Assets/Teleport_Particle_Effect/FBX/Materials/Bulb_Glow_2_c.mat
+- Assets/Teleport_Particle_Effect/FBX/Materials/HoloWorld1.mat
+- Assets/ModelAndAnimation_Maya/Nova/Teleport.fbx
+- Assets/Standard Assets/CNControls/Prefabs/Touchpad.prefab
+- Assets/Prefabs/BreakWall.prefab
+- Assets/HologramShader/DemoScene/Materials/BlueHoloGram.mat
+- Assets/Chalet style furniture/Models/washbasin.FBX
+- Assets/Resources/Holographic/controls/Materials/window2.mat
+- Assets/Micro Farmer/Shader/Toon Shading/Toony-Lighted.mat
+- Assets/Micro Farmer/Models/Legacy/Farmer.FBX
+- Assets/Micro Farmer/Models/Mecanim/Farmer_mecanim.FBX
+- Assets/Move/Minimap2.prefab
+- Assets/HologramShader/DemoScene/Materials/NavyGrid.mat
+- Assets/HologramShader/DemoScene/Materials/testUlol3.mat
+- Assets/Japanese-Style Series/Rooms/Corridor Pack/model/kaidan_02.fbx
+- Assets/GoogleGoMap/Materials/mapMaterial.mat
+- Assets/Materials/face n foot.mat
+- Assets/Locker/Prefabs/locker_01b.prefab
+- Assets/ModelAndAnimation_Maya/Nova/Materials/frog.mat
+- Assets/Standard Assets/Prototyping/Prefabs/PillarPrototype01x02x01.prefab
+- Assets/Micro Farmer/Models/Mecanim/Farmer@MF_Walk.FBX
+- Assets/Chalet style furniture/Prefabs/tv_shelf.prefab
+- Assets/Teleport_Particle_Effect/FBX/Materials/sparkparticlessub.prefab
+- Assets/Teleport_Particle_Effect/Textures/Spark_Particle_c.tif
+- Assets/Micro Farmer/Models/Mecanim/Materials/default.mat
+- Assets/HologramShader/DemoScene/Materials/testUlol2.mat
+- Assets/ModelAndAnimation_Maya/RedZombie/RedZombieAttack.fbx
+- Assets/Chalet style furniture/Materials/bidet_d.mat
+- Assets/Sprites/GameTitile/Materials/bgtitle.mat
+- Assets/FreeAnimatedSpaceMan/Materials/SpaceMan_Weapons_Rank_02.mat
+- Assets/FreeAnimatedSpaceMan/Animations/Run_Rifle_Right.FBX
+- Assets/Resources/Holographic/GOTHIC.TTF
+- Assets/HologramShader/DemoScene/Materials/HoloMatPlane 6.mat
+- Assets/Prefabs/DCFresh.prefab
+- Assets/Standard Assets/CNControls/Prefabs/2 Ways DPad Vertical.prefab
+- Assets/Chalet style furniture/Prefabs/chair.prefab
+- Assets/Teleport_Particle_Effect/FBX/Materials/HoloWorld5.mat
+- Assets/HologramShader/DemoScene/Materials/HoloMatPlane 4.mat
+- Assets/GamePoly/Cryo Tube/Materials/cryo.mat
+- Assets/HologramShader/DemoScene/Materials/HoloMatDemoPattern.mat
+- Assets/Teleport_Particle_Effect/FBX/Materials/Teleport_mtl.mat
+- Assets/Locker/Prefabs/locker_01c.prefab
+- Assets/Models/Materials/frog.mat
+- Assets/Fonts/ARIALNB.TTF
+- Assets/Chalet style furniture/Prefabs/bidet.prefab
+- Assets/Assets_TVs/prefabs/CRT.prefab
+- Assets/Resources/Holographic/controls/Materials/window3.mat
+- Assets/ModelAndAnimation_Maya/BlueZombie/BlueZombieAttack.fbx
+- Assets/Teleport_Particle_Effect/Materials/Spark_Particle_c.mat
+- Assets/ZRNAssets/PQAssets/Query-Chan-SD/Models/Query-chan_Black_SD/Materials/tex_queryhat_normal_black.mat
+- Assets/Resources/Holographic/controls/Materials/slidervert.mat
+- Assets/Prefabs/RedZombieAttack.prefab
+- Assets/Fonts/ARIALBI.TTF
+- Assets/Assets_TVs/models/Materials/LCDTV-1.mat
+- Assets/ModelAndAnimation_Maya/Nova/Pre_Run.fbx
+- Assets/Chalet style furniture/Models/lamp.FBX
+- Assets/ModelAndAnimation_Maya/Nova/face/Materials/face n foot blue surp.mat
+- Assets/Micro Farmer/Models/Mecanim/Farmer@MF_Talk.FBX
+- Assets/Locker/3dobjects_props/Materials/health.mat
+- Assets/Chalet style furniture/Prefabs/stool.prefab
+- Assets/ModelAndAnimation_Maya/Nova/Win.fbx
+- Assets/Models/Materials/above_px4i.mat
+- Assets/Chalet style furniture/Models/stool.FBX
+- Assets/Locker/Prefabs/locker_01a.prefab
+- Assets/Chalet style furniture/Prefabs/dryer.prefab
+- Assets/Chalet style furniture/Models/dryer.FBX
+- Assets/Materials/Materials/World1Minimap.mat
+- Assets/Materials/Materials/BG White.mat
+- Assets/Prefabs/UI/SensitiveJoystick.prefab
+- Assets/Japanese-Style Series/Rooms/Corridor Pack/model/Materials/Japanese-Style
+  Stairs01.mat
+- Assets/Resources/Holographic/controls/Materials/window.mat
+- Assets/Machine Shop Equipment/Lathe.fbx
+- Assets/Teleport_Particle_Effect/FBX/Materials/HoloWorld3.mat
+- Assets/Chalet style furniture/Prefabs/bar_counter.prefab
+- Assets/Assets_TVs/models/HDTV.FBX
+- Assets/FreeAnimatedSpaceMan/Animations/Run_Rifle_Back.FBX
+- Assets/ModelAndAnimation_Maya/RED/texture/Materials/MAT_Body_BC.mat
+- Assets/Materials/hair test.mat
+- Assets/Chalet style furniture/Models/bollard.FBX
+- Assets/HologramShader/DemoScene/Materials/HoloMatDemoNoise.mat
+- Assets/Materials/frog.mat
+- Assets/Prefabs/Medical.prefab
+- Assets/Chalet style furniture/Materials/toilet.mat
+- Assets/Standard Assets/Characters/ThirdPersonCharacter/Animation/HumanoidIdle.fbx
+- Assets/Teleport_Particle_Effect/FBX/Ground.fbx
+- Assets/Models/Table.FBX
+- Assets/Teleport_Particle_Effect/Prefabs/Teleport_Slow.prefab
+- Assets/Teleport_Particle_Effect/FBX/Materials/Spark_Partcles_mtl 1.mat
+- Assets/Scripts/Menu/CloseS.prefab
+Dependencies: []

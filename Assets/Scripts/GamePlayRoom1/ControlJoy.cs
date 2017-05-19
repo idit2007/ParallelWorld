@@ -8,7 +8,7 @@ public class ControlJoy : MonoBehaviour {
 	private bool done;
 	private bool done2;
 	private float MovementSpeed = 5f;
-
+	private AudioSource soundWalk;
 	private Transform _mainCameraTransform;
 	private Transform _transform;
 	private CharacterController _characterController;
@@ -21,6 +21,7 @@ public class ControlJoy : MonoBehaviour {
 	}
 	void Start()
 	{
+		soundWalk = GetComponent<AudioSource> ();
 		slowUI = GameObject.Find ("SlowMotionFlash");
 		novaAnim = GetComponent<Animator>();
 		anim.gameObject.SetActive (false);
@@ -28,7 +29,7 @@ public class ControlJoy : MonoBehaviour {
 		slowUI.SetActive (false);
 		done = false;
 		done2 = true;
-
+		soundWalk.enabled = false;
 
 		if(BuffStatus.buffStatus==3)
 			MovementSpeed = 10f;
@@ -57,10 +58,12 @@ public class ControlJoy : MonoBehaviour {
 				movementVector.Normalize ();
 				_transform.forward = movementVector;
 				novaAnim.SetBool ("Run", true);
+				soundWalk.enabled = true;
 
 			}
 			else {
 				novaAnim.SetBool ("Run", false);
+				soundWalk.enabled = false;
 			}
 				movementVector += Physics.gravity;
 				_characterController.Move (movementVector * Time.deltaTime * MovementSpeed);
@@ -93,7 +96,7 @@ public class ControlJoy : MonoBehaviour {
 	public void TeleportPause()
 	{
 		EffectPlayerSlowMotion.Instance.playerMove = false;
-
+		soundWalk.enabled = false;
 		StartCoroutine (ShowEffect ());
 
 	}

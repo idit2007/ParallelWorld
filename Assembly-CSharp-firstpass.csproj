@@ -154,6 +154,9 @@
  <Reference Include="Unity.Tasks">
  <HintPath>/Users/ItBangchokdee/Desktop/ParallelWorld/Assets/Firebase/Plugins/Unity.Tasks.dll</HintPath>
  </Reference>
+ <Reference Include="UnityEngine.Advertisements.Editor">
+ <HintPath>/Users/ItBangchokdee/Desktop/ParallelWorld/Assets/UnityAds/UnityEngine.Advertisements.Editor.dll</HintPath>
+ </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

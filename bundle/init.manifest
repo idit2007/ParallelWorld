@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 3977856673
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: bf2cf7e211b5c29d82f2962ae42af93f
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 31d6cfe0d16ae931b73c59d7e0c089c0
+HashAppended: 0
+ClassTypes: []
+Assets:
+- Assets/Scenes/tutorial.unity
+- Assets/Scenes/Menu.unity
+- Assets/Scenes/Stage1.unity
+Dependencies:
+- /Users/ItBangchokdee/Desktop/ParallelWorld/bundle/menu

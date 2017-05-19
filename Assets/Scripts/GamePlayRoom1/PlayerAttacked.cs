@@ -14,6 +14,7 @@ public class PlayerAttacked : MonoBehaviour {
 	private Vector3 v3;
 	// Use this for initialization
 	void Awake () {
+		ScoreManageMent.getBite=false;
 		hpText = GameObject.Find ("HPText").GetComponent<Text>();
 		virusText = GameObject.Find ("VirusText").GetComponent<Text>();
 		redFlash = GameObject.Find ("AttackedFlash");
@@ -79,6 +80,8 @@ public class PlayerAttacked : MonoBehaviour {
 		hpSlider.value -= 10;
 		bitted = true;
 		protect = true;
+		ScoreManageMent.getBite=true;
+
 	}
 	IEnumerator RedZombieRedFlashShow()
 	{
@@ -90,6 +93,7 @@ public class PlayerAttacked : MonoBehaviour {
 		hpSlider.value -= 30;
 		bitted = true;
 		protect = true;
+		ScoreManageMent.getBite=true;
 	}
 	IEnumerator BlueZombieRedFlashShow()
 	{
@@ -102,5 +106,6 @@ public class PlayerAttacked : MonoBehaviour {
 		hpSlider.value -= 100;
 		bitted = true;
 		protect = true;
+		ScoreManageMent.getBite=true;
 	}
 }

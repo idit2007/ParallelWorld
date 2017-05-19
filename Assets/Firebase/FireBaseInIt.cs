@@ -16,7 +16,9 @@ public class FireBaseInIt : MonoBehaviour {
 	private string email = "";
 	private string password = "";
 	public GameObject popup;
+	public GameObject blackPanel;
 	public Text popupText;
+	public Text loadBunddle;
 	public InputField emailField;
 	public InputField passField;
 	public InputField newUserEmailField;
@@ -31,6 +33,7 @@ public class FireBaseInIt : MonoBehaviour {
 
 		// Get the root reference location of the database.
 		mDatabaseRef = FirebaseDatabase.DefaultInstance.RootReference;
+		StartCoroutine (LoadBunndle());
 	}
 	public void Signin() {
 		email = emailField.text;
@@ -52,7 +55,7 @@ public class FireBaseInIt : MonoBehaviour {
 			Debug.LogFormat("User signed in successfully: {0} ({1})",
 				newUser.DisplayName, newUser.UserId);
 			UserAccount=newUser.UserId;
-			Application.LoadLevel ("Menu");
+			StartCoroutine(GoTOMenu());
 		});
 	
 
@@ -115,5 +118,40 @@ public class FireBaseInIt : MonoBehaviour {
 		password = "";
 
 	}
+	IEnumerator LoadBunndle()
+	{
+		while (!Caching.ready)
+			yield return null;
 
+		var www = WWW.LoadFromCacheOrDownload("https://firebasestorage.googleapis.com/v0/b/parallelworld-1a50e.appspot.com/o/init?alt=media&token=8264fa6a-6d6e-4892-a60b-2c5deac49957", 5);
+		yield return www;
+		var www2 = WWW.LoadFromCacheOrDownload("https://firebasestorage.googleapis.com/v0/b/parallelworld-1a50e.appspot.com/o/menu?alt=media&token=994c46a7-4160-4e63-b00d-994b9526d634", 5);
+		yield return www2;
+		if (!string.IsNullOrEmpty(www.error))
+		{
+			Debug.Log(www.error);
+
+		}
+		if (!string.IsNullOrEmpty(www2.error))
+		{
+			Debug.Log(www.error);
+
+		}
+		var myLoadedAssetBundle = www.assetBundle;
+	
+		var myLoadedAssetBundle2 = www2.assetBundle;
+
+		Debug.Log (myLoadedAssetBundle);
+		Debug.Log (myLoadedAssetBundle2);
+
+//		var asset = myLoadedAssetBundle.mainAsset;
+		loadBunddle.text="Complete";
+	}
+	IEnumerator GoTOMenu()
+	{
+		blackPanel.SetActive (true);
+		yield return new WaitForSeconds (0.5f);
+		Application.LoadLevel ("Menu");
+	}
+	//https://drive.google.com/open?id=0B0HV2HqA1xvtV3ZkMDRjaXlBWm8
 }

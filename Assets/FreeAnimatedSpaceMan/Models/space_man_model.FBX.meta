@@ -124,7 +124,10 @@ ModelImporter:
     optimizeGameObjects: 0
     motionNodeName: 
     animationImportErrors: 
-    animationImportWarnings: 
+    animationImportWarnings: 'Avatar Rig Configuration mis-match. Inbetween bone rotation
+      in configuration does not match rotation in animation file
+
+      space_man_model'
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     animationCompression: 3
@@ -525,5 +528,5 @@ ModelImporter:
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
-  assetBundleName: 
+  assetBundleName: menu
   assetBundleVariant: 

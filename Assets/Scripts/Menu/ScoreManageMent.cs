@@ -17,6 +17,11 @@ public class ScoreManageMent : MonoBehaviour {
 	private string email = "test";
 	private string username="test";
 	private bool done;
+	public static bool getBite;
+	public static int  numOfTeleport;
+	public GameObject achive1;
+	public GameObject achive2;
+	public GameObject prepareLoading;
 	DatabaseReference mDatabaseRef;
 	//Singleton
 	public static ScoreManageMent Instance
@@ -59,8 +64,20 @@ public class ScoreManageMent : MonoBehaviour {
 	}
 	  //Save score when player play finish.
 	public void SaveScore(){
+		prepareLoading.SetActive (false);
 		ScoreData sd;
-		intScore = 100-(int)TimeScore.playTime;
+	     intScore = 100-(int)TimeScore.playTime;
+		if (intScore < 10)
+			intScore = 10;
+		if (!getBite) {
+			intScore += 100;
+			achive1.SetActive (false);
+		}
+		if (numOfTeleport < 10) {
+			intScore += 100;
+			achive2.SetActive (false);
+		}
+
 		if (TimeScore.currentStage <= sp.ScoreList.Count) {
 			
 			sd = sp.ScoreList [TimeScore.currentStage-1];
@@ -112,6 +129,9 @@ public class ScoreManageMent : MonoBehaviour {
 	public void NextStage()
 	{
 		TimeScore.currentStage++;
+		if(TimeScore.currentStage==10)
+			SceneManager.LoadScene ("EnddingScene");
+		else 
 		SceneManager.LoadScene ("Stage"+TimeScore.currentStage.ToString());
 	}
 	public void QueryName()

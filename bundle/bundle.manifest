@@ -1,0 +1,11 @@
+ManifestFileVersion: 0
+CRC: 20700658
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: init
+      Dependencies:
+        Dependency_0: menu
+    Info_1:
+      Name: menu
+      Dependencies: {}

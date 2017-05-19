@@ -20,7 +20,7 @@ public class GameScoreController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (score < ScoreManageMent.Instance.intScore)
-			score += Time.deltaTime*10;
+			score += Time.deltaTime*100;
 		else
 			score = ScoreManageMent.Instance.intScore;
 		scoreText.text = "Score: " + (string.Format ("{0:n0}", (int)score));
